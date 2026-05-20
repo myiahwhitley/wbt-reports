@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilson Bank &amp; Trust | Digital Marketing Report | April 2026</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --maroon: #5C1A2A;
+      --maroon-mid: #7D2B3D;
+      --maroon-pale: #C4849A;
+      --maroon-bg: #F9F1F3;
+      --gray: #F5F5F5;
+      --gray-mid: #E0E0E0;
+      --gray-dark: #777;
+      --text: #1A1A1A;
+      --up: #2E7D32;
+      --down: #C62828;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #F2F2F2; color: var(--text); }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--maroon); color: white;
+      display: flex; align-items: center;
+      padding: 0 20px; height: 54px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      overflow-x: auto; gap: 0;
+    }
+    .nav-brand {
+      font-weight: 700; font-size: 14px;
+      white-space: nowrap; margin-right: 20px;
+      color: white; text-decoration: none;
+      display: flex; align-items: center; gap: 9px; flex-shrink: 0;
+    }
+    .wbt-badge {
+      background: rgba(255,255,255,0.2); color: white;
+      font-weight: 900; font-size: 11px;
+      border-radius: 50%; width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4);
+    }
+    .nav-links { display: flex; gap: 2px; }
+    .nav-link {
+      color: rgba(255,255,255,0.7); font-size: 12.5px;
+      padding: 6px 11px; border-radius: 4px; cursor: pointer;
+      white-space: nowrap; border: none; background: none;
+      transition: all 0.15s; font-family: inherit;
+    }
+    .nav-link:hover { color: white; background: rgba(255,255,255,0.12); }
+    .nav-link.active { color: white; background: rgba(255,255,255,0.18); font-weight: 600; }
+    .nav-date { margin-left: auto; font-size: 11.5px; color: rgba(255,255,255,0.55); white-space: nowrap; flex-shrink: 0; padding-left: 16px; }
+
+    /* SECTIONS */
+    .section { display: none; padding: 24px; max-width: 1120px; margin: 0 auto; }
+    .section.active { display: block; }
+
+    /* REPORT HEADER BAR */
+    .report-header {
+      background: var(--maroon); color: white;
+      padding: 22px 26px; margin: -24px -24px 24px -24px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 3px solid rgba(255,255,255,0.15);
+    }
+    .report-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 3px; }
+    .report-header .sub { font-size: 13px; opacity: 0.65; }
+    .report-header .badge-lg {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 900; color: white;
+    }
+
+    /* SUMMARY GRID */
+    .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .summary-card {
+      background: white; border-radius: 10px; padding: 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+    }
+    .summary-card h3 {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.7px; color: var(--maroon);
+      padding-bottom: 10px; margin-bottom: 14px;
+      border-bottom: 2px solid var(--maroon-pale);
+    }
+    .summary-card ul { list-style: none; }
+    .summary-card ul li {
+      padding: 9px 0; border-bottom: 1px solid var(--gray-mid);
+      font-size: 13.5px; line-height: 1.45;
+      display: flex; align-items: flex-start; gap: 9px;
+    }
+    .summary-card ul li:last-child { border-bottom: none; }
+    .summary-card ul li::before { content: '●'; color: var(--maroon-pale); font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+    .ai-sub { font-size: 12px; color: var(--gray-dark); margin-top: 3px; display: block; }
+    .chip {
+      display: inline-block; padding: 1px 7px; border-radius: 10px;
+      font-size: 10.5px; font-weight: 700; margin-left: 5px; vertical-align: middle;
+    }
+    .chip-new { background: #E8F5E9; color: #2E7D32; }
+    .chip-rev { background: #E3F2FD; color: #1565C0; }
+
+    /* SECTION HEADER */
+    .section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 18px; padding-bottom: 14px;
+      border-bottom: 2px solid var(--gray-mid);
+    }
+    .section-header .sh-badge {
+      background: var(--maroon); color: white;
+      font-weight: 900; font-size: 13px; border-radius: 50%;
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section-header h2 { font-size: 21px; font-weight: 700; color: var(--maroon); }
+    .section-header p { font-size: 12px; color: var(--gray-dark); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* SUB-TABS */
+    .sub-tabs {
+      display: flex; gap: 2px; margin-bottom: 18px;
+      border-bottom: 2px solid var(--gray-mid);
+      overflow-x: auto;
+    }
+    .sub-tab {
+      padding: 8px 15px; font-size: 12.5px; font-weight: 500;
+      cursor: pointer; border: none; background: none;
+      color: var(--gray-dark); border-bottom: 2px solid transparent;
+      margin-bottom: -2px; white-space: nowrap;
+      transition: all 0.15s; font-family: inherit;
+    }
+    .sub-tab.active { color: var(--maroon); border-bottom-color: var(--maroon); font-weight: 700; }
+    .sub-tab:hover { color: var(--maroon); }
+    .sub-panel { display: none; }
+    .sub-panel.active { display: block; }
+
+    /* METRIC CARDS */
+    .metric-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 12px; margin-bottom: 18px;
+    }
+    .metric-card {
+      background: white; border-radius: 8px; padding: 15px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .metric-card .m-label { font-size: 10.5px; color: var(--gray-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
+    .metric-card .m-value { font-size: 22px; font-weight: 700; color: var(--maroon); line-height: 1.1; }
+    .metric-card .m-delta { font-size: 11.5px; margin-top: 5px; }
+    .up { color: var(--up); } .down { color: var(--down); } .neutral { color: var(--gray-dark); }
+
+    /* CHARTS */
+    .chart-wrap {
+      background: white; border-radius: 8px; padding: 18px 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 18px;
+    }
+    .chart-wrap h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 14px; }
+    .chart-wrap canvas { max-height: 270px; }
+
+    /* TABLES */
+    .tbl-wrap { overflow-x: auto; margin-bottom: 18px; }
+    .data-table {
+      width: 100%; border-collapse: collapse;
+      background: white; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08); min-width: 500px;
+    }
+    .data-table th {
+      background: var(--maroon); color: white;
+      font-size: 11.5px; font-weight: 600; padding: 9px 12px; text-align: left;
+    }
+    .data-table td { padding: 8px 12px; font-size: 12.5px; border-bottom: 1px solid var(--gray-mid); }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: var(--maroon-bg); }
+    .data-table tfoot td { font-weight: 700; background: var(--gray); }
+
+    /* TWO COL */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* BRANDED CONTENT CARD */
+    .branded-card {
+      background: white; border-radius: 10px; padding: 40px 32px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.09); text-align: center;
+    }
+    .branded-card .icon { font-size: 44px; margin-bottom: 14px; }
+    .branded-card h3 { font-size: 18px; color: var(--maroon); margin-bottom: 8px; }
+    .branded-card p { font-size: 13.5px; color: var(--gray-dark); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+    .note { font-size: 11.5px; color: var(--gray-dark); margin-bottom: 14px; font-style: italic; }
+
+    @media (max-width: 720px) {
+      .metric-grid { grid-template-columns: repeat(2, 1fr); }
+      .two-col { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="wbt-badge">WBT</div>
+    Wilson Bank &amp; Trust
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active"    onclick="showSection('summary',this)">Summary</button>
+    <button class="nav-link"           onclick="showSection('google-mtn',this)">Google Ads · Middle TN</button>
+    <button class="nav-link"           onclick="showSection('google-cha',this)">Google Ads · Chattanooga</button>
+    <button class="nav-link"           onclick="showSection('display',this)">Display</button>
+    <button class="nav-link"           onclick="showSection('social',this)">Paid Social</button>
+    <button class="nav-link"           onclick="showSection('branded',this)">Branded Content</button>
+    <button class="nav-link"           onclick="showSection('website',this)">Website Traffic</button>
+  </div>
+  <div class="nav-date">April 1–30, 2026</div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     SUMMARY
+═══════════════════════════════════════════════ -->
+<div id="summary" class="section active">
+  <div class="report-header">
+    <div>
+      <div class="sub">Chattanooga Times Free Press &nbsp;·&nbsp; Digital Marketing Performance Report</div>
+      <h1>Wilson Bank &amp; Trust</h1>
+      <div class="sub">April 1 – April 30, 2026</div>
+    </div>
+    <div class="badge-lg">WBT</div>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <h3>Monthly Updates</h3>
+      <ul>
+        <li>Products went live in April 2026</li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Highlights &amp; Wins</h3>
+      <ul>
+        <li>Chattanooga Retail + Business Search revamp <span class="chip chip-rev">Revamp</span></li>
+        <li>Middle TN Retail and Business Search <span class="chip chip-new">New</span></li>
+        <li>Middle TN Meta Ads <span class="chip chip-new">New</span></li>
+        <li>Middle TN Display Ads <span class="chip chip-new">New</span></li>
+        <li>New Branded Content article for Chattanooga and Middle TN <span class="chip chip-new">New</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Recommendations</h3>
+      <ul>
+        <li>Audit website tag implementation to ensure proper tracking across all pages</li>
+        <li>Refresh social campaign creative to correct the spelling error identified in current ads</li>
+        <li>Clarify Google Ads verification: determine who leads the process and what documentation is required</li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Action Items</h3>
+      <ul>
+        <li>
+          <div>
+            <strong>Tags on website</strong>
+            <span class="ai-sub">Myiah to connect with Mikaila to audit and implement proper tracking tags site-wide</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Updated creative for social campaign</strong>
+            <span class="ai-sub">Spelling error identified in current ad — updated creative needed before next flight</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Google Ads verification</strong>
+            <span class="ai-sub">Does Wilson Bank &amp; Trust want to complete verification themselves, or should TFP lead? What steps/documentation are required?</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     GOOGLE ADS · MIDDLE TN
+═══════════════════════════════════════════════ -->
+<div id="google-mtn" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Google Ads · Middle Tennessee</p>
+      <h2>Retail Banking &nbsp;|&nbsp; Business Banking &nbsp;|&nbsp; MMCT</h2>
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('mtn','mtn-account',this)">Account Overview</button>
+    <button class="sub-tab"        onclick="showSub('mtn','mtn-campaign',this)">Campaign Overview</button>
+    <button class="sub-tab"        onclick="showSub('mtn','mtn-location',this)">Location Performance</button>
+    <button class="sub-tab"        onclick="showSub('mtn','mtn-retail',this)">Retail Ad Groups</button>
+    <button class="sub-tab"        onclick="showSub('mtn','mtn-business',this)">Business Ad Groups</button>
+  </div>
+
+  <!-- Account Overview -->
+  <div id="mtn-account" class="sub-panel active">
+    <div class="chart-wrap">
+      <h4>Conversions &amp; CPC — 13-Month Trend</h4>
+      <canvas id="chart-mtn-account"></canvas>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Metric</th><th>Apr 25</th><th>May 25</th><th>Jun 25</th><th>Jul 25</th><th>Aug 25</th><th>Sep 25</th><th>Oct 25</th><th>Nov 25</th><th>Dec 25</th><th>Jan 26</th><th>Feb 26</th><th>Mar 26</th><th>Apr 26</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Search Impr. Share</td><td>24.17%</td><td>23.48%</td><td>18.84%</td><td>15.32%</td><td>15.02%</td><td>16.13%</td><td>21.64%</td><td>&gt;90%</td><td>49.12%</td><td>42.32%</td><td>35.68%</td><td>&gt;90%</td><td>16.77%</td></tr>
+          <tr><td>Impressions</td><td>112,609</td><td>114,141</td><td>112,438</td><td>136,996</td><td>132,861</td><td>128,214</td><td>181,102</td><td>930,568</td><td>373,045</td><td>321,652</td><td>186,743</td><td>453,803</td><td>27,183</td></tr>
+          <tr><td>Clicks</td><td>15,214</td><td>15,187</td><td>10,066</td><td>7,321</td><td>7,346</td><td>6,842</td><td>9,051</td><td>13,833</td><td>19,409</td><td>19,917</td><td>15,387</td><td>15,355</td><td>2,010</td></tr>
+          <tr><td>CTR</td><td>13.51%</td><td>13.31%</td><td>8.95%</td><td>5.34%</td><td>5.53%</td><td>5.34%</td><td>5.00%</td><td>1.49%</td><td>5.20%</td><td>6.19%</td><td>8.24%</td><td>3.38%</td><td>7.39%</td></tr>
+          <tr><td>CPC</td><td>$0.60</td><td>$0.65</td><td>$0.98</td><td>$1.27</td><td>$1.20</td><td>$1.33</td><td>$1.04</td><td>$0.70</td><td>$0.59</td><td>$0.61</td><td>$0.71</td><td>$0.71</td><td>$4.75</td></tr>
+          <tr><td>Conversions</td><td>3,802</td><td>3,451</td><td>2,766</td><td>2,069</td><td>1,918</td><td>1,807</td><td>2,450</td><td>3,723</td><td>3,327</td><td>3,390</td><td>3,114</td><td>3,041</td><td>359</td></tr>
+          <tr><td>Conv. Rate</td><td>24.99%</td><td>22.72%</td><td>27.48%</td><td>28.26%</td><td>26.11%</td><td>26.41%</td><td>27.07%</td><td>26.91%</td><td>17.14%</td><td>17.02%</td><td>20.24%</td><td>19.80%</td><td>17.86%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Campaign Overview -->
+  <div id="mtn-campaign" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">27,183</div><div class="m-delta down">▼ 426,620 vs prior</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">2,010</div><div class="m-delta down">▼ 13,345 vs prior</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">7.39%</div><div class="m-delta up">▲ 4.01%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$4.75</div><div class="m-delta down">▲ $4.04</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">358</div><div class="m-delta down">▼ 2,684 vs prior</div></div>
+    </div>
+    <div class="chart-wrap">
+      <h4>Clicks &amp; CPC — 13-Month Trend</h4>
+      <canvas id="chart-mtn-campaign"></canvas>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Campaign</th><th>Budget Share</th><th>Search Impr. Share</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
+        <tbody>
+          <tr><td>Retail Banking</td><td>53%</td><td>11.71%</td><td>13,564</td><td>1,019</td><td>7.51%</td><td>$4.59</td></tr>
+          <tr><td>Business Banking</td><td>35%</td><td>51.14%</td><td>10,078</td><td>737</td><td>7.31%</td><td>$5.58</td></tr>
+          <tr><td>MMCT Mortgage</td><td>12%</td><td>11.61%</td><td>1,995</td><td>89</td><td>4.46%</td><td>$2.72</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Location Performance -->
+  <div id="mtn-location" class="sub-panel">
+    <div class="two-col">
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Retail Banking</h4>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>City</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+            <tbody>
+              <tr><td>Nashville</td><td>5,008</td><td>462</td><td>9.23%</td></tr>
+              <tr><td>Murfreesboro</td><td>1,511</td><td>100</td><td>6.62%</td></tr>
+              <tr><td>Lebanon</td><td>1,424</td><td>94</td><td>6.60%</td></tr>
+              <tr><td>Cookeville</td><td>745</td><td>45</td><td>6.04%</td></tr>
+              <tr><td>Mt. Juliet</td><td>714</td><td>54</td><td>7.56%</td></tr>
+              <tr><td>Gallatin</td><td>625</td><td>40</td><td>6.40%</td></tr>
+              <tr><td>Hendersonville</td><td>481</td><td>30</td><td>6.24%</td></tr>
+              <tr><td>Franklin</td><td>443</td><td>21</td><td>4.74%</td></tr>
+              <tr><td>Smyrna</td><td>403</td><td>32</td><td>7.94%</td></tr>
+              <tr><td>Algood</td><td>254</td><td>18</td><td>7.09%</td></tr>
+              <tr><td>Brentwood</td><td>242</td><td>17</td><td>7.02%</td></tr>
+              <tr><td>Portland</td><td>164</td><td>10</td><td>6.10%</td></tr>
+              <tr><td>La Vergne</td><td>153</td><td>8</td><td>5.23%</td></tr>
+              <tr><td>Baxter</td><td>139</td><td>5</td><td>3.60%</td></tr>
+              <tr><td>South Carthage</td><td>139</td><td>7</td><td>5.04%</td></tr>
+              <tr><td>White House</td><td>106</td><td>13</td><td>12.26%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Business Banking</h4>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>City</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+            <tbody>
+              <tr><td>Nashville</td><td>6,443</td><td>584</td><td>9.06%</td></tr>
+              <tr><td>Murfreesboro</td><td>722</td><td>28</td><td>3.88%</td></tr>
+              <tr><td>Lebanon</td><td>426</td><td>33</td><td>7.75%</td></tr>
+              <tr><td>Mt. Juliet</td><td>336</td><td>19</td><td>5.65%</td></tr>
+              <tr><td>Cookeville</td><td>265</td><td>8</td><td>3.02%</td></tr>
+              <tr><td>Franklin</td><td>248</td><td>13</td><td>5.24%</td></tr>
+              <tr><td>Hendersonville</td><td>246</td><td>5</td><td>2.03%</td></tr>
+              <tr><td>Gallatin</td><td>234</td><td>12</td><td>5.13%</td></tr>
+              <tr><td>Smyrna</td><td>184</td><td>15</td><td>8.15%</td></tr>
+              <tr><td>La Vergne</td><td>154</td><td>7</td><td>4.55%</td></tr>
+              <tr><td>Algood</td><td>141</td><td>7</td><td>4.96%</td></tr>
+              <tr><td>Brentwood</td><td>125</td><td>4</td><td>3.20%</td></tr>
+              <tr><td>Goodlettsville</td><td>93</td><td>9</td><td>9.68%</td></tr>
+              <tr><td>Portland</td><td>70</td><td>8</td><td>11.43%</td></tr>
+              <tr><td>Monterey</td><td>62</td><td>2</td><td>3.23%</td></tr>
+              <tr><td>South Carthage</td><td>59</td><td>2</td><td>3.39%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Retail Ad Groups -->
+  <div id="mtn-retail" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">13,564</div><div class="m-delta up">▲ New this period</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">1,019</div><div class="m-delta up">▲ New this period</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">7.51%</div><div class="m-delta up">▲ 7.51%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$4.59</div><div class="m-delta neutral">● Avg cost/click</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">285</div><div class="m-delta up">▲ New this period</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Group</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
+        <tbody>
+          <tr><td>Auto Loans</td><td>7,879</td><td>432</td><td>5.48%</td><td>$6.40</td></tr>
+          <tr><td>Mortgage + Home Loans</td><td>3,914</td><td>221</td><td>5.65%</td><td>$5.11</td></tr>
+          <tr><td>Personal Savings</td><td>979</td><td>235</td><td>24.00%</td><td>$2.00</td></tr>
+          <tr><td>Personal Checking</td><td>580</td><td>96</td><td>16.55%</td><td>$2.67</td></tr>
+          <tr><td>HELOC</td><td>201</td><td>35</td><td>17.41%</td><td>$1.59</td></tr>
+          <tr><td>CD Rates</td><td>9</td><td>0</td><td>0.00%</td><td>$0.00</td></tr>
+          <tr><td>Personal Loans</td><td>2</td><td>0</td><td>0.00%</td><td>$0.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Business Ad Groups -->
+  <div id="mtn-business" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">10,307</div><div class="m-delta up">▲ 7,290</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">782</div><div class="m-delta up">▲ 408</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">7.59%</div><div class="m-delta down">▼ 4.81%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$5.54</div><div class="m-delta down">▲ $1.09</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">27</div><div class="m-delta down">▼ 123</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Group</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
+        <tbody>
+          <tr><td>Business Loans</td><td>4,924</td><td>225</td><td>4.57%</td><td>$10.12</td></tr>
+          <tr><td>Business Money Market</td><td>2,451</td><td>305</td><td>12.44%</td><td>$3.66</td></tr>
+          <tr><td>Business CDs</td><td>1,465</td><td>113</td><td>7.71%</td><td>$2.84</td></tr>
+          <tr><td>Business Checking</td><td>1,238</td><td>94</td><td>7.59%</td><td>$4.21</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     GOOGLE ADS · CHATTANOOGA
+═══════════════════════════════════════════════ -->
+<div id="google-cha" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Google Ads · Chattanooga</p>
+      <h2>Retail Banking &nbsp;|&nbsp; Business Banking</h2>
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('cha','cha-account',this)">Account Overview</button>
+    <button class="sub-tab"        onclick="showSub('cha','cha-campaign',this)">Campaign Overview</button>
+    <button class="sub-tab"        onclick="showSub('cha','cha-retail',this)">Retail Ad Groups</button>
+    <button class="sub-tab"        onclick="showSub('cha','cha-business',this)">Business Ad Groups</button>
+  </div>
+
+  <!-- Account Overview -->
+  <div id="cha-account" class="sub-panel active">
+    <div class="chart-wrap">
+      <h4>Conversions &amp; CPC — 13-Month Trend</h4>
+      <canvas id="chart-cha-account"></canvas>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Metric</th><th>Apr 25</th><th>May 25</th><th>Jun 25</th><th>Jul 25</th><th>Aug 25</th><th>Sep 25</th><th>Oct 25</th><th>Nov 25</th><th>Dec 25</th><th>Jan 26</th><th>Feb 26</th><th>Mar 26</th><th>Apr 26</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Search Impr. Share</td><td>26.07%</td><td>12.37%</td><td>12.79%</td><td>12.90%</td><td>10.42%</td><td>10.50%</td><td>10.51%</td><td>10.31%</td><td>11.38%</td><td>10.90%</td><td>10.83%</td><td>11.41%</td><td>19.82%</td></tr>
+          <tr><td>Impressions</td><td>2,846</td><td>6,755</td><td>7,776</td><td>8,392</td><td>12,486</td><td>14,416</td><td>15,182</td><td>15,306</td><td>15,925</td><td>15,457</td><td>12,243</td><td>10,139</td><td>14,467</td></tr>
+          <tr><td>Clicks</td><td>91</td><td>411</td><td>356</td><td>415</td><td>640</td><td>693</td><td>657</td><td>634</td><td>601</td><td>638</td><td>530</td><td>463</td><td>558</td></tr>
+          <tr><td>CTR</td><td>3.20%</td><td>6.08%</td><td>4.58%</td><td>4.95%</td><td>5.13%</td><td>4.81%</td><td>4.33%</td><td>4.14%</td><td>3.77%</td><td>4.13%</td><td>4.33%</td><td>4.57%</td><td>3.86%</td></tr>
+          <tr><td>CPC</td><td>$16.06</td><td>$3.72</td><td>$4.24</td><td>$3.62</td><td>$2.34</td><td>$2.21</td><td>$2.25</td><td>$2.34</td><td>$2.54</td><td>$2.32</td><td>$2.85</td><td>$3.24</td><td>$3.33</td></tr>
+          <tr><td>Conversions</td><td>0</td><td>5</td><td>10</td><td>9</td><td>19</td><td>27</td><td>26</td><td>10</td><td>17</td><td>22</td><td>15</td><td>13</td><td>53</td></tr>
+          <tr><td>Conv. Rate</td><td>0.00%</td><td>1.22%</td><td>2.81%</td><td>2.17%</td><td>2.97%</td><td>3.90%</td><td>3.96%</td><td>1.58%</td><td>2.83%</td><td>3.45%</td><td>2.83%</td><td>2.81%</td><td>9.50%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Campaign Overview -->
+  <div id="cha-campaign" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">14,467</div><div class="m-delta up">▲ 4,328</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">558</div><div class="m-delta up">▲ 95</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">3.86%</div><div class="m-delta down">▼ 0.71%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$3.33</div><div class="m-delta down">▲ $0.09</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">53</div><div class="m-delta up">▲ 40</div></div>
+    </div>
+    <div class="chart-wrap">
+      <h4>Clicks &amp; CPC — 13-Month Trend</h4>
+      <canvas id="chart-cha-campaign"></canvas>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Campaign</th><th>Budget Share</th><th>Search Impr. Share</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conversions</th></tr></thead>
+        <tbody>
+          <tr><td>Retail Banking</td><td>60%</td><td>21.40%</td><td>6,599</td><td>276</td><td>4.18%</td><td>$3.21</td><td>45</td></tr>
+          <tr><td>Business Banking</td><td>40%</td><td>&gt;90%</td><td>3,492</td><td>137</td><td>3.92%</td><td>$4.00</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Retail Ad Groups -->
+  <div id="cha-retail" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">10,098</div><div class="m-delta up">▲ 2,502</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">387</div><div class="m-delta up">▲ 49</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">3.83%</div><div class="m-delta down">▼ 0.62%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$2.75</div><div class="m-delta down">▲ $0.97</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">51</div><div class="m-delta up">▲ 40</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Group</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
+        <tbody>
+          <tr><td>Personal Checking</td><td>4,121</td><td>200</td><td>4.85%</td><td>$2.93</td></tr>
+          <tr><td>Personal Savings</td><td>1,000</td><td>29</td><td>2.90%</td><td>$3.51</td></tr>
+          <tr><td>Mortgage + Home Loans</td><td>618</td><td>22</td><td>3.56%</td><td>$4.61</td></tr>
+          <tr><td>CD Rates</td><td>486</td><td>15</td><td>3.09%</td><td>$3.32</td></tr>
+          <tr><td>Auto Loans</td><td>272</td><td>7</td><td>2.57%</td><td>$5.04</td></tr>
+          <tr><td>HELOC</td><td>102</td><td>3</td><td>2.94%</td><td>$3.76</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Business Ad Groups -->
+  <div id="cha-business" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">4,369</div><div class="m-delta up">▲ 1,826</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">171</div><div class="m-delta up">▲ 46</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">3.91%</div><div class="m-delta down">▼ 1.00%</div></div>
+      <div class="metric-card"><div class="m-label">CPC</div><div class="m-value">$4.66</div><div class="m-delta up">▼ $2.53</div></div>
+      <div class="metric-card"><div class="m-label">Conversions</div><div class="m-value">2</div><div class="m-delta neutral">● No change</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Group</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
+        <tbody>
+          <tr><td>Business CDs</td><td>2,951</td><td>121</td><td>4.10%</td><td>$1.81</td></tr>
+          <tr><td>Business Loans</td><td>385</td><td>14</td><td>3.64%</td><td>$20.98</td></tr>
+          <tr><td>Business Checking</td><td>135</td><td>2</td><td>1.48%</td><td>$17.10</td></tr>
+          <tr><td>Business Money Market</td><td>21</td><td>0</td><td>0.00%</td><td>$0.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PROGRAMMATIC DISPLAY
+═══════════════════════════════════════════════ -->
+<div id="display" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Programmatic Display</p>
+      <h2>Chattanooga &amp; Middle TN</h2>
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('disp','disp-overview',this)">Campaign Overview</button>
+    <button class="sub-tab"        onclick="showSub('disp','disp-lookback',this)">13-Month Lookback</button>
+    <button class="sub-tab"        onclick="showSub('disp','disp-mtn',this)">Middle TN · Location &amp; Device</button>
+    <button class="sub-tab"        onclick="showSub('disp','disp-mtn-creative',this)">Middle TN · Creative</button>
+    <button class="sub-tab"        onclick="showSub('disp','disp-cha',this)">Chattanooga · Location &amp; Device</button>
+    <button class="sub-tab"        onclick="showSub('disp','disp-cha-creative',this)">Chattanooga · Creative</button>
+  </div>
+
+  <!-- Campaign Overview -->
+  <div id="disp-overview" class="sub-panel active">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">1.44M</div><div class="m-delta up">▲ 1,191,203</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">1,367</div><div class="m-delta up">▲ 1,003</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">0.09%</div><div class="m-delta down">▼ 0.05%</div></div>
+      <div class="metric-card"><div class="m-label">CPM</div><div class="m-value">$0.16</div><div class="m-delta down">▲ $0.03</div></div>
+      <div class="metric-card"><div class="m-label">VTC</div><div class="m-value">9,386</div><div class="m-delta up">▲ 5,499</div></div>
+    </div>
+    <p class="note">*Industry standard CTR for display: 0.05%–0.08% &nbsp;·&nbsp; VTC = view-through conversion (ad was served but not clicked; user visited site later)</p>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Campaign</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPM</th><th>VTC</th></tr></thead>
+        <tbody>
+          <tr><td>Precision Display – Middle TN</td><td>1,134,701</td><td>1,053</td><td>0.09%</td><td>$0.16</td><td>7,629</td></tr>
+          <tr><td>Precision Display – Chattanooga</td><td>303,131</td><td>312</td><td>0.10%</td><td>$0.14</td><td>450</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Lookback -->
+  <div id="disp-lookback" class="sub-panel">
+    <div class="chart-wrap">
+      <h4>Impressions &amp; VTC — 13-Month Trend</h4>
+      <canvas id="chart-disp-lookback"></canvas>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Month</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPM</th><th>VTC</th></tr></thead>
+        <tbody>
+          <tr><td>April 2026</td><td>1,439,416</td><td>1,367</td><td>0.09%</td><td>$1.55</td><td>8,981</td></tr>
+          <tr><td>March 2026</td><td>248,213</td><td>364</td><td>0.15%</td><td>$1.27</td><td>3,080</td></tr>
+          <tr><td>February 2026</td><td>213,163</td><td>255</td><td>0.12%</td><td>$1.48</td><td>4,740</td></tr>
+          <tr><td>January 2026</td><td>233,412</td><td>280</td><td>0.12%</td><td>$1.35</td><td>6,536</td></tr>
+          <tr><td>December 2025</td><td>220,570</td><td>283</td><td>0.13%</td><td>$1.43</td><td>6,644</td></tr>
+          <tr><td>November 2025</td><td>208,419</td><td>236</td><td>0.11%</td><td>$1.51</td><td>6,005</td></tr>
+          <tr><td>October 2025</td><td>226,152</td><td>251</td><td>0.11%</td><td>$1.39</td><td>6,119</td></tr>
+          <tr><td>September 2025</td><td>202,857</td><td>185</td><td>0.09%</td><td>$1.50</td><td>5,733</td></tr>
+          <tr><td>August 2025</td><td>190,714</td><td>201</td><td>0.11%</td><td>$1.65</td><td>4,487</td></tr>
+          <tr><td>July 2025</td><td>199,926</td><td>223</td><td>0.11%</td><td>$1.57</td><td>2,759</td></tr>
+          <tr><td>June 2025</td><td>227,963</td><td>238</td><td>0.10%</td><td>$1.43</td><td>646</td></tr>
+          <tr><td>May 2025</td><td>207,818</td><td>208</td><td>0.10%</td><td>$1.51</td><td>596</td></tr>
+          <tr><td>April 2025</td><td>215,149</td><td>235</td><td>0.11%</td><td>$1.46</td><td>58</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>4,033,772</strong></td><td><strong>4,326</strong></td><td><strong>0.11%</strong></td><td><strong>$1.49</strong></td><td><strong>56,384</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MTN Location + Device -->
+  <div id="disp-mtn" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">1.13M</div><div class="m-delta up">▲ New launch</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">1,053</div><div class="m-delta up">▲ New launch</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">0.09%</div><div class="m-delta up">Above industry avg</div></div>
+      <div class="metric-card"><div class="m-label">CPM</div><div class="m-value">$0.16</div><div class="m-delta neutral">● Efficient</div></div>
+      <div class="metric-card"><div class="m-label">VTC</div><div class="m-value">7,629</div><div class="m-delta up">▲ Strong return</div></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Location</h4>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>City</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+            <tbody>
+              <tr><td>Nashville</td><td>443,809</td><td>453</td><td>0.10%</td></tr>
+              <tr><td>Murfreesboro</td><td>114,407</td><td>95</td><td>0.08%</td></tr>
+              <tr><td>Antioch</td><td>77,609</td><td>70</td><td>0.09%</td></tr>
+              <tr><td>Franklin</td><td>60,566</td><td>49</td><td>0.08%</td></tr>
+              <tr><td>Cookeville</td><td>53,192</td><td>36</td><td>0.07%</td></tr>
+              <tr><td>Mount Juliet</td><td>48,873</td><td>47</td><td>0.10%</td></tr>
+              <tr><td>Lebanon</td><td>47,475</td><td>35</td><td>0.07%</td></tr>
+              <tr><td>Brentwood</td><td>38,500</td><td>41</td><td>0.11%</td></tr>
+              <tr><td>Hendersonville</td><td>37,850</td><td>31</td><td>0.08%</td></tr>
+              <tr><td>Gallatin</td><td>37,408</td><td>34</td><td>0.09%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Device</h4>
+        <div class="chart-wrap">
+          <canvas id="chart-mtn-device" style="max-height:180px;"></canvas>
+        </div>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>Device</th><th>Impressions</th><th>Share</th></tr></thead>
+            <tbody>
+              <tr><td>Mobile</td><td>533,371</td><td>47%</td></tr>
+              <tr><td>PC</td><td>367,011</td><td>32%</td></tr>
+              <tr><td>Tablet</td><td>234,194</td><td>21%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MTN Creative -->
+  <div id="disp-mtn-creative" class="sub-panel">
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Creative</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+        <tbody>
+          <tr><td>Business banner — wide</td><td>678,833</td><td>706</td><td>0.10%</td></tr>
+          <tr><td>Business square — small</td><td>398,436</td><td>260</td><td>0.07%</td></tr>
+          <tr><td>Ad creative 3</td><td>28,751</td><td>54</td><td>0.19%</td></tr>
+          <tr><td>Ad creative 4</td><td>28,681</td><td>33</td><td>0.12%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CHA Location + Device -->
+  <div id="disp-cha" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">304,715</div><div class="m-delta up">▲ 56,502</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">314</div><div class="m-delta down">▼ 50</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">0.10%</div><div class="m-delta down">▼ 0.04%</div></div>
+      <div class="metric-card"><div class="m-label">CPM</div><div class="m-value">$0.14</div><div class="m-delta down">▲ $0.01</div></div>
+      <div class="metric-card"><div class="m-label">VTC</div><div class="m-value">1,757</div><div class="m-delta down">▼ 2,130</div></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Location</h4>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>City</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+            <tbody>
+              <tr><td>Chattanooga</td><td>202,357</td><td>208</td><td>0.10%</td></tr>
+              <tr><td>Hixson</td><td>56,053</td><td>53</td><td>0.09%</td></tr>
+              <tr><td>Ooltewah</td><td>40,662</td><td>43</td><td>0.11%</td></tr>
+              <tr><td>Signal Mountain</td><td>5,514</td><td>10</td><td>0.18%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Device</h4>
+        <div class="chart-wrap">
+          <canvas id="chart-cha-device" style="max-height:180px;"></canvas>
+        </div>
+        <div class="tbl-wrap">
+          <table class="data-table">
+            <thead><tr><th>Device</th><th>Impressions</th><th>Share</th></tr></thead>
+            <tbody>
+              <tr><td>Mobile</td><td>123,415</td><td>41%</td></tr>
+              <tr><td>PC</td><td>106,551</td><td>35%</td></tr>
+              <tr><td>Tablet</td><td>74,733</td><td>24%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHA Creative -->
+  <div id="disp-cha-creative" class="sub-panel">
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Creative</th><th>Impressions</th><th>Clicks</th><th>CTR</th></tr></thead>
+        <tbody>
+          <tr><td>Business banner — wide</td><td>214,954</td><td>246</td><td>0.11%</td></tr>
+          <tr><td>Business square — small</td><td>80,371</td><td>39</td><td>0.05%</td></tr>
+          <tr><td>Ad creative 3</td><td>4,969</td><td>8</td><td>0.16%</td></tr>
+          <tr><td>Ad creative 4</td><td>4,421</td><td>21</td><td>0.48%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAID SOCIAL
+═══════════════════════════════════════════════ -->
+<div id="social" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Paid Social</p>
+      <h2>Facebook + Instagram &nbsp;|&nbsp; Chattanooga &amp; Middle TN</h2>
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('soc','soc-overall',this)">Overall Performance</button>
+    <button class="sub-tab"        onclick="showSub('soc','soc-cha',this)">Chattanooga Campaign</button>
+    <button class="sub-tab"        onclick="showSub('soc','soc-mtn',this)">Middle TN Campaign</button>
+  </div>
+
+  <div id="soc-overall" class="sub-panel active">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">864,048</div><div class="m-delta up">▲ 798,171</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">9,244</div><div class="m-delta up">▲ 8,532</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">1.07%</div><div class="m-delta down">▼ 0.01%</div></div>
+      <div class="metric-card"><div class="m-label">Reach</div><div class="m-value">329,381</div><div class="m-delta up">▲ 305,874</div></div>
+      <div class="metric-card"><div class="m-label">Frequency</div><div class="m-value">2.62</div><div class="m-delta down">▼ 0.18</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Campaign</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPM</th><th>Reach</th><th>Frequency</th></tr></thead>
+        <tbody>
+          <tr><td>2026–27 | Chattanooga Traffic</td><td>132,666</td><td>1,584</td><td>1.19%</td><td>$0.57</td><td>52,901</td><td>2.51</td></tr>
+          <tr><td>2026–27 | Middle TN Traffic</td><td>731,382</td><td>7,660</td><td>1.05%</td><td>$0.56</td><td>277,365</td><td>2.64</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="soc-cha" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">132,666</div><div class="m-delta up">▲ New campaign</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">1,584</div><div class="m-delta up">▲ New campaign</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">1.19%</div><div class="m-delta up">▲ Strong CTR</div></div>
+      <div class="metric-card"><div class="m-label">Reach</div><div class="m-value">52,901</div><div class="m-delta up">▲ New campaign</div></div>
+      <div class="metric-card"><div class="m-label">Frequency</div><div class="m-value">2.51</div><div class="m-delta neutral">● Healthy</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Name</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPM</th><th>Reach</th><th>Freq.</th></tr></thead>
+        <tbody>
+          <tr><td>April 2026 | Greenlight RT | Chattanooga</td><td>8,426</td><td>136</td><td>1.61%</td><td>$0.61</td><td>2,511</td><td>3.36</td></tr>
+          <tr><td>April 2026 | Greenlight | Chattanooga</td><td>77,643</td><td>908</td><td>1.17%</td><td>$0.49</td><td>38,404</td><td>2.02</td></tr>
+          <tr><td>January 2026 | Business RT | Chattanooga</td><td>4,513</td><td>54</td><td>1.20%</td><td>$0.58</td><td>1,533</td><td>2.94</td></tr>
+          <tr><td>January 2026 | Business | Chattanooga</td><td>42,084</td><td>486</td><td>1.15%</td><td>$0.70</td><td>18,622</td><td>2.26</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="soc-mtn" class="sub-panel">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Impressions</div><div class="m-value">731,382</div><div class="m-delta up">▲ 665,505</div></div>
+      <div class="metric-card"><div class="m-label">Clicks</div><div class="m-value">7,660</div><div class="m-delta up">▲ 6,948</div></div>
+      <div class="metric-card"><div class="m-label">CTR</div><div class="m-value">1.05%</div><div class="m-delta down">▼ 0.03%</div></div>
+      <div class="metric-card"><div class="m-label">Reach</div><div class="m-value">277,365</div><div class="m-delta up">▲ 253,858</div></div>
+      <div class="metric-card"><div class="m-label">Frequency</div><div class="m-value">2.64</div><div class="m-delta down">▼ 0.17</div></div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Ad Name</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPM</th><th>Reach</th><th>Freq.</th></tr></thead>
+        <tbody>
+          <tr><td>April 2026 | Business RT | Middle TN</td><td>3,710</td><td>48</td><td>1.29%</td><td>$0.65</td><td>2,601</td><td>1.43</td></tr>
+          <tr><td>April 2026 | Business | Middle TN</td><td>207,601</td><td>2,238</td><td>1.08%</td><td>$0.67</td><td>96,207</td><td>2.16</td></tr>
+          <tr><td>April 2026 | Greenlight RT | Middle TN</td><td>14,040</td><td>179</td><td>1.27%</td><td>$0.62</td><td>6,221</td><td>2.26</td></tr>
+          <tr><td>April 2026 | Greenlight | Middle TN</td><td>506,031</td><td>5,195</td><td>1.03%</td><td>$0.51</td><td>223,756</td><td>2.26</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     BRANDED CONTENT
+═══════════════════════════════════════════════ -->
+<div id="branded" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Branded Content</p>
+      <h2>Chattanooga &amp; Middle TN</h2>
+    </div>
+  </div>
+  <div class="branded-card">
+    <div class="icon">📰</div>
+    <h3>New Branded Content Articles Live</h3>
+    <p>New branded content articles launched this month for both the Chattanooga and Middle TN markets. Campaign performance data will be available in the next reporting cycle.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     WEBSITE TRAFFIC
+═══════════════════════════════════════════════ -->
+<div id="website" class="section">
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div>
+      <p>Website Traffic</p>
+      <h2>Traffic &amp; User Engagement Overview</h2>
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('web','web-overview',this)">Traffic Overview</button>
+    <button class="sub-tab"        onclick="showSub('web','web-pages',this)">Popular Pages</button>
+    <button class="sub-tab"        onclick="showSub('web','web-sources',this)">Source / Medium</button>
+  </div>
+
+  <div id="web-overview" class="sub-panel active">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">Sessions</div><div class="m-value">124,549</div><div class="m-delta up">▲ 4,195</div></div>
+      <div class="metric-card"><div class="m-label">Engaged Sessions</div><div class="m-value">66,209</div><div class="m-delta up">▲ 582</div></div>
+      <div class="metric-card"><div class="m-label">Avg Time / Session</div><div class="m-value">0:23</div><div class="m-delta up">▲ 0:01</div></div>
+      <div class="metric-card"><div class="m-label">Engagement Rate</div><div class="m-value">53.16%</div><div class="m-delta down">▼ 1.37%</div></div>
+      <div class="metric-card"><div class="m-label">Key Events</div><div class="m-value">179</div><div class="m-delta neutral">● Total</div></div>
+    </div>
+    <div class="chart-wrap">
+      <h4>Sessions vs. Engaged Sessions — April 2026</h4>
+      <canvas id="chart-web" style="max-height:220px;"></canvas>
+    </div>
+  </div>
+
+  <div id="web-pages" class="sub-panel">
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Page Path</th><th>Views</th><th>Active Users</th><th>Eng. Rate</th></tr></thead>
+        <tbody>
+          <tr><td>/</td><td>122,298</td><td>25,514</td><td>57.64%</td></tr>
+          <tr><td>/personal/online-banking</td><td>8,804</td><td>2,222</td><td>63.97%</td></tr>
+          <tr><td>/business/accounts</td><td>7,861</td><td>6,300</td><td>27.92%</td></tr>
+          <tr><td>/about-us/a-career-at-wbt</td><td>7,600</td><td>4,190</td><td>70.14%</td></tr>
+          <tr><td>/resources/financial-literacy-library</td><td>4,353</td><td>2,833</td><td>56.91%</td></tr>
+          <tr><td>/personal/credit-card-resource-center</td><td>2,361</td><td>726</td><td>59.62%</td></tr>
+          <tr><td>/about-us/locations</td><td>1,654</td><td>1,155</td><td>72.01%</td></tr>
+          <tr><td>/personal/accounts</td><td>1,389</td><td>895</td><td>81.87%</td></tr>
+          <tr><td>/about-us/contact-us</td><td>1,362</td><td>987</td><td>67.15%</td></tr>
+          <tr><td>/loans/personal</td><td>1,249</td><td>1,074</td><td>63.81%</td></tr>
+          <tr><td>/about-us/travel-club</td><td>1,108</td><td>559</td><td>67.12%</td></tr>
+          <tr><td>/about-us/upcoming-events</td><td>1,096</td><td>856</td><td>44.26%</td></tr>
+          <tr><td>/search</td><td>1,052</td><td>671</td><td>93.10%</td></tr>
+          <tr><td>/personal/savings</td><td>832</td><td>623</td><td>77.34%</td></tr>
+          <tr><td>/loans/home-loans</td><td>775</td><td>537</td><td>77.89%</td></tr>
+          <tr><td>/official-rules</td><td>763</td><td>598</td><td>79.05%</td></tr>
+          <tr><td>/loans/vehicle</td><td>721</td><td>552</td><td>63.53%</td></tr>
+          <tr><td>/personal/cds</td><td>575</td><td>405</td><td>84.26%</td></tr>
+          <tr><td>/locations/main-office-lebanon</td><td>543</td><td>314</td><td>71.76%</td></tr>
+          <tr><td>/our-leadership</td><td>518</td><td>417</td><td>79.72%</td></tr>
+          <tr><td>/loan-inquiry</td><td>363</td><td>272</td><td>85.29%</td></tr>
+          <tr><td>/loans/land-loans</td><td>342</td><td>259</td><td>72.03%</td></tr>
+          <tr><td>/personal/wbt-cash-back-checking</td><td>330</td><td>214</td><td>81.23%</td></tr>
+          <tr><td>/loans/credit-card</td><td>314</td><td>225</td><td>92.83%</td></tr>
+          <tr><td>/personal/money-market-savings</td><td>286</td><td>207</td><td>86.89%</td></tr>
+          <tr><td>/business/treasury-management-products</td><td>279</td><td>155</td><td>65.75%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="web-sources" class="sub-panel">
+    <div class="tbl-wrap">
+      <table class="data-table">
+        <thead><tr><th>Source / Medium</th><th>Campaign</th><th>Sessions</th><th>Key Events</th></tr></thead>
+        <tbody>
+          <tr><td>(direct) / (none)</td><td>(direct)</td><td>57,481</td><td>34</td></tr>
+          <tr><td>google / organic</td><td>(organic)</td><td>25,527</td><td>120</td></tr>
+          <tr><td>bing / organic</td><td>(organic)</td><td>8,190</td><td>9</td></tr>
+          <tr><td>recruitingbypaycor.com / referral</td><td>(referral)</td><td>3,414</td><td>0</td></tr>
+          <tr><td>google / cpc</td><td>(organic)</td><td>3,053</td><td>5</td></tr>
+          <tr><td>ntp.msn.com / referral</td><td>(referral)</td><td>2,961</td><td>0</td></tr>
+          <tr><td>timesfreepress / social</td><td>traffic</td><td>2,206</td><td>0</td></tr>
+          <tr><td>apps.docusign.com / referral</td><td>(referral)</td><td>2,090</td><td>1</td></tr>
+          <tr><td>google / cpc</td><td>Branding Search</td><td>1,907</td><td>0</td></tr>
+          <tr><td>yahoo / organic</td><td>(organic)</td><td>1,812</td><td>0</td></tr>
+          <tr><td>timesfreepress / display</td><td>middletn_business</td><td>1,358</td><td>0</td></tr>
+          <tr><td>google / cpc</td><td>052523</td><td>1,214</td><td>0</td></tr>
+          <tr><td>google / cpc</td><td>Retail Banking – 60%</td><td>1,008</td><td>0</td></tr>
+          <tr><td>google / cpc</td><td>(not set)</td><td>972</td><td>0</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>—</strong></td><td><strong>124,549</strong></td><td><strong>179</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+  const MAROON = '#5C1A2A';
+  const PINK   = 'rgba(196,132,154,0.85)';
+  const LABELS13 = ['Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26'];
+  const rendered = new Set();
+
+  function makeCombo(id, bars, line, barLabel, lineLabel, barAxis, lineAxis) {
+    if (rendered.has(id)) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    rendered.add(id);
+    new Chart(el, {
+      data: {
+        labels: LABELS13,
+        datasets: [
+          { type:'bar', label: barLabel, data: bars, backgroundColor: MAROON, yAxisID:'y' },
+          { type:'line', label: lineLabel, data: line, borderColor: PINK, backgroundColor:'transparent', yAxisID:'y2', tension:0.35, pointRadius:4, pointBackgroundColor: PINK }
+        ]
+      },
+      options: {
+        responsive:true, interaction:{ mode:'index' },
+        plugins:{ legend:{ position:'top', labels:{ font:{ size:12 } } } },
+        scales:{
+          y:{ type:'linear', position:'left', title:{ display:true, text: barAxis, font:{size:11} }, ticks:{font:{size:11}} },
+          y2:{ type:'linear', position:'right', title:{ display:true, text: lineAxis, font:{size:11} }, grid:{ drawOnChartArea:false }, ticks:{font:{size:11}} }
+        }
+      }
+    });
+  }
+
+  function makeBar(id, labels, data, label) {
+    if (rendered.has(id)) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    rendered.add(id);
+    new Chart(el, {
+      type:'bar',
+      data:{ labels, datasets:[{ label, data, backgroundColor:[MAROON, PINK, 'rgba(196,132,154,0.45)'], borderRadius:4 }] },
+      options:{
+        indexAxis:'y', responsive:true,
+        plugins:{ legend:{ display:false } },
+        scales:{ x:{ ticks:{ font:{size:11} } }, y:{ ticks:{ font:{size:11} } } }
+      }
+    });
+  }
+
+  function makeWebChart(id) {
+    if (rendered.has(id)) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    rendered.add(id);
+    new Chart(el, {
+      type:'bar',
+      data:{
+        labels:['Sessions','Engaged Sessions'],
+        datasets:[{ label:'April 2026', data:[124549, 66209], backgroundColor:[MAROON, PINK], borderRadius:5 }]
+      },
+      options:{
+        responsive:true,
+        plugins:{ legend:{ display:false } },
+        scales:{ y:{ title:{ display:true, text:'Count', font:{size:11} }, ticks:{font:{size:11}} } }
+      }
+    });
+  }
+
+  // Chart initialization map
+  const chartInits = {
+    'mtn-account':   () => makeCombo('chart-mtn-account',
+      [3802,3451,2766,2069,1918,1807,2450,3723,3327,3390,3114,3041,359],
+      [0.60,0.65,0.98,1.27,1.20,1.33,1.04,0.70,0.59,0.61,0.71,0.71,4.75],
+      'Conversions','CPC ($)','Conversions','CPC ($)'),
+    'mtn-campaign':  () => makeCombo('chart-mtn-campaign',
+      [15214,15187,10066,7321,7346,6842,9051,13833,19409,19917,15387,15355,2010],
+      [0.60,0.65,0.98,1.27,1.20,1.33,1.04,0.70,0.59,0.61,0.71,0.71,4.75],
+      'Clicks','CPC ($)','Clicks','CPC ($)'),
+    'cha-account':   () => makeCombo('chart-cha-account',
+      [0,5,10,9,19,27,26,10,17,22,15,13,53],
+      [16.06,3.72,4.24,3.62,2.34,2.21,2.25,2.34,2.54,2.32,2.85,3.24,3.33],
+      'Conversions','CPC ($)','Conversions','CPC ($)'),
+    'cha-campaign':  () => makeCombo('chart-cha-campaign',
+      [91,411,356,415,640,693,657,634,601,638,530,463,558],
+      [16.06,3.72,4.24,3.62,2.34,2.21,2.25,2.34,2.54,2.32,2.85,3.24,3.33],
+      'Clicks','CPC ($)','Clicks','CPC ($)'),
+    'disp-lookback': () => makeCombo('chart-disp-lookback',
+      [215149,207818,227963,199926,190714,202857,226152,208419,220570,233412,213163,248213,1439416],
+      [58,596,646,2759,4487,5733,6119,6005,6644,6536,4740,3080,8981],
+      'Impressions','VTC','Impressions','VTC'),
+    'disp-mtn':      () => makeBar('chart-mtn-device',['Mobile','PC','Tablet'],[533371,367011,234194],'Impressions'),
+    'disp-cha':      () => makeBar('chart-cha-device',['Mobile','PC','Tablet'],[123415,106551,74733],'Impressions'),
+    'web-overview':  () => makeWebChart('chart-web')
+  };
+
+  function initActive(section) {
+    const ap = document.querySelector('#' + section + ' .sub-panel.active');
+    if (ap && chartInits[ap.id]) chartInits[ap.id]();
+  }
+
+  function showSection(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    setTimeout(() => initActive(id), 50);
+  }
+
+  function showSub(group, panelId, btn) {
+    const section = btn.closest('.section');
+    section.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
+    section.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(panelId).classList.add('active');
+    btn.classList.add('active');
+    if (chartInits[panelId]) chartInits[panelId]();
+  }
+
+  // Init on load
+  window.addEventListener('load', () => initActive('summary'));
+</script>
+</body>
+</html>
