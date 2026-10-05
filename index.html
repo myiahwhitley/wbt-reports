@@ -3,86 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilson Bank &amp; Trust | Digital Marketing Report | April&ndash;July 2026</title>
+<title>Wilson Bank &amp; Trust September 2026 Report</title>
 <style>
-    :root {
-      color-scheme: light;
-      --maroon: #5C1A2A; --maroon-mid: #7D2B3D; --maroon-pale: #C4849A; --maroon-bg: #F9F1F3;
-      --gray: #F5F5F5; --gray-mid: #E0E0E0; --gray-dark: #777; --text: #1A1A1A;
-      --up: #2E7D32; --down: #C62828;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #F2F2F2; color: var(--text); }
-    .nav { position: sticky; top: 0; z-index: 100; background: var(--maroon); color: white; display: flex; align-items: center; padding: 0 20px; height: 54px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); overflow-x: auto; gap: 0; }
-    .nav-brand { font-weight: 700; font-size: 14px; white-space: nowrap; margin-right: 20px; color: white; text-decoration: none; display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
-    .wbt-badge { background: rgba(255,255,255,0.2); color: white; font-weight: 900; font-size: 11px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
-    .nav-links { display: flex; gap: 2px; }
-    .nav-link { color: rgba(255,255,255,0.7); font-size: 12.5px; padding: 6px 11px; border-radius: 4px; cursor: pointer; white-space: nowrap; border: none; background: none; transition: all 0.15s; font-family: inherit; }
-    .nav-link:hover { color: white; background: rgba(255,255,255,0.12); }
-    .nav-link.active { color: white; background: rgba(255,255,255,0.18); font-weight: 600; }
-    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-shrink: 0; padding-left: 16px; }
-    .month-select { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); border-radius: 5px; padding: 5px 10px; font-size: 12.5px; font-weight: 600; font-family: inherit; cursor: pointer; }
-    .month-select option { color: #1A1A1A; }
-    .nav-date { font-size: 11.5px; color: rgba(255,255,255,0.55); white-space: nowrap; }
-    .section { display: none; padding: 24px; max-width: 1120px; margin: 0 auto; }
-    .section.active { display: block; }
-    .report-header { background: var(--maroon); color: white; padding: 22px 26px; margin: -24px -24px 24px -24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid rgba(255,255,255,0.15); }
-    .report-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 3px; }
-    .report-header .sub { font-size: 13px; opacity: 0.65; }
-    .report-header .badge-lg { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; color: white; }
-    .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .summary-card { background: white; border-radius: 10px; padding: 22px; box-shadow: 0 1px 4px rgba(0,0,0,0.09); }
-    .summary-card h3 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--maroon); padding-bottom: 10px; margin-bottom: 14px; border-bottom: 2px solid var(--maroon-pale); }
-    .summary-card ul { list-style: none; }
-    .summary-card ul li { padding: 9px 0; border-bottom: 1px solid var(--gray-mid); font-size: 13.5px; line-height: 1.45; display: flex; align-items: flex-start; gap: 9px; }
-    .summary-card ul li:last-child { border-bottom: none; }
-    .summary-card ul li::before { content: '\25CF'; color: var(--maroon-pale); font-size: 8px; margin-top: 5px; flex-shrink: 0; }
-    .summary-card ul li.placeholder::before { content: ''; }
-    .summary-card ul li.placeholder { color: var(--gray-dark); font-style: italic; }
-    .ai-sub { font-size: 12px; color: var(--gray-dark); margin-top: 3px; display: block; }
-    .chip { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 10.5px; font-weight: 700; margin-left: 5px; vertical-align: middle; }
-    .chip-new { background: #E8F5E9; color: #2E7D32; }
-    .chip-rev { background: #E3F2FD; color: #1565C0; }
-    .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid var(--gray-mid); }
-    .section-header .sh-badge { background: var(--maroon); color: white; font-weight: 900; font-size: 13px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .section-header h2 { font-size: 21px; font-weight: 700; color: var(--maroon); }
-    .section-header p { font-size: 12px; color: var(--gray-dark); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .sub-tabs { display: flex; gap: 2px; margin-bottom: 18px; border-bottom: 2px solid var(--gray-mid); overflow-x: auto; }
-    .sub-tab { padding: 8px 15px; font-size: 12.5px; font-weight: 500; cursor: pointer; border: none; background: none; color: var(--gray-dark); border-bottom: 2px solid transparent; margin-bottom: -2px; white-space: nowrap; transition: all 0.15s; font-family: inherit; }
-    .sub-tab.active { color: var(--maroon); border-bottom-color: var(--maroon); font-weight: 700; }
-    .sub-tab:hover { color: var(--maroon); }
-    .sub-panel { display: none; }
-    .sub-panel.active { display: block; }
-    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 18px; }
-    .metric-card { background: white; border-radius: 8px; padding: 15px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-    .metric-card .m-label { font-size: 10.5px; color: var(--gray-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
-    .metric-card .m-value { font-size: 22px; font-weight: 700; color: var(--maroon); line-height: 1.1; }
-    .metric-card .m-delta { font-size: 11.5px; margin-top: 5px; }
-    .up { color: var(--up); } .down { color: var(--down); } .neutral { color: var(--gray-dark); }
-    .chart-wrap { background: white; border-radius: 8px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 18px; }
-    .chart-wrap h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 14px; }
-    .chart-wrap canvas { max-height: 270px; }
-    .tbl-wrap { overflow-x: auto; margin-bottom: 18px; }
-    .data-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); min-width: 500px; }
-    .data-table th { background: var(--maroon); color: white; font-size: 11.5px; font-weight: 600; padding: 9px 12px; text-align: left; }
-    .data-table td { padding: 8px 12px; font-size: 12.5px; border-bottom: 1px solid var(--gray-mid); }
-    .data-table tr:last-child td { border-bottom: none; }
-    .data-table tr:hover td { background: var(--maroon-bg); }
-    .data-table tfoot td { font-weight: 700; background: var(--gray); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .branded-card { background: white; border-radius: 10px; padding: 40px 32px; box-shadow: 0 1px 4px rgba(0,0,0,0.09); text-align: center; }
-    .branded-card .icon { font-size: 44px; margin-bottom: 14px; }
-    .branded-card h3 { font-size: 18px; color: var(--maroon); margin-bottom: 8px; }
-    .branded-card p { font-size: 13.5px; color: var(--gray-dark); max-width: 480px; margin: 0 auto; line-height: 1.6; }
-    .note { font-size: 11.5px; color: var(--gray-dark); margin-bottom: 14px; font-style: italic; }
-    .summary-toolbar { display: flex; gap: 10px; margin-bottom: 14px; align-items: center; flex-wrap: wrap; }
-    .btn { font-family: inherit; font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 6px; border: 1.5px solid var(--maroon); background: white; color: var(--maroon); cursor: pointer; transition: all 0.15s; }
-    .btn:hover { background: var(--maroon-bg); }
-    .btn-primary { background: var(--maroon); color: white; }
-    .btn-primary:hover { background: var(--maroon-mid); }
-    .edit-hint { font-size: 11.5px; color: var(--gray-dark); }
-    .summary-card textarea { width: 100%; min-height: 130px; font-family: inherit; font-size: 13px; padding: 9px; border: 1.5px solid var(--maroon-pale); border-radius: 6px; resize: vertical; line-height: 1.5; }
-    @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } .summary-grid { grid-template-columns: 1fr; } }
+  /* Layout: sticky maroon nav, one section per channel, sub-tabs inside each section */
+  :root {
+    color-scheme: light;
+    --maroon: #5C1A2A;
+    --maroon-mid: #7D2B3D;
+    --maroon-pale: #C4849A;
+    --maroon-bg: #F9F1F3;
+    --page: #F2F0F1;
+    --card: #FFFFFF;
+    --gray: #F5F4F4;
+    --gray-mid: #E3DFE0;
+    --gray-dark: #6F6669;
+    --text: #1A1416;
+    --up: #2E7D32;
+    --down: #C62828;
+    --on-maroon: #FFFFFF;
+    --font: 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--page); color: var(--text); }
+
+  .nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100;
+    background: var(--maroon); color: var(--on-maroon);
+    display: flex; align-items: center;
+    padding: 0 16px; height: 54px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    overflow-x: auto;
+  }
+  .nav-brand { font-weight: 700; font-size: 14px; white-space: nowrap; margin-right: 20px; display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+  .wbt-badge { background: rgba(255,255,255,0.2); font-weight: 900; font-size: 11px; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1.5px solid rgba(255,255,255,0.4); }
+  .nav-links { display: flex; gap: 2px; }
+  .nav-link { color: rgba(255,255,255,0.72); font-size: 12.5px; padding: 6px 11px; border-radius: 4px; cursor: pointer; white-space: nowrap; border: none; background: none; font-family: inherit; }
+  .nav-link:hover, .nav-link:focus-visible { color: var(--on-maroon); background: rgba(255,255,255,0.12); outline: none; }
+  .nav-link.active { color: var(--on-maroon); background: rgba(255,255,255,0.18); font-weight: 600; }
+  .nav-date { margin-left: auto; font-size: 11.5px; color: rgba(255,255,255,0.6); white-space: nowrap; flex-shrink: 0; padding-left: 16px; }
+
+  .section { display: none; padding-block: 24px; padding-inline: 16px; max-width: 1120px; margin: 0 auto; }
+  .section.active { display: block; }
+
+  .report-header { background: var(--maroon); color: var(--on-maroon); padding: 22px 26px; border-radius: 10px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .report-header h1 { font-size: 20px; font-weight: 700; margin-bottom: 3px; }
+  .report-header .sub { font-size: 13px; opacity: 0.7; }
+  .badge-lg { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; flex-shrink: 0; }
+
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .summary-card { background: var(--card); border-radius: 10px; padding: 22px; box-shadow: 0 1px 4px rgba(0,0,0,0.09); min-width: 0; }
+  .summary-card h3 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--maroon); padding-bottom: 10px; margin-bottom: 14px; border-bottom: 2px solid var(--maroon-pale); }
+  .summary-card ul { list-style: none; }
+  .summary-card li { padding: 9px 0; border-bottom: 1px solid var(--gray-mid); font-size: 13.5px; line-height: 1.45; display: flex; align-items: flex-start; gap: 9px; }
+  .summary-card li:last-child { border-bottom: none; }
+  .summary-card li::before { content: '●'; color: var(--maroon-pale); font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+  .ai-sub { font-size: 12px; color: var(--gray-dark); margin-top: 3px; display: block; }
+
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 2px solid var(--gray-mid); }
+  .sh-badge { background: var(--maroon); color: var(--on-maroon); font-weight: 900; font-size: 13px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-header h2 { font-size: 21px; font-weight: 700; color: var(--maroon); text-wrap: balance; }
+  .section-header p { font-size: 12px; color: var(--gray-dark); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .sub-tabs { display: flex; gap: 2px; margin-bottom: 18px; border-bottom: 2px solid var(--gray-mid); overflow-x: auto; }
+  .sub-tab { padding: 8px 15px; font-size: 12.5px; font-weight: 500; cursor: pointer; border: none; background: none; color: var(--gray-dark); border-bottom: 2px solid transparent; margin-bottom: -2px; white-space: nowrap; font-family: inherit; }
+  .sub-tab.active { color: var(--maroon); border-bottom-color: var(--maroon); font-weight: 700; }
+  .sub-tab:hover, .sub-tab:focus-visible { color: var(--maroon); outline: none; }
+  .sub-panel { display: none; }
+  .sub-panel.active { display: block; }
+
+  .metric-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px; }
+  .metric-card { background: var(--card); border-radius: 8px; padding: 15px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .m-label { font-size: 10.5px; color: var(--gray-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
+  .m-value { font-size: 22px; font-weight: 700; color: var(--maroon); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .m-delta { font-size: 11.5px; margin-top: 5px; font-variant-numeric: tabular-nums; }
+  .up { color: var(--up); } .down { color: var(--down); } .neutral { color: var(--gray-dark); }
+
+  .chart-wrap { background: var(--card); border-radius: 8px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 18px; }
+  .chart-wrap h4 { font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+  .chart-box { position: relative; height: 270px; }
+  .chart-box.sm { height: 170px; }
+
+  .tbl-wrap { overflow-x: auto; margin-bottom: 18px; }
+  .data-table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); min-width: 480px; font-variant-numeric: tabular-nums; }
+  .data-table th { background: var(--maroon); color: var(--on-maroon); font-size: 11.5px; font-weight: 600; padding: 9px 12px; text-align: left; white-space: nowrap; }
+  .data-table td { padding: 8px 12px; font-size: 12.5px; border-bottom: 1px solid var(--gray-mid); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tbody tr:hover td { background: var(--maroon-bg); }
+  .data-table tr.total td { font-weight: 700; background: var(--gray); }
+  .data-table td.hl { background: var(--maroon-bg); font-weight: 600; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .two-col > div { min-width: 0; }
+  .col-title { font-size: 13px; font-weight: 700; color: var(--maroon); margin-bottom: 10px; }
+
+  .terms { display: flex; flex-wrap: wrap; gap: 6px; background: var(--card); border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 18px; }
+  .term { font-size: 12px; background: var(--gray); border: 1px solid var(--gray-mid); border-radius: 12px; padding: 3px 10px; }
+  .term.flag { background: #FDECEA; border-color: #F3B8B3; color: var(--down); }
+
+  .branded-card { background: var(--card); border-radius: 10px; padding: 40px 32px; box-shadow: 0 1px 4px rgba(0,0,0,0.09); text-align: center; }
+  .branded-card h3 { font-size: 18px; color: var(--maroon); margin-bottom: 8px; }
+  .branded-card p { font-size: 13.5px; color: var(--gray-dark); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  .note { font-size: 11.5px; color: var(--gray-dark); margin-bottom: 14px; font-style: italic; line-height: 1.5; }
+
+  @media (max-width: 760px) {
+    .metric-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .summary-grid { grid-template-columns: 1fr; }
+    .report-header { padding: 18px; }
+  }
 </style>
 </head>
 <body>
@@ -90,550 +118,612 @@
 <nav class="nav">
   <div class="nav-brand"><div class="wbt-badge">WBT</div>Wilson Bank &amp; Trust</div>
   <div class="nav-links">
-    <button class="nav-link active" onclick="showSection('summary',this)">Summary</button>
-    <button class="nav-link" onclick="showSection('google-mtn',this)">Google Ads &middot; Middle TN</button>
-    <button class="nav-link" onclick="showSection('google-cha',this)">Google Ads &middot; Chattanooga</button>
-    <button class="nav-link" onclick="showSection('display',this)">Display</button>
-    <button class="nav-link" onclick="showSection('social',this)">Paid Social</button>
-    <button class="nav-link" onclick="showSection('branded',this)">Branded Content</button>
-    <button class="nav-link" onclick="showSection('website',this)">Website Traffic</button>
-    <button class="nav-link" onclick="showSection('mmct',this)">MMCT Compliance</button>
+    <button class="nav-link active" data-section="summary">Summary</button>
+    <button class="nav-link" data-section="google-mtn">Google Ads · Middle TN</button>
+    <button class="nav-link" data-section="google-cha">Google Ads · Chattanooga</button>
+    <button class="nav-link" data-section="display">Display</button>
+    <button class="nav-link" data-section="social">Paid Social</button>
+    <button class="nav-link" data-section="branded">Branded Content</button>
+    <button class="nav-link" data-section="website">Website Traffic</button>
   </div>
-  <div class="nav-right">
-    <select id="month-select" class="month-select" onchange="onMonthChange(this.value)">
-      <option value="april">April 2026</option>
-      <option value="may">May 2026</option>
-      <option value="june">June 2026</option>
-      <option value="july" selected>July 2026</option>
-    </select>
-    <div class="nav-date" id="nav-date-label"></div>
-  </div>
+  <div class="nav-date">September 1–30, 2026</div>
 </nav>
 
+<!-- SUMMARY -->
 <div id="summary" class="section active">
   <div class="report-header">
     <div>
-      <div class="sub">Chattanooga Times Free Press &nbsp;&middot;&nbsp; Digital Marketing Performance Report</div>
+      <div class="sub">Chattanooga Times Free Press · Digital Marketing Performance Report</div>
       <h1>Wilson Bank &amp; Trust</h1>
-      <div class="sub" id="report-daterange"></div>
+      <div class="sub">September 1 – September 30, 2026</div>
     </div>
     <div class="badge-lg">WBT</div>
   </div>
-  <div class="summary-toolbar">
-    <button id="edit-toggle-btn" class="btn" onclick="toggleSummaryEdit()">Edit Summary</button>
-    <button id="download-btn" class="btn btn-primary" onclick="downloadReport()">Download Updated Report (.html)</button>
-    <span class="edit-hint" id="edit-hint" style="display:none;">Action Items: one per line, as <strong>Title | Detail</strong> (detail optional). Other cards: one bullet per line.</span>
-  </div>
+
   <div class="summary-grid">
-    <div class="summary-card"><h3>Monthly Updates</h3><ul id="su-monthly"></ul></div>
-    <div class="summary-card"><h3>Key Discussion Points</h3><ul id="su-discussion"></ul></div>
-    <div class="summary-card"><h3>Recommendations</h3><ul id="su-recommend"></ul></div>
-    <div class="summary-card"><h3>Action Items</h3><ul id="su-action"></ul></div>
+    <div class="summary-card">
+      <h3>Monthly Updates</h3>
+      <ul>
+        <li>Chattanooga search drove 67 conversions, the highest month in the 13-month lookback</li>
+        <li>Middle TN search conversions rose to 217 (+31) while CPC eased to $9.81 (−$0.68)</li>
+        <li>WBT Mergers &amp; Acquisition display campaign ran alongside the Middle TN and Chattanooga display campaigns</li>
+        <li>Treasury Management ad group now live in Middle TN Business Banking</li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Highlights &amp; Wins</h3>
+      <ul>
+        <li>Chattanooga search conversion rate reached 16.96%, up from 2.81% in March</li>
+        <li>HELOC drove 523 clicks in Middle TN, 79% of all Retail Banking clicks</li>
+        <li>Display CTR held at 0.17%, more than double the 0.05%–0.08% industry standard</li>
+        <li>Meta CTR of 1.61% across both markets; Chattanooga reach grew by 4,346</li>
+        <li>Website key events reached 659, with Google organic contributing 396</li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Recommendations</h3>
+      <ul>
+        <li>Move HELOC into its own campaign and budget so it stops pulling spend from Checking, Savings and Mortgage</li>
+        <li>Review Chattanooga Business Banking: $24.01 CPC with 2 conversions this month</li>
+        <li>Add negative keywords for low-intent loan searches (payday, tribal, no-credit-check style terms) in Middle TN Retail</li>
+        <li>Shift display weight from square units (0.05% CTR) toward wide banners (0.17%–0.29% CTR)</li>
+      </ul>
+    </div>
+
+    <div class="summary-card">
+      <h3>Action Items</h3>
+      <ul>
+        <li><div><strong>HELOC campaign proposal</strong><span class="ai-sub">Share the dedicated HELOC campaign recommendation with WBT for approval</span></div></li>
+        <li><div><strong>Negative keyword pass</strong><span class="ai-sub">Apply negatives from the flagged search terms in Middle TN Retail and MMCT</span></div></li>
+        <li><div><strong>Business Loans review</strong><span class="ai-sub">Revisit bids and keywords on Business Loans in both markets ($17.98 Middle TN, $28.07 Chattanooga CPC)</span></div></li>
+      </ul>
+    </div>
   </div>
 </div>
 
+<!-- GOOGLE ADS · MIDDLE TN -->
 <div id="google-mtn" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Google Ads &middot; Middle Tennessee</p><h2>Retail Banking &nbsp;|&nbsp; Business Banking &nbsp;|&nbsp; MMCT</h2></div></div>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Google Ads · Middle Tennessee</p><h2>Retail Banking | Business Banking | MMCT</h2></div>
+  </div>
   <div class="sub-tabs">
-    <button class="sub-tab active" onclick="showSub('mtn','mtn-account',this)">Account Overview</button>
-    <button class="sub-tab" onclick="showSub('mtn','mtn-campaign',this)">Campaign Overview</button>
-    <button class="sub-tab" onclick="showSub('mtn','mtn-location',this)">Location Performance</button>
-    <button class="sub-tab" onclick="showSub('mtn','mtn-retail',this)">Retail Ad Groups</button>
-    <button class="sub-tab" onclick="showSub('mtn','mtn-business',this)">Business Ad Groups</button>
+    <button class="sub-tab active" data-panel="mtn-account">Account Overview</button>
+    <button class="sub-tab" data-panel="mtn-campaign">Campaign Overview</button>
+    <button class="sub-tab" data-panel="mtn-location">Location Performance</button>
+    <button class="sub-tab" data-panel="mtn-retail">Retail Ad Groups</button>
+    <button class="sub-tab" data-panel="mtn-business">Business Ad Groups</button>
+    <button class="sub-tab" data-panel="mtn-mmct">MMCT Ad Groups</button>
+    <button class="sub-tab" data-panel="mtn-terms">Search Terms</button>
   </div>
+
   <div id="mtn-account" class="sub-panel active">
-    <div class="chart-wrap"><h4>Conversions &amp; CPC &mdash; 13-Month Trend</h4><canvas id="chart-mtn-account"></canvas></div>
-    <div id="mtn-account-table"></div>
+    <div class="chart-wrap"><h4>Conversions &amp; CPC — 13-Month Trend</h4><div class="chart-box"><canvas id="chart-mtn-account"></canvas></div></div>
+    <p class="note">Middle TN search campaigns were rebuilt in April 2026; months before April reflect the prior account setup.</p>
+    <div class="tbl-wrap" id="t-mtn-account"></div>
   </div>
+
   <div id="mtn-campaign" class="sub-panel">
-    <div id="mtn-campaign-metrics"></div>
-    <div class="chart-wrap"><h4>Clicks &amp; CPC &mdash; 13-Month Trend</h4><canvas id="chart-mtn-campaign"></canvas></div>
-    <div id="mtn-campaign-table"></div>
+    <div class="metric-grid" id="m-mtn-campaign"></div>
+    <div class="chart-wrap"><h4>Clicks &amp; CPC — 13-Month Trend</h4><div class="chart-box"><canvas id="chart-mtn-campaign"></canvas></div></div>
+    <div class="tbl-wrap" id="t-mtn-campaign"></div>
   </div>
+
   <div id="mtn-location" class="sub-panel">
     <div class="two-col">
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Retail Banking</h4><div id="mtn-loc-retail-table"></div></div>
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Business Banking</h4><div id="mtn-loc-business-table"></div></div>
+      <div><h4 class="col-title">Retail Banking</h4><div class="tbl-wrap" id="t-mtn-loc-retail"></div></div>
+      <div><h4 class="col-title">Business Banking</h4><div class="tbl-wrap" id="t-mtn-loc-business"></div></div>
     </div>
   </div>
+
   <div id="mtn-retail" class="sub-panel">
-    <div id="mtn-retail-metrics"></div>
-    <div id="mtn-retail-table"></div>
+    <div class="metric-grid" id="m-mtn-retail"></div>
+    <div class="tbl-wrap" id="t-mtn-retail"></div>
   </div>
+
   <div id="mtn-business" class="sub-panel">
-    <div id="mtn-business-metrics"></div>
-    <div id="mtn-business-table"></div>
+    <div class="metric-grid" id="m-mtn-business"></div>
+    <div class="tbl-wrap" id="t-mtn-business"></div>
+  </div>
+
+  <div id="mtn-mmct" class="sub-panel">
+    <div class="metric-grid" id="m-mtn-mmct"></div>
+    <div class="tbl-wrap" id="t-mtn-mmct"></div>
+  </div>
+
+  <div id="mtn-terms" class="sub-panel">
+    <p class="note">Sample of search terms that triggered ads this month. Terms in red are candidates for negative keywords.</p>
+    <h4 class="col-title">Retail Banking</h4><div class="terms" id="terms-mtn-retail"></div>
+    <h4 class="col-title">Business Banking</h4><div class="terms" id="terms-mtn-business"></div>
+    <h4 class="col-title">MMCT</h4><div class="terms" id="terms-mtn-mmct"></div>
   </div>
 </div>
 
+<!-- GOOGLE ADS · CHATTANOOGA -->
 <div id="google-cha" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Google Ads &middot; Chattanooga</p><h2>Retail Banking &nbsp;|&nbsp; Business Banking</h2></div></div>
-  <div class="sub-tabs">
-    <button class="sub-tab active" onclick="showSub('cha','cha-account',this)">Account Overview</button>
-    <button class="sub-tab" onclick="showSub('cha','cha-campaign',this)">Campaign Overview</button>
-    <button class="sub-tab" onclick="showSub('cha','cha-retail',this)">Retail Ad Groups</button>
-    <button class="sub-tab" onclick="showSub('cha','cha-business',this)">Business Ad Groups</button>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Google Ads · Chattanooga</p><h2>Retail Banking | Business Banking</h2></div>
   </div>
+  <div class="sub-tabs">
+    <button class="sub-tab active" data-panel="cha-account">Account Overview</button>
+    <button class="sub-tab" data-panel="cha-campaign">Campaign Overview</button>
+    <button class="sub-tab" data-panel="cha-location">Location Performance</button>
+    <button class="sub-tab" data-panel="cha-retail">Retail Ad Groups</button>
+    <button class="sub-tab" data-panel="cha-business">Business Ad Groups</button>
+    <button class="sub-tab" data-panel="cha-terms">Search Terms</button>
+  </div>
+
   <div id="cha-account" class="sub-panel active">
-    <div class="chart-wrap"><h4>Conversions &amp; CPC &mdash; 13-Month Trend</h4><canvas id="chart-cha-account"></canvas></div>
-    <div id="cha-account-table"></div>
+    <div class="chart-wrap"><h4>Conversions &amp; CPC — 13-Month Trend</h4><div class="chart-box"><canvas id="chart-cha-account"></canvas></div></div>
+    <div class="tbl-wrap" id="t-cha-account"></div>
   </div>
+
   <div id="cha-campaign" class="sub-panel">
-    <div id="cha-campaign-metrics"></div>
-    <div class="chart-wrap"><h4>Clicks &amp; CPC &mdash; 13-Month Trend</h4><canvas id="chart-cha-campaign"></canvas></div>
-    <div id="cha-campaign-table"></div>
+    <div class="metric-grid" id="m-cha-campaign"></div>
+    <div class="chart-wrap"><h4>Clicks &amp; CPC — 13-Month Trend</h4><div class="chart-box"><canvas id="chart-cha-campaign"></canvas></div></div>
+    <div class="tbl-wrap" id="t-cha-campaign"></div>
   </div>
+
+  <div id="cha-location" class="sub-panel">
+    <div class="two-col">
+      <div><h4 class="col-title">Retail Banking</h4><div class="tbl-wrap" id="t-cha-loc-retail"></div></div>
+      <div><h4 class="col-title">Business Banking</h4><div class="tbl-wrap" id="t-cha-loc-business"></div></div>
+    </div>
+  </div>
+
   <div id="cha-retail" class="sub-panel">
-    <div id="cha-retail-metrics"></div>
-    <div id="cha-retail-table"></div>
+    <div class="metric-grid" id="m-cha-retail"></div>
+    <div class="tbl-wrap" id="t-cha-retail"></div>
   </div>
+
   <div id="cha-business" class="sub-panel">
-    <div id="cha-business-metrics"></div>
-    <div id="cha-business-table"></div>
+    <div class="metric-grid" id="m-cha-business"></div>
+    <div class="tbl-wrap" id="t-cha-business"></div>
+  </div>
+
+  <div id="cha-terms" class="sub-panel">
+    <p class="note">Sample of search terms that triggered ads this month. Many retail terms are competitor brand searches (Bank of America, Regions, Truist), including Spanish-language queries.</p>
+    <h4 class="col-title">Retail Banking</h4><div class="terms" id="terms-cha-retail"></div>
+    <h4 class="col-title">Business Banking</h4><div class="terms" id="terms-cha-business"></div>
   </div>
 </div>
 
+<!-- DISPLAY -->
 <div id="display" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Programmatic Display</p><h2>Chattanooga &amp; Middle TN</h2></div></div>
-  <div class="sub-tabs">
-    <button class="sub-tab active" onclick="showSub('disp','disp-overview',this)">Campaign Overview</button>
-    <button class="sub-tab" onclick="showSub('disp','disp-lookback',this)">13-Month Lookback</button>
-    <button class="sub-tab" onclick="showSub('disp','disp-mtn',this)">Middle TN &middot; Location &amp; Device</button>
-    <button class="sub-tab" onclick="showSub('disp','disp-mtn-creative',this)">Middle TN &middot; Creative</button>
-    <button class="sub-tab" onclick="showSub('disp','disp-cha',this)">Chattanooga &middot; Location &amp; Device</button>
-    <button class="sub-tab" onclick="showSub('disp','disp-cha-creative',this)">Chattanooga &middot; Creative</button>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Programmatic Display</p><h2>Chattanooga &amp; Middle TN</h2></div>
   </div>
+  <div class="sub-tabs">
+    <button class="sub-tab active" data-panel="disp-overview">Campaign Overview</button>
+    <button class="sub-tab" data-panel="disp-lookback">13-Month Lookback</button>
+    <button class="sub-tab" data-panel="disp-mtn">Middle TN · Location &amp; Device</button>
+    <button class="sub-tab" data-panel="disp-mtn-creative">Middle TN · Creative</button>
+    <button class="sub-tab" data-panel="disp-cha">Chattanooga · Location &amp; Device</button>
+    <button class="sub-tab" data-panel="disp-cha-creative">Chattanooga · Creative</button>
+  </div>
+
   <div id="disp-overview" class="sub-panel active">
-    <div id="disp-overview-metrics"></div>
-    <p class="note">*Industry standard CTR for display: 0.05%&ndash;0.08% &nbsp;&middot;&nbsp; VTC = view-through conversion (ad was served but not clicked; user visited site later)</p>
-    <div id="disp-overview-table"></div>
+    <div class="metric-grid" id="m-disp"></div>
+    <p class="note">*Industry standard CTR for display: 0.05%–0.08% · VTC = view-through conversion (ad was served but not clicked; user visited the site later)</p>
+    <div class="tbl-wrap" id="t-disp"></div>
   </div>
+
   <div id="disp-lookback" class="sub-panel">
-    <div class="chart-wrap"><h4>Impressions &amp; VTC &mdash; 13-Month Trend</h4><canvas id="chart-disp-lookback"></canvas></div>
-    <div id="disp-lookback-table"></div>
+    <div class="chart-wrap"><h4>Impressions &amp; VTC — 13-Month Trend</h4><div class="chart-box"><canvas id="chart-disp-lookback"></canvas></div></div>
+    <div class="tbl-wrap" id="t-disp-lookback"></div>
   </div>
+
   <div id="disp-mtn" class="sub-panel">
-    <div id="disp-mtn-metrics"></div>
+    <div class="metric-grid" id="m-disp-mtn"></div>
     <div class="two-col">
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Location</h4><div id="disp-mtn-loc-table"></div></div>
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Device</h4><div class="chart-wrap"><canvas id="chart-mtn-device" style="max-height:180px;"></canvas></div></div>
+      <div><h4 class="col-title">Impressions by Location</h4><div class="tbl-wrap" id="t-disp-mtn-loc"></div></div>
+      <div>
+        <h4 class="col-title">Impressions by Device</h4>
+        <div class="chart-wrap"><div class="chart-box sm"><canvas id="chart-mtn-device"></canvas></div></div>
+        <div class="tbl-wrap" id="t-disp-mtn-dev"></div>
+      </div>
     </div>
   </div>
-  <div id="disp-mtn-creative" class="sub-panel"><div id="disp-mtn-creative-table"></div></div>
+
+  <div id="disp-mtn-creative" class="sub-panel"><div class="tbl-wrap" id="t-disp-mtn-cr"></div></div>
+
   <div id="disp-cha" class="sub-panel">
-    <div id="disp-cha-metrics"></div>
+    <div class="metric-grid" id="m-disp-cha"></div>
+    <p class="note">Chattanooga figures combine the Chattanooga display campaign with the WBT Mergers &amp; Acquisition campaign, which also serves in Middle TN.</p>
     <div class="two-col">
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Location</h4><div id="disp-cha-loc-table"></div></div>
-      <div><h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:10px;">Impressions by Device</h4><div class="chart-wrap"><canvas id="chart-cha-device" style="max-height:180px;"></canvas></div></div>
+      <div><h4 class="col-title">Impressions by Location</h4><div class="tbl-wrap" id="t-disp-cha-loc"></div></div>
+      <div>
+        <h4 class="col-title">Impressions by Device</h4>
+        <div class="chart-wrap"><div class="chart-box sm"><canvas id="chart-cha-device"></canvas></div></div>
+        <div class="tbl-wrap" id="t-disp-cha-dev"></div>
+      </div>
     </div>
   </div>
-  <div id="disp-cha-creative" class="sub-panel"><div id="disp-cha-creative-table"></div></div>
+
+  <div id="disp-cha-creative" class="sub-panel"><div class="tbl-wrap" id="t-disp-cha-cr"></div></div>
 </div>
 
+<!-- PAID SOCIAL -->
 <div id="social" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Paid Social</p><h2>Facebook + Instagram &nbsp;|&nbsp; Chattanooga &amp; Middle TN</h2></div></div>
-  <div class="sub-tabs">
-    <button class="sub-tab active" onclick="showSub('soc','soc-overall',this)">Overall Performance</button>
-    <button class="sub-tab" onclick="showSub('soc','soc-cha',this)">Chattanooga Campaign</button>
-    <button class="sub-tab" onclick="showSub('soc','soc-mtn',this)">Middle TN Campaign</button>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Paid Social</p><h2>Facebook + Instagram | Chattanooga &amp; Middle TN</h2></div>
   </div>
-  <div id="soc-overall" class="sub-panel active"><div id="soc-overall-metrics"></div><div id="soc-overall-table"></div></div>
-  <div id="soc-cha" class="sub-panel"><div id="soc-cha-metrics"></div><div id="soc-cha-table"></div></div>
-  <div id="soc-mtn" class="sub-panel"><div id="soc-mtn-metrics"></div><div id="soc-mtn-table"></div></div>
+  <div class="sub-tabs">
+    <button class="sub-tab active" data-panel="soc-overall">Overall Performance</button>
+    <button class="sub-tab" data-panel="soc-cha">Chattanooga Campaign</button>
+    <button class="sub-tab" data-panel="soc-mtn">Middle TN Campaign</button>
+  </div>
+  <div id="soc-overall" class="sub-panel active"><div class="metric-grid" id="m-soc"></div><div class="tbl-wrap" id="t-soc"></div></div>
+  <div id="soc-cha" class="sub-panel"><div class="metric-grid" id="m-soc-cha"></div><div class="tbl-wrap" id="t-soc-cha"></div></div>
+  <div id="soc-mtn" class="sub-panel"><div class="metric-grid" id="m-soc-mtn"></div><div class="tbl-wrap" id="t-soc-mtn"></div></div>
 </div>
 
+<!-- BRANDED CONTENT -->
 <div id="branded" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Branded Content</p><h2>Chattanooga &amp; Middle TN</h2></div></div>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Branded Content</p><h2>Chattanooga &amp; Middle TN</h2></div>
+  </div>
   <div class="branded-card">
-    <div class="icon">&#128240;</div>
-    <h3 id="branded-title"></h3>
-    <p id="branded-text"></p>
+    <h3>Branded Content Articles Live</h3>
+    <p>Branded content articles continue to run in both the Chattanooga and Middle TN markets. Article performance was not included in September's data export.</p>
   </div>
 </div>
 
+<!-- WEBSITE -->
 <div id="website" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>Website Traffic</p><h2>Traffic &amp; User Engagement Overview</h2></div></div>
+  <div class="section-header">
+    <div class="sh-badge">WBT</div>
+    <div><p>Website Traffic</p><h2>Traffic &amp; User Engagement Overview</h2></div>
+  </div>
   <div class="sub-tabs">
-    <button class="sub-tab active" onclick="showSub('web','web-overview',this)">Traffic Overview</button>
-    <button class="sub-tab" onclick="showSub('web','web-pages',this)">Popular Pages</button>
-    <button class="sub-tab" onclick="showSub('web','web-sources',this)">Source / Medium</button>
+    <button class="sub-tab active" data-panel="web-overview">Traffic Overview</button>
+    <button class="sub-tab" data-panel="web-pages">Popular Pages</button>
+    <button class="sub-tab" data-panel="web-sources">Source / Medium</button>
   </div>
   <div id="web-overview" class="sub-panel active">
-    <div id="web-overview-metrics"></div>
-    <div class="chart-wrap"><h4 id="web-chart-title">Sessions vs. Engaged Sessions</h4><canvas id="chart-web" style="max-height:220px;"></canvas></div>
+    <div class="metric-grid" id="m-web"></div>
+    <div class="chart-wrap"><h4>Sessions vs. Engaged Sessions — September 2026</h4><div class="chart-box sm"><canvas id="chart-web"></canvas></div></div>
   </div>
-  <div id="web-pages" class="sub-panel"><div id="web-pages-table"></div></div>
-  <div id="web-sources" class="sub-panel"><div id="web-sources-table"></div></div>
+  <div id="web-pages" class="sub-panel"><div class="tbl-wrap" id="t-web-pages"></div></div>
+  <div id="web-sources" class="sub-panel"><div class="tbl-wrap" id="t-web-sources"></div></div>
 </div>
 
-<div id="mmct" class="section">
-  <div class="section-header"><div class="sh-badge">WBT</div><div><p>MMCT Compliance</p><h2>Fair Lending Reach &mdash; Mortgage Campaign</h2></div></div>
-  <div id="mmct-body"></div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-const DATA = {"april": {"label": "April", "daterange": "April 1 &ndash; April 30, 2026", "navdate": "April 1&ndash;30, 2026", "months13": ["Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26"], "summary": {"monthly_updates": [["Products went live in April 2026.", null]], "key_discussion": [["Chattanooga Retail + Business Search revamp <span class=\"chip chip-rev\">Revamp</span>", null], ["Middle TN Retail and Business Search <span class=\"chip chip-new\">New</span>", null], ["Middle TN Meta Ads <span class=\"chip chip-new\">New</span>", null], ["Middle TN Display Ads <span class=\"chip chip-new\">New</span>", null], ["New Branded Content article for Chattanooga and Middle TN <span class=\"chip chip-new\">New</span>", null]], "recommendations": [["Audit website tag implementation to ensure proper tracking across all pages", null], ["Refresh social campaign creative to correct the spelling error identified in current ads", null], ["Clarify Google Ads verification: determine who leads the process and what documentation is required", null]], "action_items": [["Tags on website", "Myiah to connect with Mikaila to audit and implement proper tracking tags site-wide"], ["Updated creative for social campaign", "Spelling error identified in current ad &mdash; updated creative needed before next flight"], ["Google Ads verification", "Does Wilson Bank &amp; Trust want to complete verification themselves, or should TFP lead? What steps/documentation are required?"]]}, "branded": {"title": "New Branded Content Articles Live", "text": "New branded content articles launched this month for both the Chattanooga and Middle TN markets. Campaign performance data will be available in the next reporting cycle."}, "mtn_account": {"sis": ["24.17%", "23.48%", "18.84%", "15.32%", "15.02%", "16.13%", "21.64%", ">90%", "49.12%", "42.32%", "35.68%", ">90%", "16.77%"], "impr": [112609, 114141, 112438, 136996, 132861, 128214, 181102, 930568, 373045, 321652, 186743, 453803, 27183], "clicks": [15214, 15187, 10066, 7321, 7346, 6842, 9051, 13833, 19409, 19917, 15387, 15355, 2010], "ctr": ["13.51%", "13.31%", "8.95%", "5.34%", "5.53%", "5.34%", "5.00%", "1.49%", "5.20%", "6.19%", "8.24%", "3.38%", "7.39%"], "cpc": [0.6, 0.65, 0.98, 1.27, 1.2, 1.33, 1.04, 0.7, 0.59, 0.61, 0.71, 0.71, 4.75], "conv": [3802, 3451, 2766, 2069, 1918, 1807, 2450, 3723, 3327, 3390, 3114, 3041, 359], "convpct": ["24.99%", "22.72%", "27.48%", "28.26%", "26.11%", "26.41%", "27.07%", "26.91%", "17.14%", "17.02%", "20.24%", "19.80%", "17.86%"]}, "mtn_headline": {"impr": ["27,183", "&#9660; -426,620", "down"], "clicks": ["2,010", "&#9660; -13,345", "down"], "ctr": ["7.39%", "&#9650; 4.01%", "up"], "cpc": ["$4.75", "&#9650; $4.04", "down"], "conv": ["358", "&#9660; -2,684", "down"]}, "mtn_campaigns": [["Retail Banking - 53%", "11.71%", "13,564", "1,019", "7.51%", "$4.59"], ["Business Banking - 35%", "51.14%", "10,078", "737", "7.31%", "$5.58"], ["MMCT Mortgage - 12%", "11.61%", "1,995", "89", "4.46%", "$2.72"]], "mtn_location_retail": [["Nashville", "5,008", "462", "9.23%"], ["Murfreesboro", "1,511", "100", "6.62%"], ["Lebanon", "1,424", "94", "6.60%"], ["Cookeville", "745", "45", "6.04%"], ["Mt. Juliet", "714", "54", "7.56%"], ["Gallatin", "625", "40", "6.40%"], ["Hendersonville", "481", "30", "6.24%"], ["Franklin", "443", "21", "4.74%"], ["Smyrna", "403", "32", "7.94%"], ["Algood", "254", "18", "7.09%"], ["Brentwood", "242", "17", "7.02%"], ["Portland", "164", "10", "6.10%"], ["La Vergne", "153", "8", "5.23%"], ["Baxter", "139", "5", "3.60%"], ["South Carthage", "139", "7", "5.04%"], ["White House", "106", "13", "12.26%"]], "mtn_location_business": [["Nashville", "6,443", "584", "9.06%"], ["Murfreesboro", "722", "28", "3.88%"], ["Lebanon", "426", "33", "7.75%"], ["Mt. Juliet", "336", "19", "5.65%"], ["Cookeville", "265", "8", "3.02%"], ["Franklin", "248", "13", "5.24%"], ["Hendersonville", "246", "5", "2.03%"], ["Gallatin", "234", "12", "5.13%"], ["Smyrna", "184", "15", "8.15%"], ["La Vergne", "154", "7", "4.55%"], ["Algood", "141", "7", "4.96%"], ["Brentwood", "125", "4", "3.20%"], ["Goodlettsville", "93", "9", "9.68%"], ["Portland", "70", "8", "11.43%"], ["Monterey", "62", "2", "3.23%"], ["South Carthage", "59", "2", "3.39%"]], "mtn_retail_headline": {"impr": ["13,564", "&#9650; New this period", "up"], "clicks": ["1,019", "&#9650; New this period", "up"], "ctr": ["7.51%", "&#9650; 7.51%", "up"], "cpc": ["$4.59", "&#9679; Avg cost/click", "neutral"], "conv": ["285", "&#9650; New this period", "up"]}, "mtn_retail_groups": [["Auto Loans", "7,879", "432", "5.48%", "$6.40"], ["Mortgage + Home Loans", "3,914", "221", "5.65%", "$5.11"], ["Personal Savings", "979", "235", "24.00%", "$2.00"], ["Personal Checking", "580", "96", "16.55%", "$2.67"], ["HELOC", "201", "35", "17.41%", "$1.59"], ["CD Rates", "9", "0", "0.00%", "$0.00"], ["Personal Loans", "2", "0", "0.00%", "$0.00"]], "mtn_business_headline": {"impr": ["10,307", "&#9650; 7,290", "up"], "clicks": ["782", "&#9650; 408", "up"], "ctr": ["7.59%", "&#9660; -4.81%", "down"], "cpc": ["$5.54", "&#9650; $1.09", "down"], "conv": ["27", "&#9660; -123", "down"]}, "mtn_business_groups": [["Business Loans", "4,924", "225", "4.57%", "$10.12"], ["Business Money Market", "2,451", "305", "12.44%", "$3.66"], ["Business CDs", "1,465", "113", "7.71%", "$2.84"], ["Business Checking", "1,238", "94", "7.59%", "$4.21"]], "cha_account": {"sis": ["26.07%", "12.37%", "12.79%", "12.90%", "10.42%", "10.50%", "10.51%", "10.31%", "11.38%", "10.90%", "10.83%", "11.41%", "19.82%"], "impr": [2846, 6755, 7776, 8392, 12486, 14416, 15182, 15306, 15925, 15457, 12243, 10139, 14467], "clicks": [91, 411, 356, 415, 640, 693, 657, 634, 601, 638, 530, 463, 558], "ctr": ["3.20%", "6.08%", "4.58%", "4.95%", "5.13%", "4.81%", "4.33%", "4.14%", "3.77%", "4.13%", "4.33%", "4.57%", "3.86%"], "cpc": [16.06, 3.72, 4.24, 3.62, 2.34, 2.21, 2.25, 2.34, 2.54, 2.32, 2.85, 3.24, 3.33], "conv": [0, 5, 10, 9, 19, 27, 26, 10, 17, 22, 15, 13, 53], "convpct": ["0.00%", "1.22%", "2.81%", "2.17%", "2.97%", "3.90%", "3.96%", "1.58%", "2.83%", "3.45%", "2.83%", "2.81%", "9.50%"]}, "cha_headline": {"impr": ["14,467", "&#9650; 4,328", "up"], "clicks": ["558", "&#9650; 95", "up"], "ctr": ["3.86%", "&#9660; -0.71%", "down"], "cpc": ["$3.33", "&#9650; $0.09", "down"], "conv": ["53", "&#9650; 40", "up"]}, "cha_campaigns": [["Retail Banking - 60%", "21.40%", "6,599", "276", "4.18%", "$3.21", "45"], ["Business Banking - 40%", ">90%", "3,492", "137", "3.92%", "$4.00", "2"]], "cha_retail_headline": {"impr": ["6,599", "&#9679; Period total", "neutral"], "clicks": ["276", "&#9679; Period total", "neutral"], "ctr": ["4.18%", "&#9679; Period total", "neutral"], "cpc": ["$3.21", "&#9679; Period total", "neutral"], "conv": ["45", "&#9679; Period total", "neutral"]}, "cha_retail_groups": [["Personal Checking", "4,121", "200", "4.85%", "$2.93"], ["Personal Savings", "1,000", "29", "2.90%", "$3.51"], ["Mortgage + Home Loans", "618", "22", "3.56%", "$4.61"], ["CD Rates", "486", "15", "3.09%", "$3.32"], ["Auto Loans", "272", "7", "2.57%", "$5.04"], ["HELOC", "102", "3", "2.94%", "$3.76"]], "cha_business_headline": {"impr": ["3,492", "&#9679; Period total", "neutral"], "clicks": ["137", "&#9679; Period total", "neutral"], "ctr": ["3.92%", "&#9679; Period total", "neutral"], "cpc": ["$4.00", "&#9679; Period total", "neutral"], "conv": ["2", "&#9679; Period total", "neutral"]}, "cha_business_groups": [["Business CDs", "2,951", "121", "4.10%", "$1.81"], ["Business Loans", "385", "14", "3.64%", "$20.98"], ["Business Checking", "135", "2", "1.48%", "$17.10"], ["Business Money Market", "21", "0", "0.00%", "$0.00"]], "disp_headline": {"impr": ["1.44M", "&#9650; 1,191,203", "up"], "clicks": ["1,367", "&#9650; 1,003", "up"], "ctr": ["0.09%", "&#9660; -0.05%", "down"], "cpm": ["$0.16", "&#9650; $0.03", "down"], "vtc": ["9,386", "&#9650; 5,499", "up"]}, "disp_campaigns": [["Precision Display &ndash; Middle TN", "1,134,701", "1,053", "0.09%", "$0.16", "7,629"], ["Precision Display &ndash; Chattanooga", "303,131", "312", "0.10%", "$0.14", "450"]], "disp_lookback_rows": [["April 2026", "1,439,416", "1,367", "0.09%", "$1.55", "8,981"], ["March 2026", "248,213", "364", "0.15%", "$1.27", "3,080"], ["February 2026", "213,163", "255", "0.12%", "$1.48", "4,740"], ["January 2026", "233,412", "280", "0.12%", "$1.35", "6,536"], ["December 2025", "220,570", "283", "0.13%", "$1.43", "6,644"], ["November 2025", "208,419", "236", "0.11%", "$1.51", "6,005"], ["October 2025", "226,152", "251", "0.11%", "$1.39", "6,119"], ["September 2025", "202,857", "185", "0.09%", "$1.50", "5,733"], ["August 2025", "190,714", "201", "0.11%", "$1.65", "4,487"], ["July 2025", "199,926", "223", "0.11%", "$1.57", "2,759"], ["June 2025", "227,963", "238", "0.10%", "$1.43", "646"], ["May 2025", "207,818", "208", "0.10%", "$1.51", "596"], ["April 2025", "215,149", "235", "0.11%", "$1.46", "58"]], "disp_lookback_total": ["Total", "4,033,772", "4,326", "0.11%", "$1.49", "56,384"], "disp_lookback_chart": {"labels": ["Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26"], "impr": [215149, 207818, 227963, 199926, 190714, 202857, 226152, 208419, 220570, 233412, 213163, 248213, 1439416], "vtc": [58, 596, 646, 2759, 4487, 5733, 6119, 6005, 6644, 6536, 4740, 3080, 8981]}, "mtn_locdev_headline": {"impr": ["1.13M", "&#9650; New launch", "up"], "clicks": ["1,053", "&#9650; New launch", "up"], "ctr": ["0.09%", "Above industry avg", "up"], "cpm": ["$0.16", "&#9679; Efficient", "neutral"], "vtc": ["7,629", "&#9650; Strong return", "up"]}, "mtn_locdev_location": [["Nashville", "443,809", "453", "0.10%"], ["Murfreesboro", "114,407", "95", "0.08%"], ["Antioch", "77,609", "70", "0.09%"], ["Franklin", "60,566", "49", "0.08%"], ["Cookeville", "53,192", "36", "0.07%"], ["Mount Juliet", "48,873", "47", "0.10%"], ["Lebanon", "47,475", "35", "0.07%"], ["Brentwood", "38,500", "41", "0.11%"], ["Hendersonville", "37,850", "31", "0.08%"], ["Gallatin", "37,408", "34", "0.09%"]], "mtn_device": {"Mobile": 533371, "PC": 367011, "Tablet": 234194}, "mtn_creative": [["Business banner &mdash; wide", "678,833", "706", "0.10%"], ["Business square &mdash; small", "398,436", "260", "0.07%"], ["Ad creative 3", "28,751", "54", "0.19%"], ["Ad creative 4", "28,681", "33", "0.12%"]], "cha_locdev_headline": {"impr": ["304,715", "&#9650; 56,502", "up"], "clicks": ["314", "&#9660; -50", "down"], "ctr": ["0.10%", "&#9660; -0.04%", "down"], "cpm": ["$0.14", "&#9650; $0.01", "down"], "vtc": ["1,757", "&#9660; -2,130", "down"]}, "cha_locdev_location": [["Chattanooga", "202,357", "208", "0.10%"], ["Hixson", "56,053", "53", "0.09%"], ["Ooltewah", "40,662", "43", "0.11%"], ["Signal Mountain", "5,514", "10", "0.18%"]], "cha_device": {"Mobile": 123415, "PC": 106551, "Tablet": 74733}, "cha_creative": [["Business banner &mdash; wide", "214,954", "246", "0.11%"], ["Business square &mdash; small", "80,371", "39", "0.05%"], ["Ad creative 3", "4,969", "8", "0.16%"], ["Ad creative 4", "4,421", "21", "0.48%"]], "soc_headline": {"impr": ["864,048", "&#9650; 798,171", "up"], "clicks": ["9,244", "&#9650; 8,532", "up"], "ctr": ["1.07%", "&#9660; -0.01%", "down"], "reach": ["329,381", "&#9650; 305,874", "up"], "freq": ["2.62", "&#9660; -0.18", "down"]}, "soc_campaigns": [["2026&ndash;27 | Chattanooga Traffic", "132,666", "1,584", "1.19%", "$0.57", "52,901", "2.51"], ["2026&ndash;27 | Middle TN Traffic", "731,382", "7,660", "1.05%", "$0.56", "277,365", "2.64"]], "soc_cha_headline": {"impr": ["132,666", "&#9650; New campaign", "up"], "clicks": ["1,584", "&#9650; New campaign", "up"], "ctr": ["1.19%", "&#9650; Strong CTR", "up"], "reach": ["52,901", "&#9650; New campaign", "up"], "freq": ["2.51", "&#9679; Healthy", "neutral"]}, "soc_cha_ads": [["April 2026 | Greenlight RT | Chattanooga", "8,426", "136", "1.61%", "$0.61", "2,511", "3.36"], ["April 2026 | Greenlight | Chattanooga", "77,643", "908", "1.17%", "$0.49", "38,404", "2.02"], ["January 2026 | Business RT | Chattanooga", "4,513", "54", "1.20%", "$0.58", "1,533", "2.94"], ["January 2026 | Business | Chattanooga", "42,084", "486", "1.15%", "$0.70", "18,622", "2.26"]], "soc_mtn_headline": {"impr": ["731,382", "&#9650; 665,505", "up"], "clicks": ["7,660", "&#9650; 6,948", "up"], "ctr": ["1.05%", "&#9660; -0.03%", "down"], "reach": ["277,365", "&#9650; 253,858", "up"], "freq": ["2.64", "&#9660; -0.17", "down"]}, "soc_mtn_ads": [["April 2026 | Business RT | Middle TN", "3,710", "48", "1.29%", "$0.65", "2,601", "1.43"], ["April 2026 | Business | Middle TN", "207,601", "2,238", "1.08%", "$0.67", "96,207", "2.16"], ["April 2026 | Greenlight RT | Middle TN", "14,040", "179", "1.27%", "$0.62", "6,221", "2.26"], ["April 2026 | Greenlight | Middle TN", "506,031", "5,195", "1.03%", "$0.51", "223,756", "2.26"]], "web_headline_extra": [["Key Events", "179", "&#9679; Total", "neutral"]], "web_headline": {"sessions": ["124,549", "&#9650; 4,195", "up"], "engaged": ["66,209", "&#9650; 582", "up"], "time": ["0:23", "&#9650; 0:01", "up"], "rate": ["53.16%", "&#9660; -1.37%", "down"]}, "web_chart": {"sessions": 124549, "engaged": 66209}, "web_pages": [["/", "122,298", "25,514", "57.64%"], ["/personal/online-banking", "8,804", "2,222", "63.97%"], ["/business/accounts", "7,861", "6,300", "27.92%"], ["/about-us/a-career-at-wbt", "7,600", "4,190", "70.14%"], ["/resources/financial-literacy-library", "4,353", "2,833", "56.91%"], ["/personal/credit-card-resource-center", "2,361", "726", "59.62%"], ["/about-us/locations", "1,654", "1,155", "72.01%"], ["/personal/accounts", "1,389", "895", "81.87%"], ["/about-us/contact-us", "1,362", "987", "67.15%"], ["/loans/personal", "1,249", "1,074", "63.81%"], ["/about-us/travel-club", "1,108", "559", "67.12%"], ["/about-us/upcoming-events", "1,096", "856", "44.26%"], ["/search", "1,052", "671", "93.10%"], ["/personal/savings", "832", "623", "77.34%"], ["/loans/home-loans", "775", "537", "77.89%"], ["/official-rules", "763", "598", "79.05%"], ["/loans/vehicle", "721", "552", "63.53%"], ["/personal/cds", "575", "405", "84.26%"], ["/locations/main-office-lebanon", "543", "314", "71.76%"], ["/our-leadership", "518", "417", "79.72%"], ["/loan-inquiry", "363", "272", "85.29%"], ["/loans/land-loans", "342", "259", "72.03%"], ["/personal/wbt-cash-back-checking", "330", "214", "81.23%"], ["/loans/credit-card", "314", "225", "92.83%"], ["/personal/money-market-savings", "286", "207", "86.89%"], ["/business/treasury-management-products", "279", "155", "65.75%"]], "web_sources": [["(direct) / (none)", "(direct)", "57,481", "34"], ["google / organic", "(organic)", "25,527", "120"], ["bing / organic", "(organic)", "8,190", "9"], ["recruitingbypaycor.com / referral", "(referral)", "3,414", "0"], ["google / cpc", "(organic)", "3,053", "5"], ["ntp.msn.com / referral", "(referral)", "2,961", "0"], ["timesfreepress / social", "traffic", "2,206", "0"], ["apps.docusign.com / referral", "(referral)", "2,090", "1"], ["google / cpc", "Branding Search", "1,907", "0"], ["yahoo / organic", "(organic)", "1,812", "0"], ["timesfreepress / display", "middletn_business", "1,358", "0"], ["google / cpc", "052523", "1,214", "0"], ["google / cpc", "Retail Banking - 60%", "1,008", "0"], ["google / cpc", "(not set)", "972", "0"]], "web_sources_total": ["Total", "&mdash;", "124,549", "179"], "mmct": {"has_data": false}}, "may": {"label": "May", "daterange": "May 1 &ndash; May 31, 2026", "navdate": "May 1&ndash;31, 2026", "months13": ["May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26"], "summary": {"monthly_updates": [], "key_discussion": [], "recommendations": [], "action_items": []}, "branded": {"title": "Branded Content Update Pending", "text": "No branded content performance data was included in this period's export. Metrics will be added once available."}, "mtn_account": {"sis": ["23.48%", "18.84%", "15.32%", "15.02%", "16.13%", "21.64%", ">90%", "49.12%", "42.32%", "35.68%", ">90%", "16.77%", "19.59%"], "impr": [114141, 112438, 136996, 132861, 128214, 181102, 930568, 373045, 321652, 186743, 453803, 27183, 27667], "clicks": [15187, 10066, 7321, 7346, 6842, 9051, 13833, 19409, 19917, 15387, 15355, 2010, 2142], "ctr": ["13.31%", "8.95%", "5.34%", "5.53%", "5.34%", "5.00%", "1.49%", "5.20%", "6.19%", "8.24%", "3.38%", "7.39%", "7.74%"], "cpc": [0.65, 0.98, 1.27, 1.2, 1.33, 1.04, 0.7, 0.59, 0.61, 0.71, 0.71, 4.75, 4.82], "conv": [3451, 2766, 2069, 1918, 1807, 2450, 3723, 3327, 3390, 3114, 3041, 360, 330], "convpct": ["22.72%", "27.48%", "28.26%", "26.11%", "26.41%", "27.07%", "26.91%", "17.14%", "17.02%", "20.24%", "19.80%", "17.91%", "15.41%"]}, "mtn_headline": {"impr": ["27,667", "&#9650; 484", "up"], "clicks": ["2,142", "&#9650; 132", "up"], "ctr": ["7.74%", "&#9650; 0.35%", "up"], "cpc": ["$4.82", "&#9650; $0.07", "down"], "conv": ["330", "&#9660; -29", "down"]}, "mtn_campaigns": [["Retail Banking - 53%", "15.31%", "14,134", "1,539", "10.89%", "$3.51"], ["Business Banking - 35%", "35.35%", "8,966", "417", "4.65%", "$8.45"], ["MMCT Mortgage - 12%", "19.39%", "4,567", "186", "4.07%", "$7.50"]], "mtn_location_retail": [["Nashville", "6,050", "896", "14.81%"], ["Murfreesboro", "1,473", "103", "6.99%"], ["Lebanon", "1,372", "112", "8.16%"], ["Mt. Juliet", "780", "76", "9.74%"], ["Cookeville", "704", "49", "6.96%"], ["Gallatin", "445", "31", "6.97%"], ["Hendersonville", "442", "38", "8.60%"], ["Smyrna", "418", "26", "6.22%"], ["Franklin", "391", "29", "7.42%"], ["Algood", "291", "26", "8.93%"], ["Brentwood", "217", "21", "9.68%"], ["La Vergne", "155", "9", "5.81%"], ["Portland", "146", "17", "11.64%"], ["South Carthage", "107", "8", "7.48%"], ["Baxter", "101", "8", "7.92%"], ["Goodlettsville", "91", "9", "9.89%"]], "mtn_location_business": [["Nashville", "4,561", "255", "5.59%"], ["Murfreesboro", "839", "29", "3.46%"], ["Lebanon", "540", "22", "4.07%"], ["Mt. Juliet", "368", "16", "4.35%"], ["Franklin", "301", "6", "1.99%"], ["Smyrna", "298", "7", "2.35%"], ["Gallatin", "276", "6", "2.17%"], ["Hendersonville", "266", "9", "3.38%"], ["Cookeville", "248", "8", "3.23%"], ["Brentwood", "240", "13", "5.42%"], ["Algood", "111", "8", "7.21%"], ["La Vergne", "109", "7", "6.42%"], ["South Carthage", "82", "4", "4.88%"], ["Goodlettsville", "79", "8", "10.13%"], ["Portland", "78", "0", "0.00%"], ["Baxter", "66", "0", "0.00%"]], "mtn_retail_headline": {"impr": ["14,134", "&#9650; 570", "up"], "clicks": ["1,539", "&#9650; 520", "up"], "ctr": ["10.89%", "&#9650; 3.38%", "up"], "cpc": ["$3.51", "&#9660; -$1.08", "down"], "conv": ["313", "&#9650; 27", "up"]}, "mtn_retail_groups": [["Auto Loans", "7,831", "486", "6.21%", "$5.57"], ["Mortgage + Home Loans", "2,847", "196", "6.88%", "$4.55"], ["Personal Checking", "2,810", "754", "26.83%", "$2.12"], ["Personal Savings", "424", "72", "16.98%", "$1.91"], ["HELOC", "222", "31", "13.96%", "$2.07"]], "mtn_business_headline": {"impr": ["8,966", "&#9660; -1,341", "down"], "clicks": ["417", "&#9660; -365", "down"], "ctr": ["4.65%", "&#9660; -2.94%", "down"], "cpc": ["$8.45", "&#9650; $2.91", "down"], "conv": ["6", "&#9660; -21", "down"]}, "mtn_business_groups": [["Business Loans", "6,051", "149", "2.46%", "$17.64"], ["Business CDs", "1,415", "114", "8.06%", "$2.39"], ["Business Checking", "778", "69", "8.87%", "$4.48"], ["Business Money Market", "722", "85", "11.77%", "$3.70"]], "cha_account": {"sis": ["12.37%", "12.79%", "12.90%", "10.42%", "10.50%", "10.51%", "10.31%", "11.38%", "10.90%", "10.83%", "11.41%", "19.82%", "33.06%"], "impr": [6755, 7776, 8392, 12486, 14416, 15182, 15306, 15925, 15457, 12243, 10139, 14467, 10366], "clicks": [411, 356, 415, 640, 693, 657, 634, 601, 638, 530, 463, 558, 442], "ctr": ["6.08%", "4.58%", "4.95%", "5.13%", "4.81%", "4.33%", "4.14%", "3.77%", "4.13%", "4.33%", "4.57%", "3.86%", "4.26%"], "cpc": [3.72, 4.24, 3.62, 2.34, 2.21, 2.25, 2.34, 2.54, 2.32, 2.85, 3.24, 3.33, 3.5], "conv": [5, 10, 9, 19, 27, 26, 10, 17, 22, 15, 13, 53, 60], "convpct": ["1.22%", "2.81%", "2.17%", "2.97%", "3.90%", "3.96%", "1.58%", "2.83%", "3.45%", "2.83%", "2.81%", "9.50%", "13.57%"]}, "cha_headline": {"impr": ["10,366", "&#9660; -4,101", "down"], "clicks": ["442", "&#9660; -116", "down"], "ctr": ["4.26%", "&#9650; 0.41%", "up"], "cpc": ["$3.50", "&#9650; $0.17", "down"], "conv": ["60", "&#9650; 7", "up"]}, "cha_campaigns": [["Retail Banking - 60%", "28.11%", "8,210", "333", "4.06%", "$2.79", "52"], ["Business Banking - 40%", ">90%", "2,156", "109", "5.06%", "$5.66", "8"]], "cha_retail_headline": {"impr": ["8,210", "&#9660; -1,888", "down"], "clicks": ["333", "&#9660; -54", "down"], "ctr": ["4.06%", "&#9650; 0.22%", "up"], "cpc": ["$2.79", "&#9650; $0.05", "down"], "conv": ["52", "&#9650; 1", "up"]}, "cha_retail_groups": [["Personal Checking", "5,751", "252", "4.38%", "$2.70"], ["Personal Savings", "867", "24", "2.77%", "$2.11"], ["Auto Loans", "814", "26", "3.19%", "$4.37"], ["CD Rates", "472", "19", "4.03%", "$2.95"], ["Mortgage + Home Loans", "254", "11", "4.33%", "$2.41"], ["HELOC", "52", "1", "1.92%", "$3.68"]], "cha_business_headline": {"impr": ["2,156", "&#9660; -2,213", "down"], "clicks": ["109", "&#9660; -62", "down"], "ctr": ["5.06%", "&#9650; 1.14%", "up"], "cpc": ["$5.66", "&#9650; $1.00", "down"], "conv": ["8", "&#9650; 6", "up"]}, "cha_business_groups": [["Business CDs", "1,656", "86", "5.19%", "$2.06"], ["Business Loans", "401", "20", "4.99%", "$18.04"], ["Business Checking", "75", "3", "4.00%", "$26.28"], ["Business Money Market", "24", "0", "0.00%", "$0.00"]], "disp_headline": {"impr": ["1.61M", "&#9650; 173,604", "up"], "clicks": ["1,596", "&#9650; 229", "up"], "ctr": ["0.10%", "&#9650; 0.00%", "neutral"], "cpm": ["$1.40", "&#9660; -$0.15", "up"], "vtc": ["27,734", "&#9650; 18,348", "up"]}, "disp_campaigns": [["Precision Display &ndash; Middle TN", "1,336,815", "1,289", "0.10%", "$1.38", "26,924"], ["Precision Display &ndash; Chattanooga", "276,205", "307", "0.11%", "$1.52", "659"]], "disp_lookback_rows": [["May 2026", "1,613,020", "1,596", "0.10%", "$1.40", "27,729"], ["April 2026", "1,439,416", "1,367", "0.09%", "$1.55", "8,981"], ["March 2026", "248,213", "364", "0.15%", "$1.27", "3,080"], ["February 2026", "213,163", "255", "0.12%", "$1.48", "4,740"], ["January 2026", "233,412", "280", "0.12%", "$1.35", "6,536"], ["December 2025", "220,570", "283", "0.13%", "$1.43", "6,644"], ["November 2025", "208,419", "236", "0.11%", "$1.51", "6,005"], ["October 2025", "226,152", "251", "0.11%", "$1.39", "6,119"], ["September 2025", "202,857", "185", "0.09%", "$1.50", "5,733"], ["August 2025", "190,714", "201", "0.11%", "$1.65", "4,487"], ["July 2025", "199,926", "223", "0.11%", "$1.57", "2,759"], ["June 2025", "227,963", "238", "0.10%", "$1.43", "646"], ["May 2025", "207,818", "208", "0.10%", "$1.51", "596"]], "disp_lookback_total": ["Total", "5,431,643", "5,687", "0.10%", "$1.46", "84,055"], "disp_lookback_chart": {"labels": ["May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26"], "impr": [207818, 227963, 199926, 190714, 202857, 226152, 208419, 220570, 233412, 213163, 248213, 1439416, 1613020], "vtc": [596, 646, 2759, 4487, 5733, 6119, 6005, 6644, 6536, 4740, 3080, 8981, 27729]}, "mtn_locdev_headline": {"impr": ["1,336,815", "&#9650; 202,114", "up"], "clicks": ["1,289", "&#9650; 236", "up"], "ctr": ["0.10%", "&#9650; 0.00%", "neutral"], "cpm": ["$1.38", "&#9660; -$0.22", "up"], "vtc": ["26,924", "&#9650; 19,295", "up"]}, "mtn_locdev_location": [["Nashville", "480,051", "514", "0.11%"], ["Murfreesboro", "139,874", "136", "0.10%"], ["Franklin", "79,786", "51", "0.06%"], ["Cookeville", "69,965", "58", "0.08%"], ["Mount Juliet", "67,386", "71", "0.11%"], ["Antioch", "60,539", "64", "0.11%"], ["Lebanon", "60,331", "57", "0.09%"], ["Brentwood", "52,108", "44", "0.08%"], ["Gallatin", "48,826", "44", "0.09%"], ["Hendersonville", "46,911", "37", "0.08%"]], "mtn_device": {"PC": 540286, "Mobile": 486792, "Tablet": 234194}, "mtn_creative": [["Business banner &mdash; wide", "804,943", "1,011", "0.13%"], ["Business square &mdash; small", "496,655", "227", "0.05%"], ["Ad creative 3", "20,820", "29", "0.14%"], ["Ad creative 4", "14,397", "22", "0.15%"]], "cha_locdev_headline": {"impr": ["276,205", "&#9660; -28,510", "down"], "clicks": ["307", "&#9660; -7", "down"], "ctr": ["0.11%", "&#9650; 0.01%", "up"], "cpm": ["$1.52", "&#9650; $0.14", "down"], "vtc": ["810", "&#9660; -947", "down"]}, "cha_locdev_location": [["Chattanooga", "189,306", "199", "0.11%"], ["Hixson", "50,980", "64", "0.13%"], ["Ooltewah", "32,621", "42", "0.13%"], ["Signal Mountain", "3,225", "2", "0.06%"]], "cha_device": {"Mobile": 116460, "PC": 101539, "Tablet": 58192}, "cha_creative": [["Business banner &mdash; wide", "166,472", "236", "0.14%"], ["Business square &mdash; small", "100,519", "53", "0.05%"], ["Ad creative 3", "4,972", "11", "0.22%"], ["Ad creative 4", "4,242", "7", "0.17%"]], "soc_headline": {"impr": ["714,280", "&#9660; -149,768", "down"], "clicks": ["12,611", "&#9650; 3,367", "up"], "ctr": ["1.77%", "&#9650; 0.70%", "up"], "reach": ["288,160", "&#9660; -41,221", "down"], "freq": ["2.48", "&#9660; -0.14", "down"]}, "soc_campaigns": [["2026&ndash;27 | Middle TN Traffic", "479,324", "5,693", "1.19%", "$4.86", "211,584", "2.27"], ["2026&ndash;27 | Chattanooga Traffic", "111,908", "1,424", "1.27%", "$5.83", "42,914", "2.61"], ["2026&ndash;27 | Roots &amp; Rhythms", "83,692", "4,055", "4.85%", "$7.88", "37,060", "2.26"], ["2026 May&ndash;July | Rutherford County Traffic", "39,356", "1,439", "3.66%", "$7.60", "16,329", "2.41"]], "soc_cha_headline": {"impr": ["111,908", "&#9660; -20,758", "down"], "clicks": ["1,424", "&#9660; -160", "down"], "ctr": ["1.27%", "&#9650; 0.08%", "up"], "reach": ["42,914", "&#9660; -9,987", "down"], "freq": ["2.61", "&#9650; 0.10", "up"]}, "soc_cha_ads": [["April 2026 | Greenlight | Chattanooga", "98,973", "1,211", "1.22%", "$5.67", "42,189", "2.35"], ["April 2026 | Greenlight RT | Chattanooga", "12,329", "206", "1.67%", "$7.17", "3,240", "3.81"]], "soc_mtn_headline": {"impr": ["602,372", "&#9660; -129,010", "down"], "clicks": ["11,187", "&#9650; 3,527", "up"], "ctr": ["1.86%", "&#9650; 0.81%", "up"], "reach": ["251,364", "&#9660; -26,001", "down"], "freq": ["2.40", "&#9660; -0.24", "down"]}, "soc_mtn_ads": [["April 2026 | Greenlight | Middle TN", "443,774", "5,230", "1.18%", "$4.81", "202,552", "2.19"], ["May 2026 | Roots &amp; Rhythms", "83,692", "4,055", "4.85%", "$7.88", "37,060", "2.26"], ["May 2026 | Consumer", "39,356", "1,439", "3.66%", "$7.60", "16,329", "2.41"], ["April 2026 | Business | Middle TN", "19,297", "213", "1.10%", "$4.96", "14,234", "1.36"], ["April 2026 | Greenlight RT | Middle TN", "16,182", "249", "1.54%", "$6.13", "7,852", "2.06"]], "web_headline_extra": [], "web_headline": {"sessions": ["113,522", "&#9660; -11,027", "down"], "engaged": ["63,051", "&#9660; -3,158", "down"], "time": ["0:23", "&#9650; 0:00", "up"], "rate": ["55.54%", "&#9650; 2.38%", "up"]}, "web_chart": {"sessions": 113522, "engaged": 63051}, "web_pages": [["/", "121,365", "25,514", "59.74%"], ["/personal/online-banking", "8,681", "2,145", "64.13%"], ["/about-us/a-career-at-wbt", "6,704", "3,928", "69.03%"], ["/business/accounts", "5,562", "4,028", "36.26%"], ["/personal/credit-card-resource-center", "1,975", "669", "58.78%"], ["/personal/accounts", "1,903", "1,234", "68.17%"], ["/about-us/locations", "1,541", "1,032", "68.59%"], ["/about-us/contact-us", "1,488", "1,030", "63.53%"], ["/loans/personal", "1,049", "867", "65.99%"], ["/search", "919", "675", "80.52%"], ["/about-us/upcoming-events", "867", "715", "43.64%"], ["/loans/vehicle", "780", "617", "60.88%"], ["/loans/home-loans", "694", "517", "80.83%"], ["/about-us/travel-club", "656", "294", "67.57%"], ["/personal/savings", "651", "483", "80.19%"], ["/locations/main-office-lebanon", "569", "299", "64.98%"], ["/personal/cds", "551", "389", "80.60%"], ["/our-leadership", "444", "381", "78.50%"], ["/business/treasury-management-resource-center", "410", "175", "64.69%"], ["/calculators", "392", "261", "85.67%"], ["/about-us/investor-relations", "388", "237", "76.90%"], ["/loan-inquiry", "354", "276", "84.78%"], ["/resources/financial-literacy-library", "350", "263", "68.01%"], ["/personal/online-loan-payment", "281", "179", "73.27%"], ["/personal/wbt-cash-back-checking", "319", "212", "80.62%"], ["/business/treasury-management-products", "315", "210", "69.55%"], ["/loans/land-loans", "294", "217", "71.43%"], ["/loans/construction-loans", "293", "220", "75.40%"], ["/personal/basic-checking", "259", "189", "81.00%"], ["/loans/credit-card", "254", "177", "79.82%"], ["/personal/money-market-savings", "251", "190", "81.11%"], ["/personal/community-100-loan", "250", "206", "51.25%"], ["/privacy-policy", "247", "154", "34.08%"], ["/about-us/who-we-are", "243", "176", "74.78%"]], "web_sources": [["(direct) / (none)", "(direct)", "54,961", "101"], ["google / organic", "(organic)", "24,936", "251"], ["bing / organic", "(organic)", "7,965", "25"], ["google / cpc", "(organic)", "3,099", "12"], ["recruitingbypaycor.com / referral", "(referral)", "3,067", "1"], ["ntp.msn.com / referral", "(referral)", "2,947", "0"], ["apps.docusign.com / referral", "(referral)", "2,012", "1"], ["yahoo / organic", "(organic)", "1,743", "5"], ["timesfreepress / display", "middletn_business", "1,564", "0"], ["google / cpc", "Retail Banking - 53%", "1,541", "3"], ["google / cpc", "052523", "1,236", "0"], ["google / cpc", "(not set)", "896", "1"], ["na.network-auth.com / referral", "(referral)", "835", "0"], ["timesfreepress / social", "rutherford", "783", "1"]], "web_sources_total": ["Total", "&mdash;", "113,522", "414"], "mmct": {"has_data": false}}, "june": {"label": "June", "daterange": "June 1 &ndash; June 30, 2026", "navdate": "June 1&ndash;30, 2026", "months13": ["Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26"], "summary": {"monthly_updates": [["July 1: launched Treasury Management search ad group in Middle TN.", null], ["Changed Greenlight creatives on social (June 24).", null], ["Middle TN Roots &amp; Rhythms social campaign ended (June 26).", null], ["Retail Banking Auto Loans ad group paused for both Middle TN and Chattanooga search campaigns (June 10).", "A clear difference is visible in Retail Banking performance since removal &mdash; this ad group appears to have been on the lower end of the CPC spectrum, so pausing it has pushed CPC up in both accounts."], ["Large increase in Key Events attributed to organic traffic.", null]], "key_discussion": [["Cost of Business Banking campaigns in both Chattanooga and Middle TN increased significantly &mdash; is this a seasonality trend?", "Initial thought: some companies&rsquo; fiscal years end in June, which could drive a seasonal increase in business banking search activity."], ["LinkedIn campaign proposal drafted for both Middle TN and Chattanooga.", "Would pair with Business Banking &mdash; specifically Treasury Management &mdash; to help build search volume. Treasury Management launched 7/1 but has had no interactions yet; part of the LinkedIn strategy is to help increase search volume and interest."]], "recommendations": [["In Chattanooga, the majority of Retail Banking search terms are branded toward competitors &mdash; likely reflecting lower awareness of Wilson Bank in that market.", "Recommend testing an evergreen branding creative/campaign across Social and Display to build general awareness, with the goal of shifting search performance away from competitor-branded queries and toward higher-intent terms like &ldquo;open a checking account.&rdquo;"]], "action_items": [["TTD address-list activation for Chattanooga rates", "Working with TTD rep to get pricing and the address list activated; still need to confirm which landing page to send this traffic to once ready."], ["Q4 market acquisition &amp; conquest plan (Google)", "Myiah is collaborating with the Google contact to build this out. Google clarified the agency typically does not run branding campaigns on Google Ads; Myiah is awaiting creative assets and expects the work to align with later-quarter timing."]]}, "branded": {"title": "Branded Content Update Pending", "text": "No branded content performance data was included in this period's export. Metrics will be added once available."}, "mtn_account": {"sis": ["18.84%", "15.32%", "15.02%", "16.13%", "21.64%", ">90%", "49.12%", "42.32%", "35.68%", ">90%", "16.77%", "19.59%", "17.20%"], "impr": [112438, 136996, 132861, 128214, 181102, 930568, 373045, 321652, 186743, 453803, 27183, 27667, 27446], "clicks": [10066, 7321, 7346, 6842, 9051, 13833, 19409, 19917, 15387, 15355, 2010, 2142, 1116], "ctr": ["8.95%", "5.34%", "5.53%", "5.34%", "5.00%", "1.49%", "5.20%", "6.19%", "8.24%", "3.38%", "7.39%", "7.74%", "4.07%"], "cpc": [0.98, 1.27, 1.2, 1.33, 1.04, 0.7, 0.59, 0.61, 0.71, 0.71, 4.75, 4.82, 9.84], "conv": [2766, 2069, 1918, 1807, 2450, 3723, 3327, 3390, 3114, 3041, 360, 330, 184], "convpct": ["27.48%", "28.26%", "26.11%", "26.41%", "27.07%", "26.91%", "17.14%", "17.02%", "20.24%", "19.80%", "17.91%", "15.41%", "16.49%"]}, "mtn_headline": {"impr": ["27,446", "&#9660; -221", "down"], "clicks": ["1,116", "&#9660; -1,026", "down"], "ctr": ["4.07%", "&#9660; -3.68%", "down"], "cpc": ["$9.84", "&#9650; $5.03", "down"], "conv": ["184", "&#9660; -146", "down"]}, "mtn_campaigns": [["Retail Banking - 53%", "14.95%", "13,576", "746", "5.50%", "$7.26"], ["Business Banking - 35%", "27.92%", "6,956", "196", "2.82%", "$19.72"], ["MMCT Mortgage - 12%", "15.75%", "6,914", "174", "2.52%", "$9.81"]], "mtn_location_retail": [["Nashville", "5,449", "264", "4.84%"], ["Murfreesboro", "1,424", "77", "5.41%"], ["Lebanon", "1,236", "81", "6.55%"], ["Cookeville", "758", "41", "5.41%"], ["Mt. Juliet", "726", "74", "10.19%"], ["Gallatin", "637", "32", "5.02%"], ["Hendersonville", "521", "36", "6.91%"], ["Smyrna", "433", "21", "4.85%"], ["Franklin", "373", "15", "4.02%"], ["La Vergne", "213", "8", "3.76%"], ["Algood", "196", "9", "4.59%"], ["Brentwood", "181", "10", "5.52%"], ["Portland", "179", "6", "3.35%"], ["Baxter", "129", "9", "6.98%"], ["South Carthage", "108", "7", "6.48%"], ["Westmoreland", "98", "4", "4.08%"]], "mtn_location_business": [["Nashville", "2,997", "68", "2.27%"], ["Murfreesboro", "741", "26", "3.51%"], ["Lebanon", "583", "27", "4.63%"], ["Cookeville", "345", "11", "3.19%"], ["Mt. Juliet", "326", "6", "1.84%"], ["Gallatin", "291", "13", "4.47%"], ["Franklin", "253", "7", "2.77%"], ["Hendersonville", "218", "5", "2.29%"], ["Smyrna", "188", "6", "3.19%"], ["Brentwood", "173", "1", "0.58%"], ["La Vergne", "89", "3", "3.37%"], ["Algood", "79", "2", "2.53%"], ["Portland", "74", "3", "4.05%"], ["South Carthage", "72", "1", "1.39%"], ["Goodlettsville", "52", "2", "3.85%"], ["Baxter", "51", "0", "0.00%"]], "mtn_retail_headline": {"impr": ["13,576", "&#9660; -558", "down"], "clicks": ["746", "&#9660; -793", "down"], "ctr": ["5.50%", "&#9660; -5.39%", "down"], "cpc": ["$7.26", "&#9650; $3.75", "down"], "conv": ["144", "&#9660; -169", "down"]}, "mtn_retail_groups": [["Mortgage + Home Loans", "5,198", "250", "4.81%", "$5.72"], ["Auto Loans", "3,341", "183", "5.48%", "$7.08"], ["HELOC", "3,335", "194", "5.82%", "$9.95"], ["Personal Checking", "1,529", "96", "6.28%", "$7.32"], ["Personal Savings", "173", "23", "13.29%", "$2.50"]], "mtn_business_headline": {"impr": ["6,956", "&#9660; -2,010", "down"], "clicks": ["196", "&#9660; -221", "down"], "ctr": ["2.82%", "&#9660; -1.83%", "down"], "cpc": ["$19.72", "&#9650; $11.27", "down"], "conv": ["11", "&#9650; 5", "up"]}, "mtn_business_groups": [["Business Loans", "5,698", "119", "2.09%", "$23.24"], ["Business Checking", "496", "12", "2.42%", "$34.16"], ["Business Money Market", "468", "20", "4.27%", "$15.29"], ["Business CDs", "294", "45", "15.31%", "$8.52"]], "cha_account": {"sis": ["12.79%", "12.90%", "10.42%", "10.50%", "10.51%", "10.31%", "11.38%", "10.90%", "10.83%", "11.41%", "19.82%", "33.06%", "16.55%"], "impr": [7776, 8392, 12486, 14416, 15182, 15306, 15925, 15457, 12243, 10139, 14467, 10366, 7377], "clicks": [356, 415, 640, 693, 657, 634, 601, 638, 530, 463, 558, 442, 345], "ctr": ["4.58%", "4.95%", "5.13%", "4.81%", "4.33%", "4.14%", "3.77%", "4.13%", "4.33%", "4.57%", "3.86%", "4.26%", "4.68%"], "cpc": [4.24, 3.62, 2.34, 2.21, 2.25, 2.34, 2.54, 2.32, 2.85, 3.24, 3.33, 3.5, 4.85], "conv": [10, 9, 19, 27, 26, 10, 17, 22, 15, 13, 53, 60, 47], "convpct": ["2.81%", "2.17%", "2.97%", "3.90%", "3.96%", "1.58%", "2.83%", "3.45%", "2.83%", "2.81%", "9.50%", "13.57%", "13.62%"]}, "cha_headline": {"impr": ["7,377", "&#9660; -2,989", "down"], "clicks": ["345", "&#9660; -97", "down"], "ctr": ["4.68%", "&#9650; 0.41%", "up"], "cpc": ["$4.85", "&#9650; $1.35", "down"], "conv": ["47", "&#9660; -13", "down"]}, "cha_campaigns": [["Retail Banking - 60%", "16.05%", "6,791", "322", "4.74%", "$3.14", "43"], ["Business Banking - 40%", "25.89%", "586", "23", "3.92%", "$28.79", "4"]], "cha_retail_headline": {"impr": ["6,791", "&#9660; -1,419", "down"], "clicks": ["322", "&#9660; -11", "down"], "ctr": ["4.74%", "&#9650; 0.69%", "up"], "cpc": ["$3.14", "&#9650; $0.35", "down"], "conv": ["43", "&#9650; 1", "up"]}, "cha_retail_groups": [["Personal Checking", "5,361", "270", "5.04%", "$3.04"], ["Personal Savings", "618", "29", "4.69%", "$3.34"], ["Auto Loans", "563", "16", "2.84%", "$4.55"], ["Mortgage + Home Loans", "249", "7", "2.81%", "$3.08"]], "cha_business_headline": {"impr": ["586", "&#9660; -1,570", "down"], "clicks": ["23", "&#9660; -86", "down"], "ctr": ["3.92%", "&#9660; -1.13%", "down"], "cpc": ["$28.79", "&#9650; $23.13", "down"], "conv": ["4", "&#9660; -4", "down"]}, "cha_business_groups": [["Business Loans", "454", "18", "3.96%", "$29.44"], ["Business Checking", "129", "5", "3.88%", "$26.44"], ["Business Money Market", "3", "0", "0.00%", "$0.00"]], "disp_headline": {"impr": ["1.52M", "&#9660; -88,142", "down"], "clicks": ["2,486", "&#9650; 890", "up"], "ctr": ["0.16%", "&#9650; 0.06%", "up"], "cpm": ["$1.48", "&#9650; $0.07", "down"], "vtc": ["37,848", "&#9650; 10,114", "up"]}, "disp_campaigns": [["Precision Display &ndash; Middle TN", "1,271,436", "2,066", "0.16%", "$1.44", "36,613"], ["Precision Display &ndash; Chattanooga", "253,442", "420", "0.17%", "$1.66", "1,174"]], "disp_lookback_rows": [["June 2026", "1,524,878", "2,486", "0.16%", "$1.48", "37,848"], ["May 2026", "1,613,020", "1,596", "0.10%", "$1.40", "27,729"], ["April 2026", "1,439,416", "1,367", "0.09%", "$1.55", "8,981"], ["March 2026", "248,213", "364", "0.15%", "$1.27", "3,080"], ["February 2026", "213,163", "255", "0.12%", "$1.48", "4,740"], ["January 2026", "233,412", "280", "0.12%", "$1.35", "6,536"], ["December 2025", "220,570", "283", "0.13%", "$1.43", "6,644"], ["November 2025", "208,419", "236", "0.11%", "$1.51", "6,005"], ["October 2025", "226,152", "251", "0.11%", "$1.39", "6,119"], ["September 2025", "202,857", "185", "0.09%", "$1.50", "5,733"], ["August 2025", "190,714", "201", "0.11%", "$1.65", "4,487"], ["July 2025", "199,926", "223", "0.11%", "$1.57", "2,759"], ["June 2025", "227,963", "238", "0.10%", "$1.43", "646"]], "disp_lookback_total": ["Total", "6,748,703", "7,965", "0.12%", "$1.47", "121,307"], "disp_lookback_chart": {"labels": ["Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26"], "impr": [227963, 199926, 190714, 202857, 226152, 208419, 220570, 233412, 213163, 248213, 1439416, 1613020, 1524878], "vtc": [646, 2759, 4487, 5733, 6119, 6005, 6644, 6536, 4740, 3080, 8981, 27729, 37848]}, "mtn_locdev_headline": {"impr": ["1,271,436", "&#9660; -65,379", "down"], "clicks": ["2,066", "&#9650; 777", "up"], "ctr": ["0.16%", "&#9650; 0.07%", "up"], "cpm": ["$1.44", "&#9650; $0.06", "down"], "vtc": ["36,613", "&#9650; 9,689", "up"]}, "mtn_locdev_location": [["Nashville", "431,383", "750", "0.17%"], ["Murfreesboro", "125,221", "205", "0.16%"], ["Antioch", "103,898", "245", "0.24%"], ["Franklin", "65,140", "87", "0.13%"], ["Cookeville", "62,509", "115", "0.18%"], ["Lebanon", "61,851", "85", "0.14%"], ["Mount Juliet", "61,284", "68", "0.11%"], ["Brentwood", "46,691", "64", "0.14%"], ["Gallatin", "44,856", "57", "0.13%"], ["Hendersonville", "41,494", "49", "0.12%"]], "mtn_device": {"Mobile": 562994, "PC": 371784, "Tablet": 336579}, "mtn_creative": [["Business banner &mdash; wide", "740,476", "1,783", "0.24%"], ["Business square &mdash; small", "499,274", "239", "0.05%"], ["Ad creative 3", "18,399", "28", "0.15%"], ["Ad creative 4", "13,287", "16", "0.12%"]], "cha_locdev_headline": {"impr": ["253,442", "&#9660; -22,763", "down"], "clicks": ["420", "&#9650; 113", "up"], "ctr": ["0.17%", "&#9650; 0.05%", "up"], "cpm": ["$1.66", "&#9650; $0.14", "down"], "vtc": ["1,235", "&#9650; 425", "up"]}, "cha_locdev_location": [["Chattanooga", "168,960", "245", "0.15%"], ["Ooltewah", "42,187", "96", "0.23%"], ["Hixson", "40,132", "75", "0.19%"], ["Signal Mountain", "1,987", "4", "0.20%"], ["East Chattanooga", "176", "0", "0.00%"]], "cha_device": {"Mobile": 117181, "PC": 79320, "Tablet": 56919}, "cha_creative": [["Business banner &mdash; wide", "138,596", "342", "0.25%"], ["Business square &mdash; small", "106,641", "57", "0.05%"], ["Ad creative 3", "4,280", "14", "0.33%"], ["Ad creative 4", "3,925", "7", "0.18%"]], "soc_headline": {"impr": ["692,513", "&#9660; -21,767", "down"], "clicks": ["13,311", "&#9650; 700", "up"], "ctr": ["1.92%", "&#9650; 0.16%", "up"], "reach": ["259,547", "&#9660; -28,613", "down"], "freq": ["2.67", "&#9650; 0.19", "up"]}, "soc_campaigns": [["2026&ndash;27 | Middle TN Traffic", "437,762", "5,444", "1.24%", "$6.88", "157,257", "2.78"], ["2026&ndash;27 | Chattanooga Traffic", "102,611", "1,308", "1.27%", "$7.25", "34,181", "3.00"], ["2026 May&ndash;July | Rutherford County Traffic", "78,637", "3,454", "4.39%", "$7.63", "39,712", "1.98"], ["2026&ndash;27 | Roots &amp; Rhythms", "73,503", "3,105", "4.22%", "$7.91", "39,522", "1.86"]], "soc_cha_headline": {"impr": ["102,611", "&#9660; -9,297", "down"], "clicks": ["1,308", "&#9660; -116", "down"], "ctr": ["1.27%", "&#9650; 0.00%", "neutral"], "reach": ["34,181", "&#9660; -8,733", "down"], "freq": ["3.00", "&#9650; 0.39", "up"]}, "soc_cha_ads": [["April 2026 | Greenlight | Chattanooga", "88,516", "1,089", "1.23%", "$6.87", "33,219", "2.66"], ["April 2026 | Greenlight RT | Chattanooga", "11,979", "200", "1.67%", "$10.13", "2,502", "4.79"], ["January 2026 | Business | Chattanooga", "2,002", "17", "0.85%", "$7.02", "1,565", "1.28"]], "soc_mtn_headline": {"impr": ["589,902", "&#9660; -12,470", "down"], "clicks": ["12,003", "&#9650; 816", "up"], "ctr": ["2.03%", "&#9650; 0.18%", "up"], "reach": ["226,903", "&#9660; -24,461", "down"], "freq": ["2.60", "&#9650; 0.20", "up"]}, "soc_mtn_ads": [["April 2026 | Greenlight | Middle TN", "402,913", "4,894", "1.21%", "$6.75", "152,567", "2.64"], ["June 2026 | Consumer", "78,637", "3,454", "4.39%", "$7.63", "39,712", "1.98"], ["May 2026 | Roots &amp; Rhythms", "73,503", "3,105", "4.22%", "$7.91", "39,522", "1.86"], ["April 2026 | Greenlight RT | Middle TN", "29,127", "438", "1.50%", "$8.41", "9,057", "3.22"], ["April 2026 | Business | Middle TN", "4,197", "81", "1.93%", "$7.86", "3,460", "1.21"], ["April 2026 | Business RT | Middle TN", "1,525", "31", "2.03%", "$8.54", "1,140", "1.34"]], "web_headline_extra": [], "web_headline": {"sessions": ["114,568", "&#9650; 1,046", "up"], "engaged": ["63,181", "&#9650; 130", "up"], "time": ["0:26", "&#9650; 0:03", "up"], "rate": ["55.15%", "&#9660; -0.39%", "down"]}, "web_chart": {"sessions": 114568, "engaged": 63181}, "web_pages": [["/", "122,850", "27,314", "59.04%"], ["/personal/online-banking", "8,562", "2,015", "64.97%"], ["/about-us/a-career-at-wbt", "5,282", "3,056", "76.08%"], ["/business/accounts", "4,314", "2,876", "17.44%"], ["/personal/credit-card-resource-center", "2,058", "716", "60.88%"], ["/search", "1,716", "1,530", "36.79%"], ["/about-us/locations", "1,671", "1,069", "72.24%"], ["/about-us/contact-us", "1,411", "991", "63.18%"], ["/personal/accounts", "1,079", "691", "83.20%"], ["/loans/personal", "923", "785", "64.68%"], ["/about-us/travel-club", "711", "315", "74.64%"], ["/loans/home-loans", "649", "518", "78.26%"], ["/locations/main-office-lebanon", "634", "330", "70.68%"], ["/personal/savings", "634", "478", "76.17%"], ["/about-us/investor-relations", "530", "291", "84.97%"], ["/business/treasury-management-resource-center", "515", "188", "62.68%"], ["/about-us/upcoming-events", "514", "429", "68.93%"], ["/personal/cds", "495", "358", "78.21%"], ["/our-leadership", "482", "401", "79.57%"], ["/loans/vehicle", "441", "354", "66.49%"], ["/calculators", "439", "308", "95.20%"], ["/loan-inquiry", "366", "263", "85.40%"], ["/loans/home-equity-line-of-credit", "345", "281", "60.62%"], ["/personal/basic-checking", "284", "185", "78.97%"], ["/resources/financial-literacy-library", "279", "260", "82.14%"], ["/personal/online-loan-payment", "266", "164", "74.19%"], ["/personal/money-market-savings", "259", "192", "92.42%"], ["/business/business-solutions", "254", "166", "75.54%"], ["/personal/wbt-cash-back-checking", "246", "143", "70.80%"], ["/about-us/board-of-directors", "242", "208", "77.92%"], ["/privacy-policy", "237", "149", "24.77%"], ["/personal/wbt-saver", "233", "186", "74.16%"], ["/about-us/who-we-are", "229", "182", "84.21%"], ["/loans/land-loans", "226", "162", "75.40%"], ["/loans/construction-loans", "223", "151", "77.27%"]], "web_sources": [["(direct) / (none)", "(direct)", "56,501", "128"], ["google / organic", "(organic)", "28,263", "498"], ["bing / organic", "(organic)", "8,086", "27"], ["ntp.msn.com / referral", "(referral)", "2,657", "1"], ["timesfreepress / display", "middletn_business", "2,314", "6"], ["apps.docusign.com / referral", "(referral)", "2,094", "5"], ["recruitingbypaycor.com / referral", "(referral)", "2,029", "0"], ["yahoo / organic", "(organic)", "1,683", "7"], ["timesfreepress / social", "rutherford", "1,622", "7"], ["google / cpc", "052523", "1,423", "0"], ["na.network-auth.com / referral", "(referral)", "941", "0"], ["google / cpc", "(organic)", "936", "0"], ["google / cpc", "(not set)", "786", "0"], ["timesfreepress / display", "chatt_business", "755", "0"]], "web_sources_total": ["Total", "&mdash;", "114,568", "727"], "mmct": {"has_data": false}}, "july": {"label": "July", "daterange": "July 1 &ndash; July 31, 2026", "navdate": "July 1&ndash;31, 2026", "months13": ["Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26"], "summary": {"monthly_updates": [], "key_discussion": [], "recommendations": [], "action_items": []}, "branded": {"title": "Branded Content Update Pending", "text": "No branded content performance data was included in this period's export. Metrics will be added once available."}, "mtn_account": {"sis": ["15.32%", "15.02%", "16.13%", "21.64%", ">90%", "49.12%", "42.32%", "35.68%", ">90%", "16.77%", "19.59%", "17.20%", "16.79%"], "impr": [136996, 132861, 128214, 181102, 930568, 373045, 321652, 186743, 453803, 27183, 27667, 27446, 25180], "clicks": [7321, 7346, 6842, 9051, 13833, 19409, 19917, 15387, 15355, 2010, 2142, 1116, 1029], "ctr": ["5.34%", "5.53%", "5.34%", "5.00%", "1.49%", "5.20%", "6.19%", "8.24%", "3.38%", "7.39%", "7.74%", "4.07%", "4.09%"], "cpc": [1.27, 1.2, 1.33, 1.04, 0.7, 0.59, 0.61, 0.71, 0.71, 4.75, 4.82, 9.84, 9.86], "conv": [2069, 1918, 1807, 2450, 3723, 3327, 3390, 3114, 3041, 360, 331, 185, 147], "convpct": ["28.26%", "26.11%", "26.41%", "27.07%", "26.91%", "17.14%", "17.02%", "20.24%", "19.80%", "17.91%", "15.45%", "16.58%", "14.29%"]}, "mtn_headline": {"impr": ["25,180", "&#9660; -2,266", "down"], "clicks": ["1,029", "&#9660; -87", "down"], "ctr": ["4.09%", "&#9650; 0.02%", "up"], "cpc": ["$9.86", "&#9650; $0.01", "down"], "conv": ["147", "&#9660; -38", "down"]}, "mtn_campaigns": [["Retail Banking - 53%", "15.17%", "15,685", "725", "4.62%", "$7.37"], ["Business Banking - 35%", "27.90%", "5,529", "199", "3.60%", "$18.11"], ["MMCT Mortgage - 12%", "14.81%", "3,966", "105", "2.65%", "$11.41"]], "mtn_location_retail": [["Nashville", "6,105", "264", "4.32%"], ["Murfreesboro", "1,756", "69", "3.93%"], ["Lebanon", "1,618", "91", "5.62%"], ["Mt. Juliet", "895", "49", "5.47%"], ["Cookeville", "880", "39", "4.43%"], ["Gallatin", "679", "44", "6.48%"], ["Smyrna", "521", "22", "4.22%"], ["Hendersonville", "455", "14", "3.08%"], ["Franklin", "334", "14", "4.19%"], ["Algood", "285", "10", "3.51%"], ["La Vergne", "232", "16", "6.90%"], ["Brentwood", "227", "10", "4.41%"], ["South Carthage", "218", "11", "5.05%"], ["Portland", "188", "10", "5.32%"], ["Goodlettsville", "151", "6", "3.97%"], ["Watertown", "120", "10", "8.33%"]], "mtn_location_business": [["Nashville", "2,149", "70", "3.26%"], ["Murfreesboro", "553", "17", "3.07%"], ["Lebanon", "524", "20", "3.82%"], ["Cookeville", "366", "8", "2.19%"], ["Mt. Juliet", "257", "7", "2.72%"], ["Gallatin", "240", "14", "5.83%"], ["Hendersonville", "185", "6", "3.24%"], ["Franklin", "153", "3", "1.96%"], ["Smyrna", "147", "9", "6.12%"], ["Brentwood", "139", "7", "5.04%"], ["Algood", "99", "2", "2.02%"], ["La Vergne", "90", "4", "4.44%"], ["South Carthage", "81", "6", "7.41%"], ["Goodlettsville", "53", "3", "5.66%"], ["Westmoreland", "44", "0", "0.00%"], ["Portland", "43", "4", "9.30%"]], "mtn_retail_headline": {"impr": ["15,685", "&#9650; 2,109", "up"], "clicks": ["725", "&#9660; -21", "down"], "ctr": ["4.62%", "&#9660; -0.87%", "down"], "cpc": ["$7.37", "&#9650; $0.11", "down"], "conv": ["120", "&#9660; -24", "down"]}, "mtn_retail_groups": [["Mortgage + Home Loans", "7,720", "335", "4.34%", "$5.62"], ["HELOC", "4,825", "197", "4.08%", "$9.96"], ["Personal Checking", "2,655", "127", "4.78%", "$10.62"], ["CD Rates", "293", "41", "13.99%", "$2.32"], ["Personal Savings", "192", "25", "13.02%", "$2.17"]], "mtn_business_headline": {"impr": ["5,529", "&#9660; -1,427", "down"], "clicks": ["199", "&#9650; 3", "up"], "ctr": ["3.60%", "&#9650; 0.78%", "up"], "cpc": ["$18.11", "&#9660; -$1.61", "up"], "conv": ["20", "&#9650; 8", "up"]}, "mtn_business_groups": [["Business Loans", "4,191", "114", "2.72%", "$23.02"], ["Business Money Market", "634", "22", "3.47%", "$13.42"], ["Business Checking", "414", "12", "2.90%", "$26.34"], ["Business CDs", "266", "49", "18.42%", "$6.92"], ["Treasury Management", "24", "2", "8.33%", "$14.12"]], "cha_account": {"sis": ["12.90%", "10.42%", "10.50%", "10.51%", "10.31%", "11.38%", "10.90%", "10.83%", "11.41%", "19.82%", "33.06%", "16.55%", "15.18%"], "impr": [8392, 12486, 14416, 15182, 15306, 15925, 15457, 12243, 10139, 14467, 10366, 7377, 6412], "clicks": [415, 640, 693, 657, 634, 601, 638, 530, 463, 558, 442, 345, 341], "ctr": ["4.95%", "5.13%", "4.81%", "4.33%", "4.14%", "3.77%", "4.13%", "4.33%", "4.57%", "3.86%", "4.26%", "4.68%", "5.32%"], "cpc": [3.62, 2.34, 2.21, 2.25, 2.34, 2.54, 2.32, 2.85, 3.24, 3.33, 3.5, 4.85, 4.68], "conv": [9, 19, 27, 26, 10, 17, 22, 15, 13, 53, 60, 50, 45], "convpct": ["2.17%", "2.97%", "3.90%", "3.96%", "1.58%", "2.83%", "3.45%", "2.83%", "2.81%", "9.50%", "13.57%", "14.49%", "13.20%"]}, "cha_headline": {"impr": ["6,412", "&#9660; -965", "down"], "clicks": ["341", "&#9660; -4", "down"], "ctr": ["5.32%", "&#9650; 0.64%", "up"], "cpc": ["$4.68", "&#9660; -$0.17", "up"], "conv": ["45", "&#9660; -5", "down"]}, "cha_campaigns": [["Retail Banking - 60%", "14.30%", "5,607", "313", "5.58%", "$3.05", "45"], ["Business Banking - 40%", "26.73%", "805", "28", "3.48%", "$22.86", "0"]], "cha_retail_headline": {"impr": ["5,607", "&#9660; -1,184", "down"], "clicks": ["313", "&#9660; -9", "down"], "ctr": ["5.58%", "&#9650; 0.84%", "up"], "cpc": ["$3.05", "&#9660; -$0.09", "up"], "conv": ["45", "&#9660; -1", "down"]}, "cha_retail_groups": [["Personal Checking", "4,821", "271", "5.62%", "$2.81"], ["Personal Savings", "460", "34", "7.39%", "$4.04"], ["Mortgage + Home Loans", "326", "8", "2.45%", "$7.27"]], "cha_business_headline": {"impr": ["805", "&#9650; 219", "up"], "clicks": ["28", "&#9650; 5", "up"], "ctr": ["3.48%", "&#9660; -0.45%", "down"], "cpc": ["$22.86", "&#9660; -$5.93", "up"], "conv": ["0", "&#9660; -4", "down"]}, "cha_business_groups": [["Business Loans", "561", "21", "3.74%", "$23.65"], ["Business Checking", "244", "7", "2.87%", "$20.48"]], "disp_headline": {"impr": ["2.18M", "&#9650; 650,571", "up"], "clicks": ["4,581", "&#9650; 2,095", "up"], "ctr": ["0.21%", "&#9650; 0.05%", "up"], "cpm": ["$1.58", "&#9650; $0.11", "down"], "vtc": ["42,341", "&#9650; 4,493", "up"]}, "disp_campaigns": [["WBT Mergers &amp; Acquisition Precision Display Campaign", "611,052", "1,151", "0.19%", "$1.95", "2,821"], ["Precision Display &ndash; Middle TN", "1,304,875", "2,979", "0.23%", "$1.41", "38,380"], ["Precision Display &ndash; Chattanooga", "259,522", "451", "0.17%", "$1.62", "1,140"]], "disp_lookback_rows": [["July 2026", "2,175,449", "4,581", "0.21%", "$1.58", "42,341"], ["June 2026", "1,524,878", "2,486", "0.16%", "$1.48", "37,848"], ["May 2026", "1,613,020", "1,596", "0.10%", "$1.40", "27,729"], ["April 2026", "1,439,416", "1,367", "0.09%", "$1.55", "8,981"], ["March 2026", "248,213", "364", "0.15%", "$1.27", "3,080"], ["February 2026", "213,163", "255", "0.12%", "$1.48", "4,740"], ["January 2026", "233,412", "280", "0.12%", "$1.35", "6,536"], ["December 2025", "220,570", "283", "0.13%", "$1.43", "6,644"], ["November 2025", "208,419", "236", "0.11%", "$1.51", "6,005"], ["October 2025", "226,152", "251", "0.11%", "$1.39", "6,119"], ["September 2025", "202,857", "185", "0.09%", "$1.50", "5,733"], ["August 2025", "190,714", "201", "0.11%", "$1.65", "4,487"], ["July 2025", "199,926", "223", "0.11%", "$1.57", "2,759"]], "disp_lookback_total": ["Total", "8,696,189", "12,308", "0.14%", "$1.50", "163,002"], "disp_lookback_chart": {"labels": ["Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26"], "impr": [199926, 190714, 202857, 226152, 208419, 220570, 233412, 213163, 248213, 1439416, 1613020, 1524878, 2175449], "vtc": [2759, 4487, 5733, 6119, 6005, 6644, 6536, 4740, 3080, 8981, 27729, 37848, 42341]}, "mtn_locdev_headline": {"impr": ["1,304,875", "&#9650; 33,439", "up"], "clicks": ["2,979", "&#9650; 913", "up"], "ctr": ["0.23%", "&#9650; 0.07%", "up"], "cpm": ["$1.41", "&#9660; -$0.04", "up"], "vtc": ["38,380", "&#9650; 1,767", "up"]}, "mtn_locdev_location": [["Nashville", "446,486", "1,161", "0.26%"], ["Antioch", "131,636", "439", "0.33%"], ["Murfreesboro", "129,112", "271", "0.21%"], ["Mount Juliet", "64,096", "125", "0.20%"], ["Lebanon", "63,731", "107", "0.17%"], ["Franklin", "60,791", "87", "0.14%"], ["Cookeville", "59,481", "121", "0.20%"], ["Gallatin", "46,122", "95", "0.21%"], ["Brentwood", "43,781", "63", "0.14%"], ["Smyrna", "41,391", "97", "0.23%"]], "mtn_device": {"Mobile": 673302, "Tablet": 436321, "PC": 195158}, "mtn_creative": [["Business banner &mdash; wide", "799,337", "2,573", "0.32%"], ["Business square &mdash; small", "472,103", "342", "0.07%"], ["Ad creative 3", "19,160", "46", "0.24%"], ["Ad creative 4", "14,275", "18", "0.13%"]], "cha_locdev_headline": {"impr": ["870,574", "&#9650; 617,132", "up"], "clicks": ["1,602", "&#9650; 1,182", "up"], "ctr": ["0.18%", "&#9650; 0.02%", "up"], "cpm": ["$1.85", "&#9650; $0.19", "down"], "vtc": ["3,961", "&#9650; 2,726", "up"]}, "cha_locdev_location": [["Chattanooga", "222,719", "369", "0.17%"], ["Nashville", "192,433", "441", "0.23%"], ["Antioch", "68,566", "122", "0.18%"], ["Ooltewah", "59,048", "112", "0.19%"], ["Hixson", "51,709", "83", "0.16%"], ["Murfreesboro", "49,501", "71", "0.14%"], ["Mount Juliet", "26,984", "50", "0.19%"], ["Cookeville", "22,033", "37", "0.17%"], ["Franklin", "20,808", "29", "0.14%"], ["Lebanon", "20,774", "37", "0.18%"]], "cha_device": {"Mobile": 573449, "PC": 148763, "Tablet": 148238}, "cha_creative": [["Business banner &mdash; wide", "275,609", "444", "0.16%"], ["Business square &mdash; small", "145,369", "353", "0.24%"], ["Ad creative 3", "126,962", "130", "0.10%"], ["Ad creative 4", "104,246", "302", "0.29%"], ["Ad creative 5", "103,956", "75", "0.07%"]], "soc_headline": {"impr": ["613,527", "&#9660; -78,986", "down"], "clicks": ["11,103", "&#9660; -2,208", "down"], "ctr": ["1.81%", "&#9660; -0.11%", "down"], "reach": ["210,088", "&#9660; -49,459", "down"], "freq": ["2.92", "&#9650; 0.25", "up"]}, "soc_campaigns": [["2026&ndash;27 | Middle TN Traffic", "427,228", "6,319", "1.48%", "$7.38", "143,857", "2.97"], ["2026&ndash;27 | Chattanooga Traffic", "94,684", "1,366", "1.44%", "$7.21", "29,193", "3.24"], ["2026 May&ndash;July | Rutherford County Traffic", "91,615", "3,418", "3.73%", "$6.55", "43,281", "2.12"]], "soc_cha_headline": {"impr": ["94,684", "&#9660; -7,927", "down"], "clicks": ["1,366", "&#9650; 58", "up"], "ctr": ["1.44%", "&#9650; 0.17%", "up"], "reach": ["29,193", "&#9660; -4,988", "down"], "freq": ["3.24", "&#9650; 0.24", "up"]}, "soc_cha_ads": [["April 2026 | Greenlight | Chattanooga", "85,507", "1,213", "1.42%", "$7.09", "28,296", "3.02"], ["April 2026 | Greenlight RT | Chattanooga", "7,311", "132", "1.81%", "$9.03", "2,403", "3.04"], ["January 2026 | Business RT | Chattanooga", "1,183", "15", "1.27%", "$4.05", "786", "1.51"]], "soc_mtn_headline": {"impr": ["518,843", "&#9660; -71,059", "down"], "clicks": ["9,737", "&#9660; -2,266", "down"], "ctr": ["1.88%", "&#9660; -0.16%", "down"], "reach": ["182,665", "&#9660; -44,238", "down"], "freq": ["2.84", "&#9650; 0.24", "up"]}, "soc_mtn_ads": [["April 2026 | Greenlight | Middle TN", "356,474", "5,027", "1.41%", "$7.00", "137,580", "2.59"], ["July 2026 | Consumer", "91,615", "3,418", "3.73%", "$6.55", "43,281", "2.12"], ["April 2026 | Greenlight RT | Middle TN", "59,099", "1,088", "1.84%", "$9.26", "13,609", "4.34"], ["April 2026 | Business | Middle TN", "9,922", "153", "1.54%", "$9.34", "5,163", "1.92"], ["April 2026 | Business RT | Middle TN", "1,733", "51", "2.94%", "$11.31", "1,202", "1.44"]], "web_headline_extra": [], "web_headline": {"sessions": ["123,951", "&#9650; 9,383", "up"], "engaged": ["63,353", "&#9650; 172", "up"], "time": ["0:20", "&#9660; -0:06", "down"], "rate": ["51.11%", "&#9660; -4.04%", "down"]}, "web_chart": {"sessions": 123951, "engaged": 63353}, "web_pages": [["/", "128,685", "31,255", "54.20%"], ["/personal/online-banking", "8,420", "1,855", "62.09%"], ["/business/accounts", "5,172", "3,499", "15.41%"], ["/about-us/a-career-at-wbt", "4,547", "2,534", "75.80%"], ["/personal/credit-card-resource-center", "2,130", "745", "60.44%"], ["/personal/summersavings", "1,836", "1,509", "7.93%"], ["/about-us/locations", "1,696", "1,101", "67.41%"], ["/about-us/travel-club", "1,323", "601", "66.75%"], ["/about-us/contact-us", "1,308", "929", "66.56%"], ["/personal/accounts", "1,257", "777", "82.23%"], ["/loans/personal", "1,023", "846", "67.29%"], ["/search", "959", "716", "79.29%"], ["/about-us/investor-relations", "850", "517", "75.42%"], ["/personal/cds", "748", "504", "78.28%"], ["/loans/home-loans", "692", "552", "77.18%"], ["/personal/savings", "629", "464", "83.27%"], ["/about-us/upcoming-events", "625", "511", "76.57%"], ["/locations/main-office-lebanon", "618", "335", "71.30%"], ["/calculators", "540", "381", "97.78%"], ["/our-leadership", "464", "382", "84.44%"], ["/business/treasury-management-resource-center", "424", "157", "63.04%"], ["/loans/home-equity-line-of-credit", "408", "313", "66.94%"], ["/resources/financial-literacy-library", "368", "341", "81.52%"], ["/personal/wbt-cash-back-checking", "337", "205", "76.49%"], ["/loan-inquiry", "325", "253", "86.80%"], ["/loans/construction-loans", "298", "200", "73.75%"], ["/personal/basic-checking", "298", "193", "73.71%"], ["/personal/money-market-savings", "295", "214", "89.08%"], ["/loans/vehicle", "285", "193", "81.47%"], ["/personal/online-loan-payment", "285", "175", "80.80%"], ["/about-us/board-of-directors", "278", "241", "79.93%"], ["/personal/wbt-saver", "267", "213", "80.00%"], ["/privacy-policy", "260", "164", "30.53%"], ["/personal/premier-saver", "253", "189", "78.17%"], ["/2008/mirror/", "250", "103", "56.52%"]], "web_sources": [["(direct) / (none)", "(direct)", "59,114", "170"], ["google / organic", "(organic)", "29,370", "479"], ["bing / organic", "(organic)", "8,162", "52"], ["timesfreepress / display", "middletn_business", "3,093", "2"], ["ntp.msn.com / referral", "(referral)", "2,873", "2"], ["apps.docusign.com / referral", "(referral)", "2,014", "0"], ["timesfreepress / social", "rutherford", "1,862", "1"], ["yahoo / organic", "(organic)", "1,713", "16"], ["timesfreepress / display", "mergers_rate", "1,652", "2"], ["google / cpc", "052523", "1,412", "0"], ["recruitingbypaycor.com / referral", "(referral)", "1,223", "0"], ["na.network-auth.com / referral", "(referral)", "917", "1"], ["timesfreepress / display", "chatt_business", "763", "0"], ["google / cpc", "Retail Banking - 53%", "746", "33"]], "web_sources_total": ["Total", "&mdash;", "123,951", "794"], "mmct": {"has_data": true, "campaign": "MMCT Mortgage", "period": "July 1 &ndash; July 31, 2026", "active_groups": "Community Lending, FHA / First Time Buyer, Affordable/Assistance Programs", "reach_rows": [["MMCT Zip Codes &#10003;", "2,219", "59", "$785.84", "4"], ["Non-MMCT Zip Codes", "173", "7", "$39.98", "0"]], "reach_total": ["TOTAL", "2,392", "66", "$825.82", "4", "100.0%"], "ctr_note": "CTR: MMCT = 2.66% &nbsp;|&nbsp; Non-MMCT = 4.05% &nbsp;|&nbsp; Overall = 2.76%", "gaps": ["37072", "37115", "37213"], "by_ad_group": [["Affordable/Assistance Programs", "1,056", "25", "$250.23", "2", "2.37%"], ["Community Lending", "881", "30", "$505.67", "2", "3.41%"], ["FHA / First Time Buyer", "282", "4", "$29.94", "0", "1.42%"]], "source_note": "Source: Google Ads postal code report, July 1&ndash;31, 2026. MMCT designations per Wilson Bank SelectedCensusTracts list (24 zip codes). Google Ads cannot target at census tract level; postal code is the finest available geographic granularity.", "zip_detail": [["37013", "Yes", "300", "11", "$122.09", "2"], ["37064", "Yes", "23", "1", "$3.86", "0"], ["37066", "Yes", "340", "6", "$126.53", "0"], ["37072", "Yes", "0", "0", "$0.00", "0"], ["37076", "Yes", "211", "4", "$41.82", "0"], ["37086", "Yes", "120", "4", "$28.52", "0"], ["37115", "Yes", "0", "0", "$0.00", "0"], ["37127", "Yes", "49", "6", "$120.43", "0"], ["37130", "Yes", "63", "1", "$10.68", "0"], ["37167", "Yes", "212", "6", "$59.98", "1"], ["37189", "Yes", "19", "0", "$0.00", "0"], ["37203", "Yes", "532", "14", "$199.29", "1"], ["37204", "Yes", "14", "0", "$0.00", "0"], ["37206", "Yes", "17", "0", "$0.00", "0"], ["37207", "Yes", "17", "1", "$19.46", "0"], ["37208", "Yes", "22", "1", "$8.42", "0"], ["37209", "Yes", "24", "0", "$0.00", "0"], ["37210", "Yes", "122", "2", "$21.32", "0"], ["37211", "Yes", "6", "1", "$5.59", "0"], ["37213", "Yes", "0", "0", "$0.00", "0"], ["37216", "Yes", "22", "1", "$17.85", "0"], ["37217", "Yes", "5", "0", "$0.00", "0"], ["37218", "Yes", "59", "0", "$0.00", "0"], ["37228", "Yes", "42", "0", "$0.00", "0"]], "zip_detail_total": ["TOTAL", "", "2,219", "59", "$785.84", "4"], "census_tract": [["156.14", "37013", "Davidson", "51% - 79%", "80% - 120%", "300", "11", "$122.09", "2"], ["156.15", "37013", "Davidson", "80% - 100%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.18", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.19", "37013", "Davidson", "51% - 79%", "80% - 120%", "300", "11", "$122.09", "2"], ["156.2", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.26", "37013", "Davidson", "51% - 79%", "<50%", "300", "11", "$122.09", "2"], ["156.27", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.28", "37013", "Davidson", "80% - 100%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.29", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.3", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["156.34", "37013", "Davidson", "51% - 79%", "80% - 120%", "300", "11", "$122.09", "2"], ["191.09", "37013", "Davidson", "51% - 79%", "80% - 120%", "300", "11", "$122.09", "2"], ["191.11", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["191.17", "37013", "Davidson", "51% - 79%", "80% - 120%", "300", "11", "$122.09", "2"], ["191.18", "37013", "Davidson", "51% - 79%", "50% - 80%", "300", "11", "$122.09", "2"], ["508.01", "37064", "Williamson", "51% - 79%", "50% - 80%", "23", "1", "$3.86", "0"], ["208", "37066", "Sumner", "51% - 79%", "<50%", "340", "6", "$126.53", "0"], ["103.01", "37072", "Davidson", "51% - 79%", "80% - 120%", "0", "0", "$0.00", "0"], ["103.03", "37072", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["156.23", "37076", "Davidson", "51% - 79%", "50% - 80%", "211", "4", "$41.82", "0"], ["156.35", "37076", "Davidson", "51% - 79%", ">120%", "211", "4", "$41.82", "0"], ["401.01", "37086", "Rutherford", "51% - 79%", "80% - 120%", "120", "4", "$28.52", "0"], ["401.02", "37086", "Rutherford", "51% - 79%", "80% - 120%", "120", "4", "$28.52", "0"], ["401.04", "37086", "Rutherford", "51% - 79%", "50% - 80%", "120", "4", "$28.52", "0"], ["401.05", "37086", "Rutherford", "51% - 79%", "80% - 120%", "120", "4", "$28.52", "0"], ["401.06", "37086", "Rutherford", "51% - 79%", "50% - 80%", "120", "4", "$28.52", "0"], ["401.07", "37086", "Rutherford", "51% - 79%", "80% - 120%", "120", "4", "$28.52", "0"], ["408.12", "37086", "Rutherford", "51% - 79%", "80% - 120%", "120", "4", "$28.52", "0"], ["104.01", "37115", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["104.03", "37115", "Davidson", "51% - 79%", "<50%", "0", "0", "$0.00", "0"], ["104.04", "37115", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["106.01", "37115", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["106.02", "37115", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["107.01", "37115", "Davidson", "51% - 79%", "80% - 120%", "0", "0", "$0.00", "0"], ["107.02", "37115", "Davidson", "51% - 79%", "50% - 80%", "0", "0", "$0.00", "0"], ["108.01", "37115", "Davidson", "51% - 79%", "80% - 120%", "0", "0", "$0.00", "0"], ["421.01", "37127", "Rutherford", "51% - 79%", "<50%", "49", "6", "$120.43", "0"], ["414.04", "37130", "Rutherford", "51% - 79%", "50% - 80%", "63", "1", "$10.68", "0"], ["419", "37130", "Rutherford", "51% - 79%", "50% - 80%", "63", "1", "$10.68", "0"], ["403.12", "37167", "Rutherford", "51% - 79%", "80% - 120%", "212", "6", "$59.98", "1"], ["404.05", "37167", "Rutherford", "51% - 79%", "50% - 80%", "212", "6", "$59.98", "1"], ["423.01", "37167", "Rutherford", "51% - 79%", "80% - 120%", "212", "6", "$59.98", "1"], ["101.05", "37189", "Davidson", "80% - 100%", "80% - 120%", "19", "0", "$0.00", "0"], ["101.06", "37189", "Davidson", "51% - 79%", "80% - 120%", "19", "0", "$0.00", "0"], ["144", "37203", "Davidson", "51% - 79%", "<50%", "532", "14", "$199.29", "1"], ["161", "37203", "Davidson", "51% - 79%", "50% - 80%", "532", "14", "$199.29", "1"], ["162", "37203", "Davidson", "51% - 79%", "50% - 80%", "532", "14", "$199.29", "1"], ["9802", "37204", "Davidson", "80% - 100%", "", "14", "0", "$0.00", "0"], ["119", "37206", "Davidson", "51% - 79%", "<50%", "17", "0", "$0.00", "0"], ["102.01", "37207", "Davidson", "51% - 79%", "80% - 120%", "17", "1", "$19.46", "0"], ["109.01", "37207", "Davidson", "51% - 79%", "80% - 120%", "17", "1", "$19.46", "0"], ["109.03", "37207", "Davidson", "80% - 100%", "<50%", "17", "1", "$19.46", "0"], ["109.04", "37207", "Davidson", "80% - 100%", "<50%", "17", "1", "$19.46", "0"], ["110.01", "37207", "Davidson", "51% - 79%", "50% - 80%", "17", "1", "$19.46", "0"], ["113", "37207", "Davidson", "51% - 79%", "50% - 80%", "17", "1", "$19.46", "0"], ["118", "37207", "Davidson", "51% - 79%", "50% - 80%", "17", "1", "$19.46", "0"], ["126", "37207", "Davidson", "51% - 79%", "50% - 80%", "17", "1", "$19.46", "0"], ["127.01", "37207", "Davidson", "80% - 100%", "50% - 80%", "17", "1", "$19.46", "0"], ["127.02", "37207", "Davidson", "80% - 100%", "50% - 80%", "17", "1", "$19.46", "0"], ["137.01", "37208", "Davidson", "51% - 79%", "50% - 80%", "22", "1", "$8.42", "0"], ["138", "37208", "Davidson", "80% - 100%", "50% - 80%", "22", "1", "$8.42", "0"], ["139", "37208", "Davidson", "51% - 79%", "<50%", "22", "1", "$8.42", "0"], ["142", "37208", "Davidson", "80% - 100%", "<50%", "22", "1", "$8.42", "0"], ["143", "37208", "Davidson", "80% - 100%", "<50%", "22", "1", "$8.42", "0"], ["130.02", "37209", "Davidson", "51% - 79%", "", "24", "0", "$0.00", "0"], ["136", "37209", "Davidson", "51% - 79%", "<50%", "24", "0", "$0.00", "0"], ["181.01", "37209", "Davidson", "51% - 79%", "50% - 80%", "24", "0", "$0.00", "0"], ["148", "37210", "Davidson", "80% - 100%", "<50%", "122", "2", "$21.32", "0"], ["160", "37210", "Davidson", "80% - 100%", "<50%", "122", "2", "$21.32", "0"], ["173", "37210", "Davidson", "51% - 79%", "50% - 80%", "122", "2", "$21.32", "0"], ["174.01", "37210", "Davidson", "51% - 79%", "50% - 80%", "122", "2", "$21.32", "0"], ["156.13", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["189.04", "37211", "Davidson", "51% - 79%", "80% - 120%", "6", "1", "$5.59", "0"], ["189.05", "37211", "Davidson", "51% - 79%", "80% - 120%", "6", "1", "$5.59", "0"], ["190.03", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["190.04", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["190.07", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["190.08", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["191.05", "37211", "Davidson", "51% - 79%", "80% - 120%", "6", "1", "$5.59", "0"], ["191.08", "37211", "Davidson", "80% - 100%", "<50%", "6", "1", "$5.59", "0"], ["191.1", "37211", "Davidson", "51% - 79%", "50% - 80%", "6", "1", "$5.59", "0"], ["191.12", "37211", "Davidson", "51% - 79%", "80% - 120%", "6", "1", "$5.59", "0"], ["193", "37213", "Davidson", "51% - 79%", "<50%", "0", "0", "$0.00", "0"], ["110.02", "37216", "Davidson", "51% - 79%", "80% - 120%", "22", "1", "$17.85", "0"], ["156.36", "37217", "Davidson", "51% - 79%", "80% - 120%", "5", "0", "$0.00", "0"], ["156.37", "37217", "Davidson", "51% - 79%", "50% - 80%", "5", "0", "$0.00", "0"], ["157", "37217", "Davidson", "51% - 79%", "50% - 80%", "5", "0", "$0.00", "0"], ["158.04", "37217", "Davidson", "51% - 79%", "50% - 80%", "5", "0", "$0.00", "0"], ["158.05", "37217", "Davidson", "51% - 79%", "<50%", "5", "0", "$0.00", "0"], ["158.06", "37217", "Davidson", "51% - 79%", "50% - 80%", "5", "0", "$0.00", "0"], ["9801", "37217", "Davidson", "20% - 50%", "", "5", "0", "$0.00", "0"], ["128.01", "37218", "Davidson", "80% - 100%", "<50%", "59", "0", "$0.00", "0"], ["128.02", "37218", "Davidson", "51% - 79%", "80% - 120%", "59", "0", "$0.00", "0"], ["137.02", "37228", "Davidson", "51% - 79%", "", "42", "0", "$0.00", "0"]], "full_data": [["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37013", "Yes", "118", "5", "$38.64", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37013", "Yes", "147", "6", "$83.45", "2"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37013", "Yes", "35", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37064", "Yes", "5", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37064", "Yes", "16", "1", "$3.86", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37064", "Yes", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37066", "Yes", "211", "4", "$55.99", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37066", "Yes", "73", "2", "$70.54", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37066", "Yes", "56", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37076", "Yes", "97", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37076", "Yes", "87", "2", "$36.82", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37076", "Yes", "27", "2", "$5.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37086", "Yes", "58", "1", "$6.69", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37086", "Yes", "51", "3", "$21.83", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37086", "Yes", "11", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37127", "Yes", "11", "2", "$18.22", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37127", "Yes", "32", "4", "$102.21", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37127", "Yes", "6", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37130", "Yes", "24", "1", "$10.68", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37130", "Yes", "21", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37130", "Yes", "18", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37167", "Yes", "95", "3", "$27.28", "1"], ["MMCT Mortgage - 12%", "Community Lending", "37167", "Yes", "99", "3", "$32.70", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37167", "Yes", "18", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37189", "Yes", "10", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37189", "Yes", "9", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37203", "Yes", "232", "4", "$25.68", "1"], ["MMCT Mortgage - 12%", "Community Lending", "37203", "Yes", "230", "8", "$148.67", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37203", "Yes", "70", "2", "$24.94", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37204", "Yes", "4", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37204", "Yes", "10", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37204", "Yes", "0", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37206", "Yes", "6", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37206", "Yes", "1", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37206", "Yes", "10", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37207", "Yes", "10", "1", "$19.46", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37207", "Yes", "5", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37207", "Yes", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37208", "Yes", "8", "1", "$8.42", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37208", "Yes", "13", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37208", "Yes", "1", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37209", "Yes", "16", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37209", "Yes", "7", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37209", "Yes", "1", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37210", "Yes", "65", "2", "$21.32", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37210", "Yes", "50", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37210", "Yes", "7", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37211", "Yes", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37211", "Yes", "4", "1", "$5.59", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37216", "Yes", "16", "1", "$17.85", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37216", "Yes", "6", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37217", "Yes", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37217", "Yes", "1", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37217", "Yes", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37218", "Yes", "46", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37218", "Yes", "5", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37218", "Yes", "8", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37228", "Yes", "20", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37228", "Yes", "14", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37228", "Yes", "8", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37067", "No", "6", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37067", "No", "18", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37067", "No", "0", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37069", "No", "4", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37069", "No", "5", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37128", "No", "7", "2", "$3.40", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37128", "No", "24", "1", "$19.53", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37128", "No", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37129", "No", "21", "1", "$7.97", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37129", "No", "39", "2", "$9.07", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37129", "No", "6", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Affordable/Assistance Programs", "37212", "No", "15", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37212", "No", "23", "1", "$0.01", "0"], ["MMCT Mortgage - 12%", "FHA / First Time Buyer", "37212", "No", "2", "0", "$0.00", "0"], ["MMCT Mortgage - 12%", "Community Lending", "37215", "No", "1", "0", "$0.00", "0"]]}}};
-let currentMonth = 'july';
-let currentSection = 'summary';
-let editing = false;
-const SUMMARY_KEYS = { 'su-monthly':'monthly_updates', 'su-discussion':'key_discussion', 'su-recommend':'recommendations', 'su-action':'action_items' };
-const chartInstances = {};
+  const MAROON = '#5C1A2A';
+  const PINK = 'rgba(196,132,154,0.9)';
+  const MONTHS = ['Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26','Jul 26','Aug 26','Sep 26'];
 
-function esc(s){ return s; }
-
-function mkTable(headers, rows, foot){
-  let th = headers.map(h => `<th>${h}</th>`).join('');
-  let trs = rows.map(r => `<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
-  let footHtml = '';
-  if (foot) footHtml = `<tfoot><tr>${foot.map(c=>`<td><strong>${c}</strong></td>`).join('')}</tr></tfoot>`;
-  return `<div class="tbl-wrap"><table class="data-table"><thead><tr>${th}</tr></thead><tbody>${trs}</tbody>${footHtml}</table></div>`;
-}
-
-function mkMetricCard(label, value, delta, cls){
-  return `<div class="metric-card"><div class="m-label">${label}</div><div class="m-value">${value}</div><div class="m-delta ${cls}">${delta}</div></div>`;
-}
-
-function mkMetricGrid(cardsDict, keys, extra){
-  let out = keys.map(([label,key]) => {
-    const [val,delta,cls] = cardsDict[key];
-    return mkMetricCard(label, val, delta, cls);
-  });
-  if (extra) {
-    extra.forEach(([label,val,delta,cls]) => out.push(mkMetricCard(label,val,delta,cls)));
-  }
-  return `<div class="metric-grid">${out.join('')}</div>`;
-}
-
-function mkList(items){
-  if (!items || items.length===0) return '<li class="placeholder">No updates provided for this reporting period.</li>';
-  return items.map(([main,sub]) => {
-    if (sub) return `<li><div><strong>${main}</strong><span class="ai-sub">${sub}</span></div></li>`;
-    return `<li>${main}</li>`;
-  }).join('');
-}
-
-function set(id, html){ const el = document.getElementById(id); if (el) el.innerHTML = html; }
-
-function escapeHtml(s){
-  const d = document.createElement('div');
-  d.textContent = s;
-  return d.innerHTML;
-}
-
-function htmlToPlainText(s){
-  const d = document.createElement('div');
-  d.innerHTML = s;
-  return d.textContent;
-}
-
-function itemsToText(items, isAction){
-  if (!items || items.length===0) return '';
-  return items.map(([main,sub]) => {
-    const plainMain = htmlToPlainText(String(main));
-    if (isAction) {
-      const plainSub = sub ? htmlToPlainText(String(sub)) : '';
-      return plainSub ? `${plainMain} | ${plainSub}` : plainMain;
-    }
-    return plainMain;
-  }).join('\n');
-}
-
-function textToItems(text, isAction){
-  return text.split('\n').map(l => l.trim()).filter(l => l.length>0).map(line => {
-    if (isAction && line.includes('|')) {
-      const idx = line.indexOf('|');
-      const main = line.slice(0, idx).trim();
-      const sub = line.slice(idx+1).trim();
-      return [escapeHtml(main), sub ? escapeHtml(sub) : null];
-    }
-    return [escapeHtml(line), null];
-  });
-}
-
-function toggleSummaryEdit(){
-  const btn = document.getElementById('edit-toggle-btn');
-  const hint = document.getElementById('edit-hint');
-  if (!editing) {
-    Object.entries(SUMMARY_KEYS).forEach(([ulId, key]) => {
-      const ul = document.getElementById(ulId);
-      if (!ul) return;
-      const isAction = key === 'action_items';
-      const items = DATA[currentMonth].summary[key];
-      const ta = document.createElement('textarea');
-      ta.id = ulId + '-edit';
-      ta.value = itemsToText(items, isAction);
-      ul.style.display = 'none';
-      ul.insertAdjacentElement('afterend', ta);
+  /* ---------- helpers ---------- */
+  const $ = id => document.getElementById(id);
+  function table(id, head, rows, opts = {}) {
+    const el = $(id); if (!el) return;
+    let h = '<table class="data-table"><thead><tr>' + head.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
+    rows.forEach((r, i) => {
+      const isTotal = opts.totalLast && i === rows.length - 1;
+      h += `<tr${isTotal ? ' class="total"' : ''}>` + r.map((c, j) => `<td${opts.hlCol === j && !isTotal ? ' class="hl"' : ''}>${c}</td>`).join('') + '</tr>';
     });
-    editing = true;
-    if (btn) btn.textContent = 'Save Summary';
-    if (hint) hint.style.display = 'inline';
-  } else {
-    Object.entries(SUMMARY_KEYS).forEach(([ulId, key]) => {
-      const ta = document.getElementById(ulId + '-edit');
-      if (!ta) return;
-      const isAction = key === 'action_items';
-      DATA[currentMonth].summary[key] = textToItems(ta.value, isAction);
-      ta.remove();
-      const ul = document.getElementById(ulId);
-      if (ul) ul.style.display = '';
-    });
-    editing = false;
-    if (btn) btn.textContent = 'Edit Summary';
-    if (hint) hint.style.display = 'none';
-    renderTextContent(currentMonth);
+    el.innerHTML = h + '</tbody></table>';
   }
-}
-
-function downloadReport(){
-  if (editing) toggleSummaryEdit();
-  const scripts = document.querySelectorAll('script');
-  let target = null;
-  scripts.forEach(s => { if (s.textContent.includes('const DATA = ') && s.textContent.includes('let currentMonth')) target = s; });
-  if (!target) { alert('Could not locate report data to save.'); return; }
-  let src = target.textContent;
-  src = src.replace(/const DATA = [\s\S]*?;\nlet currentMonth = '[^']*';/, `const DATA = ${JSON.stringify(DATA)};\nlet currentMonth = '${currentMonth}';`);
-  target.textContent = src;
-  const htmlOut = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-  const blob = new Blob([htmlOut], {type:'text/html'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  const today = new Date().toISOString().slice(0,10);
-  a.href = url;
-  a.download = `wbt_2026_report_${today}.html`;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
-function renderTextContent(month){
-  const d = DATA[month];
-  document.getElementById('nav-date-label').textContent = d.navdate.replace(/&ndash;/g,'\u2013');
-  document.getElementById('report-daterange').textContent = d.daterange.replace(/&ndash;/g,'\u2013');
-
-  set('su-monthly', mkList(d.summary.monthly_updates));
-  set('su-discussion', mkList(d.summary.key_discussion));
-  set('su-recommend', mkList(d.summary.recommendations));
-  set('su-action', mkList(d.summary.action_items));
-
-  const mtn = d.mtn_account, cha = d.cha_account;
-  set('mtn-account-table', mkTable(['Metric', ...d.months13], [
-    ['Search Impr. Share', ...mtn.sis],
-    ['Impr.', ...mtn.impr.map(v=>v.toLocaleString())],
-    ['Clicks', ...mtn.clicks.map(v=>v.toLocaleString())],
-    ['CTR', ...mtn.ctr],
-    ['CPC', ...mtn.cpc.map(v=>'$'+v.toFixed(2))],
-    ['Conv.', ...mtn.conv.map(v=>v.toLocaleString())],
-    ['Conv. %', ...mtn.convpct],
-  ]));
-  set('cha-account-table', mkTable(['Metric', ...d.months13], [
-    ['Search Impr. Share', ...cha.sis],
-    ['Impr.', ...cha.impr.map(v=>v.toLocaleString())],
-    ['Clicks', ...cha.clicks.map(v=>v.toLocaleString())],
-    ['CTR', ...cha.ctr],
-    ['CPC', ...cha.cpc.map(v=>'$'+v.toFixed(2))],
-    ['Conv.', ...cha.conv.map(v=>v.toLocaleString())],
-    ['Conv. %', ...cha.convpct],
-  ]));
-
-  set('mtn-campaign-metrics', mkMetricGrid(d.mtn_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('mtn-campaign-table', mkTable(['Campaign','Search Impr. share','Impressions','Clicks','CTR','CPC'], d.mtn_campaigns));
-  set('cha-campaign-metrics', mkMetricGrid(d.cha_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('cha-campaign-table', mkTable(['Campaign','Search Impr. share','Impressions','Clicks','CTR','CPC','Conversions'], d.cha_campaigns));
-
-  set('mtn-loc-retail-table', mkTable(['City','Impressions','Clicks','CTR'], d.mtn_location_retail));
-  set('mtn-loc-business-table', mkTable(['City','Impressions','Clicks','CTR'], d.mtn_location_business));
-
-  set('mtn-retail-metrics', mkMetricGrid(d.mtn_retail_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('mtn-retail-table', mkTable(['Ad Group','Impressions','Clicks','CTR','CPC'], d.mtn_retail_groups));
-  set('mtn-business-metrics', mkMetricGrid(d.mtn_business_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('mtn-business-table', mkTable(['Ad Group','Impressions','Clicks','CTR','CPC'], d.mtn_business_groups));
-
-  set('cha-retail-metrics', mkMetricGrid(d.cha_retail_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('cha-retail-table', mkTable(['Ad Group','Impressions','Clicks','CTR','CPC'], d.cha_retail_groups));
-  set('cha-business-metrics', mkMetricGrid(d.cha_business_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPC','cpc'],['Conversions','conv']]));
-  set('cha-business-table', mkTable(['Ad Group','Impressions','Clicks','CTR','CPC'], d.cha_business_groups));
-
-  set('disp-overview-metrics', mkMetricGrid(d.disp_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPM','cpm'],['VTC','vtc']]));
-  set('disp-overview-table', mkTable(['Campaign','Impressions','Clicks','CTR','CPM','VTC'], d.disp_campaigns));
-  set('disp-lookback-table', mkTable(['Month','Impressions','Clicks','CTR','CPM','VTC'], d.disp_lookback_rows, d.disp_lookback_total));
-
-  set('disp-mtn-metrics', mkMetricGrid(d.mtn_locdev_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPM','cpm'],['VTC','vtc']]));
-  set('disp-mtn-loc-table', mkTable(['City','Impressions','Clicks','CTR'], d.mtn_locdev_location));
-  set('disp-mtn-creative-table', mkTable(['Creative','Impressions','Clicks','CTR'], d.mtn_creative));
-
-  set('disp-cha-metrics', mkMetricGrid(d.cha_locdev_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['CPM','cpm'],['VTC','vtc']]));
-  set('disp-cha-loc-table', mkTable(['City','Impressions','Clicks','CTR'], d.cha_locdev_location));
-  set('disp-cha-creative-table', mkTable(['Creative','Impressions','Clicks','CTR'], d.cha_creative));
-
-  set('soc-overall-metrics', mkMetricGrid(d.soc_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['Reach','reach'],['Frequency','freq']]));
-  set('soc-overall-table', mkTable(['Campaign','Impressions','Clicks','CTR','CPM','Reach','Frequency'], d.soc_campaigns));
-  set('soc-cha-metrics', mkMetricGrid(d.soc_cha_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['Reach','reach'],['Frequency','freq']]));
-  set('soc-cha-table', mkTable(['Ad Name','Impressions','Clicks','CTR','CPM','Reach','Freq.'], d.soc_cha_ads));
-  set('soc-mtn-metrics', mkMetricGrid(d.soc_mtn_headline, [['Impressions','impr'],['Clicks','clicks'],['CTR','ctr'],['Reach','reach'],['Frequency','freq']]));
-  set('soc-mtn-table', mkTable(['Ad Name','Impressions','Clicks','CTR','CPM','Reach','Freq.'], d.soc_mtn_ads));
-
-  document.getElementById('branded-title').textContent = d.branded.title;
-  document.getElementById('branded-text').textContent = d.branded.text;
-
-  set('web-overview-metrics', mkMetricGrid(d.web_headline, [['Sessions','sessions'],['Engaged Sessions','engaged'],['Avg Time / Session','time'],['Engagement Rate','rate']], d.web_headline_extra));
-  document.getElementById('web-chart-title').textContent = 'Sessions vs. Engaged Sessions \u2014 ' + d.label + ' 2026';
-  set('web-pages-table', mkTable(['Page Path','Views','Active Users','Eng. Rate'], d.web_pages));
-  set('web-sources-table', mkTable(['Source / Medium','Campaign','Sessions','Key Events'], d.web_sources, d.web_sources_total));
-
-  renderMmct(d);
-}
-
-function renderMmct(d){
-  const m = d.mmct;
-  if (!m || !m.has_data) {
-    set('mmct-body', `<div class="branded-card"><div class="icon">&#128202;</div><h3>No MMCT Compliance Data</h3><p>No fair-lending reach report was provided for this period. This tab will populate once an MMCT report is supplied.</p></div>`);
-    return;
+  // metric: [label, value, delta text, tone] tone: up | down | neutral
+  function metrics(id, items) {
+    const el = $(id); if (!el) return;
+    el.innerHTML = items.map(([l, v, d, t]) => {
+      const arrow = d.startsWith('+') ? '▲ ' : d.startsWith('−') ? '▼ ' : '● ';
+      return `<div class="metric-card"><div class="m-label">${l}</div><div class="m-value">${v}</div><div class="m-delta ${t}">${arrow}${d.replace(/^[+−]/, '')}</div></div>`;
+    }).join('');
   }
-  const gapsHtml = m.gaps.length
-    ? `<p class="note">&#9888; The following MMCT zip codes received no impressions this period: ${m.gaps.join(', ')}</p>`
-    : `<p class="note">No MMCT zip codes with zero impressions this period.</p>`;
+  function terms(id, list, flagged = []) {
+    $(id).innerHTML = list.map(t => `<span class="term${flagged.includes(t) ? ' flag' : ''}">${t}</span>`).join('');
+  }
+  function trendTable(id, rows) {
+    table(id, ['Metric', ...MONTHS], rows, { hlCol: 13 });
+  }
 
-  const summaryHtml = `
-    <p class="note" style="font-style:normal;">Campaign: <strong>${m.campaign}</strong> &nbsp;|&nbsp; Reporting Period: <strong>${m.period}</strong> &nbsp;|&nbsp; Active Ad Groups: <strong>${m.active_groups}</strong></p>
-    <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin:16px 0 10px;">Compliance Reach Summary</h4>
-    ${mkTable(['Area Type','Impressions','Clicks','Spend','Conversions'], m.reach_rows, m.reach_total.slice(0,5))}
-    <p class="note">${m.ctr_note}</p>
-    <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin:16px 0 10px;">MMCT Coverage Gaps</h4>
-    ${gapsHtml}
-    <h4 style="font-size:13px;font-weight:700;color:var(--maroon);margin:16px 0 10px;">MMCT Impressions by Ad Group</h4>
-    ${mkTable(['Ad Group','Impressions','Clicks','Spend','Conversions','CTR'], m.by_ad_group)}
-    <p class="note">${m.source_note}</p>
-  `;
-  const zipHtml = mkTable(['Zip Code','MMCT Designated','Impressions','Clicks','Spend','Conversions'], m.zip_detail, m.zip_detail_total);
-  const censusHtml = `<p class="note">Google Ads cannot report below zip code level. Performance figures reflect the zip code total shared across all tracts within that zip.</p>` +
-    mkTable(['Census Tract','Zip Code','County','Minority Level','Income Level','Zip Impressions','Zip Clicks','Zip Spend','Zip Conversions'], m.census_tract);
-  const fullHtml = mkTable(['Campaign','Ad Group','Zip Code','MMCT Designated','Impressions','Clicks','Spend','Conversions'], m.full_data);
+  /* ---------- MIDDLE TN SEARCH ---------- */
+  trendTable('t-mtn-account', [
+    ['Search Impr. Share','16.13%','21.64%','&gt;90%','49.12%','42.32%','35.68%','&gt;90%','16.77%','19.59%','17.20%','16.79%','20.78%','22.05%'],
+    ['Impressions','128,214','181,102','930,568','373,045','321,652','186,743','453,803','27,183','27,667','27,446','25,180','22,699','21,895'],
+    ['Clicks','6,842','9,051','13,833','19,409','19,917','15,387','15,355','2,010','2,142','1,116','1,029','974','1,019'],
+    ['CTR','5.34%','5.00%','1.49%','5.20%','6.19%','8.24%','3.38%','7.39%','7.74%','4.07%','4.09%','4.29%','4.65%'],
+    ['CPC','$1.33','$1.04','$0.70','$0.59','$0.61','$0.71','$0.71','$4.75','$4.82','$9.84','$9.86','$10.48','$9.81'],
+    ['Conversions','1,807','2,450','3,723','3,327','3,390','3,115','3,041','360','331','185','147','187','217'],
+    ['Conv. Rate','26.41%','27.07%','26.91%','17.14%','17.02%','20.24%','19.80%','17.91%','15.45%','16.58%','14.29%','19.20%','21.30%']
+  ]);
+  metrics('m-mtn-campaign', [
+    ['Impressions','21,895','−804','down'],['Clicks','1,019','+45','up'],['CTR','4.65%','+0.36%','up'],
+    ['CPC','$9.81','−$0.68','up'],['Conversions','217','+31','up']
+  ]);
+  table('t-mtn-campaign', ['Campaign','Budget Share','Search Impr. Share','Impressions','Clicks','CTR','CPC'], [
+    ['Retail Banking','53%','21.15%','11,727','666','5.68%','$8.18'],
+    ['Business Banking','35%','31.07%','6,260','240','3.83%','$13.97'],
+    ['MMCT Mortgage','12%','16.49%','3,908','113','2.89%','$10.60']
+  ]);
+  table('t-mtn-loc-retail', ['City','Impressions','Clicks','CTR'], [
+    ['Nashville','5,483','329','6.00%'],['Murfreesboro','1,439','89','6.18%'],['Lebanon','961','46','4.79%'],
+    ['Cookeville','584','16','2.74%'],['Mt. Juliet','408','32','7.84%'],['Smyrna','397','25','6.30%'],
+    ['Gallatin','338','22','6.51%'],['Hendersonville','319','12','3.76%'],['Algood','214','9','4.21%'],
+    ['La Vergne','204','9','4.41%'],['Portland','161','4','2.48%'],['Goodlettsville','153','11','7.19%'],
+    ['Franklin','145','14','9.66%'],['Brentwood','115','4','3.48%'],['Westmoreland','105','7','6.67%'],['Baxter','91','6','6.59%']
+  ]);
+  table('t-mtn-loc-business', ['City','Impressions','Clicks','CTR'], [
+    ['Nashville','2,457','72','2.93%'],['Murfreesboro','752','27','3.59%'],['Lebanon','502','27','5.38%'],
+    ['Cookeville','332','12','3.61%'],['Gallatin','317','22','6.94%'],['Mt. Juliet','300','17','5.67%'],
+    ['Hendersonville','205','6','2.93%'],['Franklin','177','4','2.26%'],['Smyrna','177','6','3.39%'],
+    ['Brentwood','138','5','3.62%'],['Algood','131','5','3.82%'],['La Vergne','71','0','0.00%'],
+    ['Goodlettsville','69','5','7.25%'],['Baxter','55','0','0.00%'],['South Carthage','55','4','7.27%'],['Westmoreland','55','3','5.45%']
+  ]);
+  metrics('m-mtn-retail', [
+    ['Impressions','11,727','−773','down'],['Clicks','666','−5','down'],['CTR','5.68%','+0.31%','up'],
+    ['CPC','$8.18','−$0.39','up'],['Conversions','193','+28','up']
+  ]);
+  table('t-mtn-retail', ['Ad Group','Impressions','Clicks','CTR','CPC'], [
+    ['HELOC','9,137','523','5.72%','$9.24'],['Mortgage + Home Loans','2,137','117','5.47%','$4.30'],
+    ['Personal Checking','260','9','3.46%','$6.79'],['Personal Savings','191','17','8.90%','$2.94'],['CD Rates','2','0','0.00%','$0.00']
+  ]);
+  metrics('m-mtn-business', [
+    ['Impressions','6,260','−518','down'],['Clicks','240','+29','up'],['CTR','3.83%','+0.72%','up'],
+    ['CPC','$13.97','−$1.55','up'],['Conversions','10','+2','up']
+  ]);
+  table('t-mtn-business', ['Ad Group','Impressions','Clicks','CTR','CPC'], [
+    ['Business Loans','4,148','122','2.94%','$17.98'],['Business Money Market','683','38','5.56%','$8.81'],
+    ['Business Checking','552','14','2.54%','$17.02'],['Treasury Management','478','7','1.46%','$30.45'],['Business CDs','399','59','14.79%','$6.30']
+  ]);
+  metrics('m-mtn-mmct', [
+    ['Impressions','3,908','+487','up'],['Clicks','113','+21','up'],['CTR','2.89%','+0.20%','up'],
+    ['CPC','$10.60','−$2.32','up'],['Conversions','14','No change','neutral']
+  ]);
+  table('t-mtn-mmct', ['Ad Group','Impressions','Clicks','CTR','CPC'], [['Community Lending','3,908','113','2.89%','$10.60']]);
 
-  set('mmct-body', `
-    <div class="sub-tabs">
-      <button class="sub-tab active" onclick="showMmctSub('mmct-summary',this)">Summary</button>
-      <button class="sub-tab" onclick="showMmctSub('mmct-zip',this)">Zip Detail</button>
-      <button class="sub-tab" onclick="showMmctSub('mmct-census',this)">Census Tract View</button>
-      <button class="sub-tab" onclick="showMmctSub('mmct-full',this)">Full Data</button>
-    </div>
-    <div id="mmct-summary" class="sub-panel active">${summaryHtml}</div>
-    <div id="mmct-zip" class="sub-panel">${zipHtml}</div>
-    <div id="mmct-census" class="sub-panel">${censusHtml}</div>
-    <div id="mmct-full" class="sub-panel">${fullHtml}</div>
-  `);
-}
+  terms('terms-mtn-retail', ['loans','loan','online loans','borrow money','land loans tennessee','loan near me','loans online','online loan','best same day loans online','credit builder loan','line of credit loans','need money now','rent to own homes near me','borrowly','credit card','emergency cash immediately','flex loans online','hardship emergency loans','instant online flex loans tn','loan places','loan places nashville','loans nashville','money borrowing apps','real online loans','tribal loans','922loan com','apply for a loan online','big loans','bisongreen loan','borrow money instantly','co signer loans','construction loan lenders near me','construction loan rates','credit cards','debt consolidation loan','easy loans near me','heloc calculator','high interest loans','how to get a loan','important things to know when buying a house','land loan calculator','land loan tennessee','land loans','land mortgage loan','line of credit','loan calculator','loan companies nashville','loan no cosigner','loans for poor credit','loans lebanon tn','mortgage calculator'],
+    ['best same day loans online','need money now','rent to own homes near me','borrowly','emergency cash immediately','flex loans online','instant online flex loans tn','money borrowing apps','tribal loans','922loan com','bisongreen loan','borrow money instantly','high interest loans','loans for poor credit']);
+  terms('terms-mtn-business', ['cd rates','sba loan','best money market rates','best money market rates near me','commercial loan calculator','money market account','certificate of deposit rates','chamber of commerce','grant writers for small business near me','high yield money market account','highest money market rates near me','money market','money market checking account','prestamos para pequeños negocios','who has best money market rates today','888 business','best money market accounts','best money markets','best sba loan lenders for startups','bluevine','bluevine business phone number','box truck financing for startups','business','business broker nashville','business checking sign up bonus','business line of credit calculator','business loan calculator','business loan calculator payment','business loans','business loans for new llc with no revenue','business start up loans','c d rates','can i get a business loan for a new business',"cd's rates",'cdfi loans','chamber of commerce mt juliet tn','commercial loan rate','commercial real estate calculator','commercial real estate lebanon tn','commercial real estate loan','corner to corner nashville','food truck builders near me','free business grants','funding for new llc','high yield money market savings','how to apply for a ppp loan','how to get a business loan','how to get small business loan','jv','llc company near me','metro small business program'],
+    ['chamber of commerce','grant writers for small business near me','888 business','bluevine','bluevine business phone number','business broker nashville','chamber of commerce mt juliet tn','corner to corner nashville','food truck builders near me','free business grants','jv','llc company near me']);
+  terms('terms-mtn-mmct', ['easiest way to buy a house','fha loan requirements tn','free home mortgage calculator','loan murfreesboro tn','loan places near me','pinnacle','real estate maximums near me','10 year land loan calculator','50 years mortgage calculator','brooks real estate near me','cheap homes for sale in hermitage tn','community mortgage','construction loan lenders','construction loan requirements','dhi mortgage','easy loans','fha 203k loan lenders near me','fha loans for bad credit','finance companies nashville tn','habitat houses','heritage south murfreesboro','homes for sale in nashville tn under $200 000','house for sale mount juliet tn','how can i buy a house with no money down','hud nashville','interest rate calculator','land and construction loan calculator','lender near me','loan agency near me','loan calculator mortgage','loan places gallatin tn','loandepot near me','loans','mobile home lenders near me','mortgage calculator tn','naca program','neighborhood loan','neighborhood loans near me','of america','one time close construction loan','real estate calculator free','realestate near me','rural home loans','security federal mcminnville tn','smyrna financial','southeast financial near me','the phone number to rocket mortgage','title company murfreesboro tn','title company near me','united community','us hud'],
+    ['real estate maximums near me','brooks real estate near me','cheap homes for sale in hermitage tn','homes for sale in nashville tn under $200 000','house for sale mount juliet tn','of america','realestate near me','the phone number to rocket mortgage','title company murfreesboro tn','title company near me']);
 
-function showMmctSub(panelId, btn){
-  const wrap = document.getElementById('mmct-body');
-  wrap.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
-  wrap.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(panelId).classList.add('active');
-  btn.classList.add('active');
-}
+  /* ---------- CHATTANOOGA SEARCH ---------- */
+  trendTable('t-cha-account', [
+    ['Search Impr. Share','10.50%','10.51%','10.31%','11.38%','10.90%','10.83%','11.41%','19.82%','33.06%','16.55%','15.18%','17.35%','18.84%'],
+    ['Impressions','14,416','15,182','15,306','15,925','15,457','12,243','10,139','14,467','10,366','7,377','6,412','6,740','7,160'],
+    ['Clicks','693','657','634','601','638','530','463','558','442','345','341','420','395'],
+    ['CTR','4.81%','4.33%','4.14%','3.77%','4.13%','4.33%','4.57%','3.86%','4.26%','4.68%','5.32%','6.23%','5.52%'],
+    ['CPC','$2.21','$2.25','$2.34','$2.54','$2.32','$2.85','$3.24','$3.33','$3.50','$4.85','$4.68','$3.72','$4.25'],
+    ['Conversions','27','26','10','17','22','15','13','53','60','50','45','61','67'],
+    ['Conv. Rate','3.90%','3.96%','1.58%','2.83%','3.45%','2.83%','2.81%','9.50%','13.57%','14.49%','13.20%','14.52%','16.96%']
+  ]);
+  metrics('m-cha-campaign', [
+    ['Impressions','7,160','+420','up'],['Clicks','395','−25','down'],['CTR','5.52%','−0.71%','down'],
+    ['CPC','$4.25','+$0.53','down'],['Conversions','67','+6','up']
+  ]);
+  table('t-cha-campaign', ['Campaign','Budget Share','Search Impr. Share','Impressions','Clicks','CTR','CPC','Conversions'], [
+    ['Retail Banking','60%','18.18%','6,401','368','5.75%','$2.80','65'],
+    ['Business Banking','40%','27.12%','759','27','3.56%','$24.01','2']
+  ]);
+  table('t-cha-loc-retail', ['City','Impressions','Clicks','CTR'], [
+    ['Chattanooga','4,678','282','6.03%'],['East Ridge','473','32','6.77%'],['Lakesite','286','11','3.85%'],
+    ['East Brainerd','159','10','6.29%'],['Ooltewah','149','5','3.36%'],['Collegedale','133','2','1.50%'],
+    ['Red Bank','126','10','7.94%'],['Harrison','120','6','5.00%'],['Middle Valley','68','2','2.94%'],
+    ['Walden','58','0','0.00%'],['Georgetown','54','1','1.85%'],['Sale Creek','38','5','13.16%'],['Fairmount','9','1','11.11%']
+  ]);
+  table('t-cha-loc-business', ['City','Impressions','Clicks','CTR'], [
+    ['Chattanooga','513','13','2.53%'],['East Ridge','48','3','6.25%'],['Lakesite','29','1','3.45%'],
+    ['Harrison','26','1','3.85%'],['Ooltewah','22','2','9.09%'],['Red Bank','22','0','0.00%'],
+    ['Middle Valley','19','3','15.79%'],['East Brainerd','18','1','5.56%'],['Collegedale','14','0','0.00%'],
+    ['Walden','12','0','0.00%'],['Sale Creek','7','2','28.57%'],['Fairmount','1','0','0.00%'],['Georgetown','1','0','0.00%']
+  ]);
+  metrics('m-cha-retail', [
+    ['Impressions','6,401','+281','up'],['Clicks','368','−25','down'],['CTR','5.75%','−0.67%','down'],
+    ['CPC','$2.80','+$0.48','down'],['Conversions','65','+4','up']
+  ]);
+  table('t-cha-retail', ['Ad Group','Impressions','Clicks','CTR','CPC'], [
+    ['Personal Checking','4,903','285','5.81%','$3.10'],['Personal Savings','1,116','71','6.36%','$1.98'],['Mortgage + Home Loans','382','12','3.14%','$0.53']
+  ]);
+  metrics('m-cha-business', [
+    ['Impressions','759','+139','up'],['Clicks','27','No change','neutral'],['CTR','3.56%','−0.80%','down'],
+    ['CPC','$24.01','−$0.12','up'],['Conversions','2','+2','up']
+  ]);
+  table('t-cha-business', ['Ad Group','Impressions','Clicks','CTR','CPC'], [
+    ['Business Loans','487','17','3.49%','$28.07'],['Business Checking','269','10','3.72%','$17.10'],['Business Money Market','3','0','0.00%','$0.00']
+  ]);
+  terms('terms-cha-retail', ['bank of america','bank of america cerca de mi','wells fargo cerca de mi','bank of america near me','builtwell bank','regions bank near me','huntington bank near me','truist bank','regions bank cerca de mi','smartbank','banco américa cerca de mi','banco truist','first horizon bank cerca de mi','wilson bank &amp; trust near me','wilson bank and trust chattanooga','banco de américa cerca de mi','bank of america español','bank of dade trenton ga','banks near me','builtwell bank near me','chase bank near me','first bank near me','first financial bank dayton tn','truist bank near me','ally financial español','banco truist cerca de mi cerca de mi','bank near me','citizens tri county bank near me','credit unions in chattanooga tn','federal credit union','first financial bank dayton tennessee','pinnacle financial partners near me','pnc bank near me','scenic city community credit union','smartbank near me','wells fargo bank chattanooga','wells fargo near me','1 800 number for regions bank','1 800 number wells fargo','access bank account','banco america abierto hoy','banco américa cerca de mi ubicación cerca de mi','banco américa cerca de mí','banco américa en español','banco cerca de mí','banco of america cerca de mí','banco pinnacle','banco regions','banco santrus','banco truist cerca de mi','banco trust cerca de mí'],
+    ['1 800 number for regions bank','1 800 number wells fargo','access bank account']);
+  terms('terms-cha-business', ['bitty advance loan','business loans for startups','ppp loan','chase business customer service phone number 24 7','cibc small business account','clover capital customer service number','grants for women','lili bank customer service','local business banks near me','quickbooks com login','rockpoint bank','sba loan','sba loan portal','startup business loans with no revenue','treasury gov ppp','truist business account','venture capitals','afg corp','afg corp fort collins co','agco finance','are sba loans still available','b&amp;i bank','bank of america business advantage','bank of america business customer service','bank of america business near me','bank of america business phone number','bank of america corporate card','bank of america sba loan requirements','bank of america small business','banks near me that do sba loans','bc financing','bear capital group','best business checking account','best commercial banks','best commercial finance companies','best commercial real estate loans','bitty advance','bitty advance requirements','blue bridge financial','bluevine','bluevine hours','business','business account','business broker','business brokers near me','business development center chattanooga','business grants for women','business hard money lenders','business loan calculator','business loan for hot shot trucking','business loan without collateral'],
+    ['chase business customer service phone number 24 7','clover capital customer service number','grants for women','lili bank customer service','quickbooks com login','treasury gov ppp','venture capitals','afg corp','afg corp fort collins co','bank of america business customer service','bank of america business phone number','bluevine hours','business broker','business brokers near me','business grants for women']);
 
-const MAROON = '#5C1A2A';
-const PINK = 'rgba(196,132,154,0.85)';
+  /* ---------- DISPLAY ---------- */
+  metrics('m-disp', [
+    ['Impressions','1.97M','−151,185','down'],['Clicks','3,415','−1,794','down'],['CTR','0.17%','−0.07%','down'],
+    ['CPM','$1.75','+$0.12','down'],['VTC','41,835','−726','down']
+  ]);
+  table('t-disp', ['Campaign','Impressions','Clicks','CTR','CPM','VTC'], [
+    ['WBT Mergers &amp; Acquisition Precision Display','648,492','1,165','0.18%','$1.84','5,796'],
+    ['Precision Display – Middle TN','1,081,086','1,830','0.17%','$1.70','35,099'],
+    ['Precision Display – Chattanooga','237,733','420','0.18%','$1.77','940'],
+    ['<strong>Total</strong>','<strong>1,967,311</strong>','<strong>3,415</strong>','<strong>0.17%</strong>','<strong>$1.75</strong>','<strong>41,835</strong>']
+  ], { totalLast: true });
+  table('t-disp-lookback', ['Month','Impressions','Clicks','CTR','CPM','VTC'], [
+    ['September 2026','1,967,311','3,415','0.17%','$1.75','41,835'],['August 2026','2,118,496','5,209','0.25%','$1.63','42,561'],
+    ['July 2026','2,175,449','4,581','0.21%','$1.58','42,341'],['June 2026','1,524,878','2,486','0.16%','$1.48','37,848'],
+    ['May 2026','1,613,020','1,596','0.10%','$1.40','27,729'],['April 2026','1,439,416','1,367','0.09%','$1.55','8,981'],
+    ['March 2026','248,213','364','0.15%','$1.27','3,080'],['February 2026','213,163','255','0.12%','$1.48','4,740'],
+    ['January 2026','233,412','280','0.12%','$1.35','6,536'],['December 2025','220,570','283','0.13%','$1.43','6,644'],
+    ['November 2025','208,419','236','0.11%','$1.51','6,005'],['October 2025','226,152','251','0.11%','$1.39','6,119'],
+    ['September 2025','202,857','185','0.09%','$1.50','5,733'],
+    ['<strong>Total</strong>','<strong>12,391,356</strong>','<strong>20,508</strong>','<strong>0.17%</strong>','<strong>$1.56</strong>','<strong>240,152</strong>']
+  ], { totalLast: true });
+  metrics('m-disp-mtn', [
+    ['Impressions','1.08M','−123,237','down'],['Clicks','1,830','−1,418','down'],['CTR','0.17%','−0.10%','down'],
+    ['CPM','$1.70','+$0.17','down'],['VTC','35,099','−1,178','down']
+  ]);
+  table('t-disp-mtn-loc', ['City','Impressions','Clicks','CTR'], [
+    ['Nashville','363,086','607','0.17%'],['Murfreesboro','116,157','184','0.16%'],['Antioch','111,873','318','0.28%'],
+    ['Cookeville','53,659','76','0.14%'],['Lebanon','52,047','79','0.15%'],['Mount Juliet','51,773','70','0.14%'],
+    ['Franklin','48,055','48','0.10%'],['Brentwood','37,136','37','0.10%'],['Gallatin','35,980','49','0.14%'],['Smyrna','34,473','51','0.15%']
+  ]);
+  table('t-disp-mtn-dev', ['Device','Impressions','Share'], [['Mobile','467,877','43%'],['PC','430,230','40%'],['Tablet','182,910','17%']]);
+  table('t-disp-mtn-cr', ['Creative','Impressions','Clicks','CTR'], [
+    ['Business banner — wide','525,357','1,513','0.29%'],['Business square — small','491,213','254','0.05%'],
+    ['Ad creative 3','37,143','33','0.09%'],['Ad creative 4','27,373','30','0.11%']
+  ]);
+  metrics('m-disp-cha', [
+    ['Impressions','886,225','−27,948','down'],['Clicks','1,585','−376','down'],['CTR','0.18%','−0.04%','down'],
+    ['CPM','$1.82','+$0.06','down'],['VTC','6,736','+452','up']
+  ]);
+  table('t-disp-cha-loc', ['City','Impressions','Clicks','CTR'], [
+    ['Chattanooga','236,001','396','0.17%'],['Nashville','186,855','353','0.19%'],['Antioch','68,901','178','0.26%'],
+    ['Murfreesboro','62,995','103','0.16%'],['Ooltewah','50,711','109','0.21%'],['Hixson','49,351','97','0.20%'],
+    ['Mount Juliet','30,714','56','0.18%'],['Cookeville','23,994','37','0.15%'],['Lebanon','22,046','22','0.10%'],['Franklin','17,864','22','0.12%']
+  ]);
+  table('t-disp-cha-dev', ['Device','Impressions','Share'], [['Mobile','461,569','52%'],['PC','286,151','32%'],['Tablet','138,408','16%']]);
+  table('t-disp-cha-cr', ['Creative','Impressions','Clicks','CTR'], [
+    ['WBT logo banner — wide','247,374','431','0.17%'],['WBT logo square — small','169,989','81','0.05%'],
+    ['WBT logo banner — diagonal','136,984','375','0.27%'],['Business banner — wide','134,280','332','0.25%'],
+    ['Business square — small','90,338','58','0.06%']
+  ]);
 
-function destroyChart(id){
-  if (chartInstances[id]) { chartInstances[id].destroy(); delete chartInstances[id]; }
-}
+  /* ---------- SOCIAL ---------- */
+  metrics('m-soc', [
+    ['Impressions','558,922','−151,829','down'],['Clicks','8,991','−4,871','down'],['CTR','1.61%','−0.34%','down'],
+    ['Reach','206,185','−39,085','down'],['Frequency','2.71','−0.19','neutral']
+  ]);
+  table('t-soc', ['Campaign','Impressions','Clicks','CTR','CPM','Reach','Frequency'], [
+    ['2026–27 | Middle TN Traffic','460,778','7,525','1.63%','$8.01','170,949','2.70'],
+    ['2026–27 | Chattanooga Traffic','98,144','1,466','1.49%','$7.79','38,744','2.53']
+  ]);
+  metrics('m-soc-cha', [
+    ['Impressions','98,144','+2,008','up'],['Clicks','1,466','+104','up'],['CTR','1.49%','+0.08%','up'],
+    ['Reach','38,744','+4,346','up'],['Frequency','2.53','−0.26','neutral']
+  ]);
+  table('t-soc-cha', ['Ad Name','Impressions','Clicks','CTR','CPM','Reach','Freq.'], [
+    ['April 2026 | Greenlight | Chattanooga','77,850','1,175','1.51%','$7.64','32,033','2.43'],
+    ['January 2026 | Business | Chattanooga','12,875','155','1.20%','$8.13','9,325','1.38'],
+    ['April 2026 | Greenlight RT | Chattanooga','6,869','130','1.89%','$8.90','2,894','2.37']
+  ]);
+  metrics('m-soc-mtn', [
+    ['Impressions','460,778','−153,837','down'],['Clicks','7,525','−4,975','down'],['CTR','1.63%','−0.40%','down'],
+    ['Reach','170,949','−42,656','down'],['Frequency','2.70','−0.18','neutral']
+  ]);
+  table('t-soc-mtn', ['Ad Name','Impressions','Clicks','CTR','CPM','Reach','Freq.'], [
+    ['April 2026 | Greenlight | Middle TN','354,309','5,448','1.54%','$7.44','154,039','2.30'],
+    ['April 2026 | Greenlight RT | Middle TN','74,890','1,446','1.93%','$9.25','20,403','3.67'],
+    ['April 2026 | Business | Middle TN','26,103','515','1.97%','$11.12','17,373','1.50'],
+    ['April 2026 | Business RT | Middle TN','5,476','116','2.12%','$13.10','3,225','1.70']
+  ]);
 
-function makeCombo(id, labels, bars, line, barLabel, lineLabel, barAxis, lineAxis){
-  const el = document.getElementById(id);
-  if (!el) return;
-  destroyChart(id);
-  chartInstances[id] = new Chart(el, {
-    data: { labels, datasets: [
-      { type:'bar', label: barLabel, data: bars, backgroundColor: MAROON, yAxisID:'y' },
-      { type:'line', label: lineLabel, data: line, borderColor: PINK, backgroundColor:'transparent', yAxisID:'y2', tension:0.35, pointRadius:4, pointBackgroundColor: PINK }
-    ]},
-    options: { responsive:true, interaction:{mode:'index'},
-      plugins:{legend:{position:'top', labels:{font:{size:12}}}},
-      scales:{
-        y:{type:'linear', position:'left', title:{display:true,text:barAxis,font:{size:11}}, ticks:{font:{size:11}}},
-        y2:{type:'linear', position:'right', title:{display:true,text:lineAxis,font:{size:11}}, grid:{drawOnChartArea:false}, ticks:{font:{size:11}}}
+  /* ---------- WEBSITE ---------- */
+  metrics('m-web', [
+    ['Sessions','118,134','+279','up'],['Engaged Sessions','60,715','−863','down'],['Avg Time / Session','0:19','−0:01','down'],
+    ['Engagement Rate','51.40%','−0.85%','down'],['Key Events','659','Total','neutral']
+  ]);
+  table('t-web-pages', ['Page Path','Views','Active Users','Eng. Rate'], [
+    ['/','120,853','25,628','56.65%'],['/personal/online-banking','8,323','2,017','63.29%'],['/business/accounts','4,340','2,964','15.35%'],
+    ['/about-us/a-career-at-wbt','2,875','1,471','68.16%'],['/loans/personal','2,012','1,680','62.01%'],['/personal/new-account-bonuses','1,951','1,492','10.96%'],
+    ['/personal/credit-card-resource-center','1,826','699','65.15%'],['/about-us/locations','1,600','1,075','67.43%'],['/about-us/contact-us','1,504','1,042','65.19%'],
+    ['/about-us/upcoming-events','1,039','785','55.41%'],['/personal/accounts','914','610','84.71%'],['/about-us/travel-club','801','343','70.00%'],
+    ['/personal/savings','786','573','84.28%'],['/personal/cds','776','550','76.65%'],['/search','773','541','94.02%'],
+    ['/loans/home-equity-line-of-credit','643','551','48.99%'],['/locations/main-office-lebanon','555','246','58.93%'],['/about-us/investor-relations','508','371','54.97%'],
+    ['/our-leadership','478','390','78.17%'],['/business/treasury-management-resource-center','456','196','61.01%'],['/loans/home-loans','430','335','79.27%'],
+    ['/personal/summersavings','363','362','6.87%'],['/personal/money-market-savings','323','248','91.51%'],['/calculators','296','190','91.80%'],
+    ['/personal/wbt-cash-back-checking','280','155','75.10%'],['/personal/online-loan-payment','274','176','76.61%'],['/routing-number','260','200','50.82%'],
+    ['/about-us/who-we-are','252','204','79.92%'],['/personal/wbt-saver','246','207','82.27%'],['/privacy-policy','245','168','35.48%'],
+    ['/loan-inquiry','239','188','87.05%'],['/personal/basic-checking','239','178','82.30%'],['/2008/mirror/','234','115','56.52%'],
+    ['/loans/vehicle','229','188','76.55%'],['/about-us/board-of-directors','226','210','83.26%']
+  ]);
+  table('t-web-sources', ['Source / Medium','Campaign','Sessions','Key Events'], [
+    ['(direct) / (none)','(direct)','57,187','152'],['google / organic','(organic)','29,247','396'],['bing / organic','(organic)','7,754','43'],
+    ['ntp.msn.com / referral','(referral)','2,748','1'],['timesfreepress / display','middletn_business','2,081','1'],['apps.docusign.com / referral','(referral)','2,039','0'],
+    ['yahoo / organic','(organic)','1,557','12'],['timesfreepress / display','bonus','1,551','6'],['utua.com.br / referral','(referral)','1,450','6'],
+    ['google / cpc','052523','1,324','0'],['na.network-auth.com / referral','(referral)','851','2'],['intranet / referral','(referral)','782','1'],
+    ['timesfreepress / display','chatt_business','735','0'],['google / cpc','Retail Banking – 53%','689','2'],
+    ['<strong>Total</strong>','—','<strong>118,134</strong>','<strong>659</strong>']
+  ], { totalLast: true });
+
+  /* ---------- CHARTS ---------- */
+  const rendered = new Set();
+  const hasChart = () => typeof Chart !== 'undefined';
+  if (hasChart()) { Chart.defaults.font.family = "'Segoe UI', Arial, sans-serif"; Chart.defaults.color = '#6F6669'; Chart.defaults.maintainAspectRatio = false; }
+
+  function makeCombo(id, bars, line, barLabel, lineLabel, money) {
+    if (rendered.has(id) || !hasChart() || !$(id)) return; rendered.add(id);
+    new Chart($(id), {
+      data: { labels: MONTHS, datasets: [
+        { type: 'bar', label: barLabel, data: bars, backgroundColor: MAROON, borderRadius: 3, yAxisID: 'y', order: 2 },
+        { type: 'line', label: lineLabel, data: line, borderColor: PINK, backgroundColor: PINK, yAxisID: 'y2', tension: 0.35, pointRadius: 3.5, order: 1 }
+      ]},
+      options: {
+        responsive: true, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { position: 'top', labels: { font: { size: 12 }, boxWidth: 12 } } },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+          y: { position: 'left', title: { display: true, text: barLabel, font: { size: 11 } }, ticks: { font: { size: 11 } }, grid: { color: '#EEE9EA' } },
+          y2: { position: 'right', title: { display: true, text: lineLabel, font: { size: 11 } }, grid: { drawOnChartArea: false },
+                ticks: { font: { size: 11 }, callback: v => money ? '$' + v : v.toLocaleString() } }
+        }
       }
-    }
-  });
-}
+    });
+  }
+  function makeDevice(id, data) {
+    if (rendered.has(id) || !hasChart() || !$(id)) return; rendered.add(id);
+    new Chart($(id), {
+      type: 'bar',
+      data: { labels: ['Mobile','PC','Tablet'], datasets: [{ data, backgroundColor: [MAROON, PINK, 'rgba(196,132,154,0.5)'], borderRadius: 4 }] },
+      options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
+                 scales: { x: { ticks: { font: { size: 11 } }, grid: { color: '#EEE9EA' } }, y: { grid: { display: false } } } }
+    });
+  }
+  function makeWeb(id) {
+    if (rendered.has(id) || !hasChart() || !$(id)) return; rendered.add(id);
+    new Chart($(id), {
+      type: 'bar',
+      data: { labels: ['Sessions','Engaged Sessions'], datasets: [{ data: [118134, 60715], backgroundColor: [MAROON, PINK], borderRadius: 5 }] },
+      options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
+                 scales: { x: { ticks: { font: { size: 11 } }, grid: { color: '#EEE9EA' } }, y: { grid: { display: false } } } }
+    });
+  }
 
-function makeBar(id, labels, data, label){
-  const el = document.getElementById(id);
-  if (!el) return;
-  destroyChart(id);
-  chartInstances[id] = new Chart(el, {
-    type:'bar',
-    data:{ labels, datasets:[{label,data,backgroundColor:[MAROON,PINK,'rgba(196,132,154,0.45)'],borderRadius:4}] },
-    options:{ indexAxis:'y', responsive:true, plugins:{legend:{display:false}},
-      scales:{x:{ticks:{font:{size:11}}}, y:{ticks:{font:{size:11}}}} }
-  });
-}
+  const MTN_CPC = [1.33,1.04,0.70,0.59,0.61,0.71,0.71,4.75,4.82,9.84,9.86,10.48,9.81];
+  const CHA_CPC = [2.21,2.25,2.34,2.54,2.32,2.85,3.24,3.33,3.50,4.85,4.68,3.72,4.25];
+  const chartInits = {
+    'mtn-account':  () => makeCombo('chart-mtn-account', [1807,2450,3723,3327,3390,3115,3041,360,331,185,147,187,217], MTN_CPC, 'Conversions', 'CPC', true),
+    'mtn-campaign': () => makeCombo('chart-mtn-campaign', [6842,9051,13833,19409,19917,15387,15355,2010,2142,1116,1029,974,1019], MTN_CPC, 'Clicks', 'CPC', true),
+    'cha-account':  () => makeCombo('chart-cha-account', [27,26,10,17,22,15,13,53,60,50,45,61,67], CHA_CPC, 'Conversions', 'CPC', true),
+    'cha-campaign': () => makeCombo('chart-cha-campaign', [693,657,634,601,638,530,463,558,442,345,341,420,395], CHA_CPC, 'Clicks', 'CPC', true),
+    'disp-lookback':() => makeCombo('chart-disp-lookback', [202857,226152,208419,220570,233412,213163,248213,1439416,1613020,1524878,2175449,2118496,1967311],
+                                     [5733,6119,6005,6644,6536,4740,3080,8981,27729,37848,42341,42561,41835], 'Impressions', 'VTC', false),
+    'disp-mtn':     () => makeDevice('chart-mtn-device', [467877,430230,182910]),
+    'disp-cha':     () => makeDevice('chart-cha-device', [461569,286151,138408]),
+    'web-overview': () => makeWeb('chart-web')
+  };
 
-function makeWebChart(id, month){
-  const el = document.getElementById(id);
-  if (!el) return;
-  destroyChart(id);
-  const d = DATA[month];
-  chartInstances[id] = new Chart(el, {
-    type:'bar',
-    data:{ labels:['Sessions','Engaged Sessions'], datasets:[{label:d.label+' 2026', data:[d.web_chart.sessions, d.web_chart.engaged], backgroundColor:[MAROON,PINK], borderRadius:5}] },
-    options:{ responsive:true, plugins:{legend:{display:false}}, scales:{y:{title:{display:true,text:'Count',font:{size:11}},ticks:{font:{size:11}}}} }
-  });
-}
-
-function deviceRows(deviceDict){
-  return Object.entries(deviceDict).sort((a,b)=>b[1]-a[1]);
-}
-
-const chartRenderers = {
-  'mtn-account': (m) => { const d=DATA[m]; makeCombo('chart-mtn-account', d.months13, d.mtn_account.conv, d.mtn_account.cpc, 'Conversions','CPC ($)','Conversions','CPC ($)'); },
-  'mtn-campaign': (m) => { const d=DATA[m]; makeCombo('chart-mtn-campaign', d.months13, d.mtn_account.clicks, d.mtn_account.cpc, 'Clicks','CPC ($)','Clicks','CPC ($)'); },
-  'cha-account': (m) => { const d=DATA[m]; makeCombo('chart-cha-account', d.months13, d.cha_account.conv, d.cha_account.cpc, 'Conversions','CPC ($)','Conversions','CPC ($)'); },
-  'cha-campaign': (m) => { const d=DATA[m]; makeCombo('chart-cha-campaign', d.months13, d.cha_account.clicks, d.cha_account.cpc, 'Clicks','CPC ($)','Clicks','CPC ($)'); },
-  'disp-lookback': (m) => { const d=DATA[m]; makeCombo('chart-disp-lookback', d.disp_lookback_chart.labels, d.disp_lookback_chart.impr, d.disp_lookback_chart.vtc, 'Impressions','VTC','Impressions','VTC'); },
-  'disp-mtn': (m) => { const d=DATA[m]; const rows=deviceRows(d.mtn_device); makeBar('chart-mtn-device', rows.map(r=>r[0]), rows.map(r=>r[1]), 'Impressions'); },
-  'disp-cha': (m) => { const d=DATA[m]; const rows=deviceRows(d.cha_device); makeBar('chart-cha-device', rows.map(r=>r[0]), rows.map(r=>r[1]), 'Impressions'); },
-  'web-overview': (m) => makeWebChart('chart-web', m),
-};
-
-function renderChartsFor(sectionId){
-  const sectionEl = document.getElementById(sectionId);
-  if (!sectionEl) return;
-  const activePanel = sectionEl.querySelector('.sub-panel.active');
-  const panelId = activePanel ? activePanel.id : sectionId;
-  if (chartRenderers[panelId]) chartRenderers[panelId](currentMonth);
-}
-
-function onMonthChange(month){
-  if (editing) toggleSummaryEdit();
-  currentMonth = month;
-  renderTextContent(currentMonth);
-  renderChartsFor(currentSection);
-}
-
-function showSection(id, btn){
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-  currentSection = id;
-  setTimeout(() => renderChartsFor(id), 50);
-}
-
-function showSub(group, panelId, btn){
-  const section = btn.closest('.section');
-  section.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
-  section.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(panelId).classList.add('active');
-  btn.classList.add('active');
-  renderChartsFor(section.id);
-}
-
-renderTextContent(currentMonth);
-window.addEventListener('load', () => renderChartsFor(currentSection));
+  /* ---------- NAV ---------- */
+  function initActive(sectionId) {
+    const ap = document.querySelector('#' + sectionId + ' .sub-panel.active');
+    if (ap && chartInits[ap.id]) chartInits[ap.id]();
+  }
+  document.querySelectorAll('.nav-link').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
+    $(btn.dataset.section).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => initActive(btn.dataset.section));
+  }));
+  document.querySelectorAll('.sub-tab').forEach(btn => btn.addEventListener('click', () => {
+    const section = btn.closest('.section');
+    section.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
+    section.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+    $(btn.dataset.panel).classList.add('active');
+    btn.classList.add('active');
+    requestAnimationFrame(() => { if (chartInits[btn.dataset.panel]) chartInits[btn.dataset.panel](); });
+  }));
 </script>
+
 </body>
 </html>
